@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 550" width="700" height="550">
+  <!-- 背景 -->
+  <rect width="700" height="550" fill="#f8f9fa"/>
+  
+  <!-- 标题 -->
+  <text x="350" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#333">AI正确使用流程</text>
+  
+  
+  <!-- 流程步骤 -->
+  
+  <!-- 步骤1：明确需求 -->
+  <rect x="250" y="70" width="200" height="60" rx="10" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+  <text x="350" y="95" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="600" fill="#1565c0">1. 明确需求</text>
+  <text x="350" y="115" text-anchor="middle" font-family="system-ui" font-size="11" fill="#555">清楚描述你要什么</text>
+  
+  <!-- 箭头1 -->
+  <path d="M350 135 L350 155" stroke="#2196f3" stroke-width="2" marker-end="url(#arrow1)"/>
+  
+  
+  <!-- 步骤2：分段生成 -->
+  <rect x="250" y="160" width="200" height="60" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="350" y="185" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="600" fill="#e65100">2. 分段生成</text>
+  <text x="350" y="205" text-anchor="middle" font-family="system-ui" font-size="11" fill="#555">让AI一次生成一部分</text>
+  
+  <!-- 箭头2 -->
+  <path d="M350 225 L350 245" stroke="#ff9800" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  
+  <!-- 步骤3：审查理解 -->
+  <rect x="250" y="250" width="200" height="60" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  <text x="350" y="275" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="600" fill="#7b1fa2">3. 审查理解</text>
+  <text x="350" y="295" text-anchor="middle" font-family="system-ui" font-size="11" fill="#555">确保你理解每一行代码</text>
+  
+  <!-- 左侧：安全检查 -->
+  <rect x="40" y="250" width="180" height="60" rx="8" fill="#ffebee" stroke="#f44336" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="130" y="275" text-anchor="middle" font-family="system-ui" font-size="12" fill="#c62828">⚠️ 安全检查</text>
+  <text x="130" y="295" text-anchor="middle" font-family="system-ui" font-size="10" fill="#d32f2f">认证/支付/权限代码</text>
+  
+  <!-- 连线 -->
+  <path d="M225 280 L250 280" stroke="#f44336" stroke-width="1.5" stroke-dasharray="5,3"/>
+  
+  
+  <!-- 箭头3 -->
+  <path d="M350 315 L350 335" stroke="#9c27b0" stroke-width="2" marker-end="url(#arrow3)"/>
+  
+  
+  <!-- 步骤4：调整优化 -->
+  <rect x="250" y="340" width="200" height="60" rx="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="350" y="365" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="600" fill="#2e7d32">4. 调整优化</text>
+  <text x="350" y="385" text-anchor="middle" font-family="system-ui" font-size="11" fill="#555">根据业务需求修改</text>
+  
+  
+  <!-- 循环箭头 -->
+  <path d="M460 370 Q520 370 520 280 Q520 190 460 190" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="540" y="285" font-family="system-ui" font-size="11" fill="#666">不满意？</text>
+  
+  <text x="540" y="300" font-family="system-ui" font-size="11" fill="#666">继续追问AI</text>
+  
+  
+  <!-- 箭头4 -->
+  <path d="M350 405 L350 425" stroke="#4caf50" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  
+  <!-- 步骤5：测试验证 -->
+  <rect x="250" y="430" width="200" height="60" rx="10" fill="#fff8e1" stroke="#ffc107" stroke-width="2"/>
+  <text x="350" y="455" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="600" fill="#f57f17">5. 测试验证</text>
+  <text x="350" y="475" text-anchor="middle" font-family="system-ui" font-size="11" fill="#555">确保功能正确、安全</text>
+  
+  
+  <!-- 右侧：错误示例 -->
+  <g transform="translate(480, 100)">
+    <rect x="0" y="0" width="200" height="160" rx="8" fill="#ffebee" stroke="#f44336" stroke-width="1"/>
+    
+    <text x="100" y="25" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="600" fill="#c62828">❌ 错误用法</text>
+    
+    <g font-family="system-ui" font-size="11">
+      <text x="15" y="50" fill="#d32f2f">• 直接提交不看代码</text>
+      
+      <text x="15" y="75" fill="#d32f2f">• 安全代码全靠AI</text>
+      
+      <text x="15" y="100" fill="#d32f2f">• 看不懂也照用</text>
+      
+      <text x="15" y="125" fill="#d32f2f">• 一次生成大量代码</text>
+      
+      <text x="15" y="145" fill="#d32f2f">• 从不验证结果</text>
+    </g>
+  </g>
+  
+  
+  <!-- 底部：核心原则 -->
+  <rect x="50" y="510" width="600" height="35" rx="17" fill="#333"/>
+  
+  <text x="350" y="533" text-anchor="middle" font-family="system-ui" font-size="13" fill="#fff">核心原则：AI是助手，你是责任人。你使用AI生成的内容，就要对它负责。</text>
+  
+  
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2196f3"/>
+    </marker>
+    
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ff9800"/>
+    </marker>
+    
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9c27b0"/>
+    </marker>
+    
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4caf50"/>
+    </marker>
+  </defs>
+</svg>

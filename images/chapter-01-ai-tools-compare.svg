@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <!-- 背景 -->
+  <rect width="800" height="420" fill="#f8f9fa"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#333">主流AI工具对比</text>
+  
+  
+  <!-- ChatGPT -->
+  <rect x="40" y="70" width="170" height="280" rx="12" fill="#fff" stroke="#10a37f" stroke-width="2"/>
+  <text x="125" y="100" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#10a37f">ChatGPT</text>
+  <text x="125" y="120" text-anchor="middle" font-family="system-ui" font-size="11" fill="#666">OpenAI</text>
+  
+  <g transform="translate(55, 140)" font-family="system-ui" font-size="11">
+    <text y="0" fill="#333" font-weight="600">✅ 优点：</text>
+    <text y="20" fill="#4caf50">• 综合能力最强</text>
+    <text y="38" fill="#4caf50">• 代码/写作/分析都好</text>
+    <text y="56" fill="#4caf50">• 社区资源最丰富</text>
+    
+    <text y="90" fill="#333" font-weight="600">❌ 缺点：</text>
+    <text y="110" fill="#f44336">• 需要科学上网</text>
+    <text y="128" fill="#f44336">• 免费版有限制</text>
+    
+    <text y="165" fill="#333" font-weight="600">适合：</text>
+    <text y="185" fill="#2196f3">全能型需求</text>
+    <text y="203" fill="#2196f3">复杂推理任务</text>
+  </g>
+  
+  
+  <!-- Cursor -->
+  <rect x="230" y="70" width="170" height="280" rx="12" fill="#fff" stroke="#6366f1" stroke-width="2"/>
+  <text x="315" y="100" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#6366f1">Cursor</text>
+  <text x="315" y="120" text-anchor="middle" font-family="system-ui" font-size="11" fill="#666">AI IDE</text>
+  
+  <g transform="translate(245, 140)" font-family="system-ui" font-size="11">
+    <text y="0" fill="#333" font-weight="600">✅ 优点：</text>
+    <text y="20" fill="#4caf50">• IDE集成，流畅</text>
+    <text y="38" fill="#4caf50">• 读项目上下文</text>
+    <text y="56" fill="#4caf50">• Tab补全体验好</text>
+    
+    <text y="90" fill="#333" font-weight="600">❌ 缺点：</text>
+    <text y="110" fill="#f44336">• 需下载安装</text>
+    <text y="128" fill="#f44336">• 重度使用付费</text>
+    
+    <text y="165" fill="#333" font-weight="600">适合：</text>
+    <text y="185" fill="#2196f3">日常编程</text>
+    <text y="203" fill="#2196f3">大型项目开发</text>
+  </g>
+  
+  
+  <!-- Copilot -->
+  <rect x="420" y="70" width="170" height="280" rx="12" fill="#fff" stroke="#6e40c9" stroke-width="2"/>
+  <text x="505" y="100" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#6e40c9">Copilot</text>
+  <text x="505" y="120" text-anchor="middle" font-family="system-ui" font-size="11" fill="#666">GitHub</text>
+  
+  <g transform="translate(435, 140)" font-family="system-ui" font-size="11">
+    <text y="0" fill="#333" font-weight="600">✅ 优点：</text>
+    <text y="20" fill="#4caf50">• 基于GitHub训练</text>
+    <text y="38" fill="#4caf50">• Tab补全极流畅</text>
+    <text y="56" fill="#4caf50">• 代码风格自然</text>
+    
+    <text y="90" fill="#333" font-weight="600">❌ 缺点：</text>
+    <text y="110" fill="#f44336">• $10/月付费</text>
+    <text y="128" fill="#f44336">• 聊天功能弱</text>
+    
+    <text y="165" fill="#333" font-weight="600">适合：</text>
+    <text y="185" fill="#2196f3">追求编码流畅度</text>
+    <text y="203" fill="#2196f3">GitHub用户</text>
+  </g>
+  
+  
+  <!-- 文心一言 -->
+  <rect x="610" y="70" width="150" height="280" rx="12" fill="#fff" stroke="#2932e1" stroke-width="2"/>
+  <text x="685" y="100" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#2932e1">文心一言</text>
+  <text x="685" y="120" text-anchor="middle" font-family="system-ui" font-size="11" fill="#666">百度</text>
+  
+  <g transform="translate(625, 140)" font-family="system-ui" font-size="11">
+    <text y="0" fill="#333" font-weight="600">✅ 优点：</text>
+    <text y="20" fill="#4caf50">• 国内直接访问</text>
+    <text y="38" fill="#4caf50">• 中文语境好</text>
+    <text y="56" fill="#4caf50">• 速度快</text>
+    
+    <text y="90" fill="#333" font-weight="600">❌ 缺点：</text>
+    <text y="110" fill="#f44336">• 代码能力较弱</text>
+    <text y="128" fill="#f44336">• 复杂任务一般</text>
+    
+    <text y="165" fill="#333" font-weight="600">适合：</text>
+    <text y="185" fill="#2196f3">日常问答</text>
+    <text y="203" fill="#2196f3">中文写作</text>
+  </g>
+  
+  
+  <!-- 底部建议 -->
+  <rect x="100" y="370" width="600" height="40" rx="20" fill="#e3f2fd" stroke="#2196f3" stroke-width="1"/>
+  <text x="400" y="395" text-anchor="middle" font-family="system-ui" font-size="13" fill="#1565c0">💡 选择建议：编程多选Cursor/Copilot，全能需求选ChatGPT，不想折腾网络选文心一言</text>
+</svg>
