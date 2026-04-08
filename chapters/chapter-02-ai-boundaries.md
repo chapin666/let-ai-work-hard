@@ -114,6 +114,10 @@ const checkPermission = (resource, action) => {
 
 他没仔细看那些代码，直接保存，提交，推送。
 
+![AI依赖症：从过度信任到事故](../images/chapter-02-ai-dependency.svg)
+
+*周一的膨胀，周二的隐患，周三的事故——AI依赖症的完整历程*
+
 ```bash
 git add .
 git commit -m "feat: 完成RBAC权限系统"
@@ -220,6 +224,10 @@ const authenticate = async (req, res, next) => {
 ```javascript
 const decoded = jwt.verify(token, process.env.JWT_SECRET);
 ```
+
+![JWT验证漏洞对比](../images/chapter-02-jwt-vulnerability.svg)
+
+*一字之差（decode vs verify），安全与漏洞的分界*
 
 小李的手在发抖。这是他周一提交的代码，当时他觉得AI生成的代码"看起来没问题"，就没仔细看安全相关的部分。
 

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 400" width="750" height="400">
+  <!-- 背景 -->
+  <rect width="750" height="400" fill="#f8f9fa"/>
+  
+  <!-- 标题 -->
+  <text x="375" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#333">AI依赖症：从过度信任到事故</text>
+  
+  
+  <!-- 周一：信心爆棚 -->
+  <rect x="40" y="70" width="200" height="280" rx="12" fill="#fff" stroke="#4caf50" stroke-width="2"/>
+  <text x="140" y="100" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#4caf50">周一</text>
+  <text x="140" y="120" text-anchor="middle" font-family="system-ui" font-size="12" fill="#666">信心爆棚</text>
+  
+  <!-- 表情 -->
+  <circle cx="140" cy="155" r="25" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <circle cx="130" cy="150" r="3" fill="#4caf50"/>
+  <circle cx="150" cy="150" r="3" fill="#4caf50"/>
+  <path d="M125 165 Q140 175 155 165" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round"/>
+  
+  <g transform="translate(55, 190)" font-family="system-ui" font-size="11">
+    <text y="0" fill="#333">AI生成200行代码</text>
+    <text y="20" fill="#333">10分钟"完成"权限系统</text>
+    <text y="40" fill="#333">没仔细看直接提交</text>
+    
+    <rect x="0" y="60" width="170" height="45" rx="6" fill="#c8e6c9"/>
+    <text x="85" y="80" text-anchor="middle" fill="#2e7d32" font-weight="500">心态：</text>
+    <text x="85" y="98" text-anchor="middle" fill="#2e7d32">"以后不用写代码了"</text>
+  </g>
+  
+  
+  <!-- 周二：发现坑 -->
+  <rect x="275" y="70" width="200" height="280" rx="12" fill="#fff" stroke="#ff9800" stroke-width="2"/>
+  <text x="375" y="100" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#ff9800">周二</text>
+  <text x="375" y="120" text-anchor="middle" font-family="system-ui" font-size="12" fill="#666">发现坑</text>
+  
+  <!-- 表情 -->
+  <circle cx="375" cy="155" r="25" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <circle cx="365" cy="150" r="3" fill="#ff9800"/>
+  <circle cx="385" cy="150" r="3" fill="#ff9800"/>
+  <path d="M365 168 Q375 162 385 168" fill="none" stroke="#ff9800" stroke-width="2" stroke-linecap="round"/>
+  
+  <g transform="translate(290, 190)" font-family="system-ui" font-size="11">
+    <text y="0" fill="#333">测试发现权限漏洞</text>
+    <text y="20" fill="#333">普通用户能访问管理员接口</text>
+    <text y="40" fill="#333">AI没考虑业务规则</text>
+    
+    <rect x="0" y="60" width="170" height="45" rx="6" fill="#ffe0b2"/>
+    <text x="85" y="80" text-anchor="middle" fill="#e65100" font-weight="500">心态：</text>
+    <text x="85" y="98" text-anchor="middle" fill="#e65100">"至少省了一半时间"</text>
+  </g>
+  
+  
+  <!-- 周三：事故 -->
+  <rect x="510" y="70" width="200" height="280" rx="12" fill="#fff" stroke="#f44336" stroke-width="3"/>
+  <text x="610" y="100" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#f44336">周三</text>
+  <text x="610" y="120" text-anchor="middle" font-family="system-ui" font-size="12" fill="#666">生产事故</text>
+  
+  <!-- 表情 -->
+  <circle cx="610" cy="155" r="25" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+  <circle cx="600" cy="150" r="3" fill="#f44336"/>
+  <circle cx="620" cy="150" r="3" fill="#f44336"/>
+  <path d="M595 170 Q610 160 625 170" fill="none" stroke="#f44336" stroke-width="2" stroke-linecap="round"/>
+  
+  <g transform="translate(525, 190)" font-family="system-ui" font-size="11">
+    <text y="0" fill="#333">JWT验证重大漏洞</text>
+    <text y="20" fill="#333">任何人可伪造Token</text>
+    <text y="40" fill="#333">紧急修复，绩效留记录</text>
+    
+    <rect x="0" y="60" width="170" height="45" rx="6" fill="#ffcdd2"/>
+    <text x="85" y="80" text-anchor="middle" fill="#c62828" font-weight="500">心态：</text>
+    <text x="85" y="98" text-anchor="middle" fill="#c62828">"差点被开除"</text>
+  </g>
+  
+  
+  <!-- 底部提示 -->
+  <rect x="150" y="370" width="450" height="25" rx="12" fill="#ffebee" stroke="#f44336" stroke-width="1"/>
+  <text x="375" y="387" text-anchor="middle" font-family="system-ui" font-size="12" fill="#c62828">⚠️ 教训：AI是助手，不是替代品。代码是你提交的，责任在你。</text>
+</svg>
