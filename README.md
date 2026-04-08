@@ -3,7 +3,7 @@
 > **程序员效率提升10倍的偷懒指南**
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Progress](https://img.shields.io/badge/progress-4%2F40-brightgreen.svg)]()
+[![Progress](https://img.shields.io/badge/progress-1%2F39-brightgreen.svg)]()
 
 ---
 
@@ -29,7 +29,7 @@
 
 ---
 
-## 📚 全书目录（40章）
+## 📚 全书目录（39章）
 
 ### 第一部分：初识AI（3章）
 建立认知，破除陌生感
@@ -156,7 +156,7 @@ let-ai-work-hard/
 ├── chapters/                   # 章节内容
 │   ├── chapter-01-first-ai-experience.md
 │   ├── chapter-02-ai-boundaries.md
-│   ├── ...（共40章）
+│   ├── ...（共39章）
 │   └── chapter-39-ai-builder.md
 ├── images/                     # 配图资源
 ├── scripts/                    # 配套脚本和工具
