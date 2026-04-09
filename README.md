@@ -47,7 +47,7 @@
 |:---:|:---|:---:|:---|
 | 4 | [一句话需求变完美代码的秘密](./chapters/chapter-04-prompt-engineering-basics.md) | 小李 | 提示工程基础——RPCT框架 |
 | 5 | [让AI一步步思考复杂问题](./chapters/chapter-05-cot-structured-output.md) | 小陈 | 提示工程进阶——CoT与结构化输出 |
-| 6 | [按Tab键比敲字母还多的日子](./chapters/chapter-06-ai-ide-basics.md) | 小张 | AI IDE入门——Cursor/Copilot深度使用 |
+| 6 | [Agent模式——AI IDE的新范式](./chapters/chapter-06-ai-ide-basics.md) | 小张 | AI IDE入门——Cursor Agent模式深度使用 |
 | 7 | [和AI结对编程的正确姿势](./chapters/chapter-07-ai-ide-advanced.md) | 小王 | AI IDE进阶——复杂项目实战 |
 | 8 | 从月更困难到周更3篇的逆袭 | 小美 | AI辅助技术写作——博客篇 |
 | 9 | 从博客到技术小册的进阶 | 小美 | AI辅助技术写作——小册篇 |
