@@ -642,17 +642,36 @@ claude code
 
 ### OpenAI Codex CLI：开源的编程Agent
 
-OpenAI推出的开源编程Agent，支持多模态（可以看图、生成图）。
+OpenAI推出的开源编程Agent，GitHub 70K+ stars。
 
 **特点**：
-- 完全开源，可自托管
-- 支持图片输入（可以传设计稿让AI生成代码）
-- 与OpenAI API深度集成
+- **完全开源**，可自托管和修改
+- **多模态**：支持图片输入（传设计稿让AI生成代码）
+- **CI/CD友好**：可集成到自动化流水线
+- 在沙箱环境中安全执行命令
+
+**典型用法**：
+```bash
+# 安装
+pip install openai-codex
+
+# 基本使用
+codex "给所有API添加统一错误处理"
+
+# 多模态：传设计稿生成代码
+codex --image ./design.png "根据设计稿生成React组件"
+
+# CI/CD集成
+# .github/workflows/auto-fix.yml
+- name: Auto Fix Code
+  run: codex --approval-mode auto "修复TypeScript错误"
+```
 
 **适合谁**：
 - 需要定制化AI工作流
 - 希望集成到CI/CD流程
 - 有多模态需求（设计稿转代码）
+- 喜欢开源工具
 
 ### Kimi Code：国内开发者的选择
 

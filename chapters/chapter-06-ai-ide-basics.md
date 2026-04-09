@@ -527,6 +527,7 @@ AI：
 - [ ] 对比Tab模式和Agent模式的效率差异
 - [ ] 试用Plan模式处理一个复杂任务
 - [ ] 试用YOLO模式处理一个简单任务
+- [ ] 试用Codex CLI体验开源Agent工具
 - [ ] 制定自己的Agent模式审查清单
 - [ ] 了解MCP协议，尝试配置一个外部工具
 
@@ -562,6 +563,62 @@ AI：
     }
   }
 }
+```
+
+### 开源替代：Codex CLI的Agent模式
+
+如果你希望使用开源的Agent工具，OpenAI Codex CLI是不错的选择。
+
+**与Cursor Agent的对比**：
+
+| 特性 | Cursor Agent | Codex CLI |
+|:---|:---|:---|
+| 开源 | 否 | **是** |
+| 界面 | 图形化IDE | 终端 |
+| 多模态 | 否 | **是（支持图片输入）** |
+| CI/CD集成 | 有限 | **完美支持** |
+| 模型 | Claude/GPT可选 | GPT-4o |
+| 沙箱执行 | 有限 | **完整支持** |
+
+**Codex CLI的Agent模式示例**：
+
+```bash
+# 安装
+pip install openai-codex
+
+# 1. 基本Agent任务
+codex "给这个项目添加JWT认证"
+
+# 2. 多模态任务：传设计稿生成代码
+codex --image ./login-design.png "实现这个登录页面"
+
+# 3. 自动化模式（适合CI/CD）
+codex --approval-mode auto "运行所有测试并修复失败的用例"
+
+# 4. 带上下文的复杂任务
+codex "@src/services/user.js @src/models/user.js 重构这两个文件，
+       将回调改为async/await，保持API兼容"
+```
+
+**Codex CLI的优势场景**：
+- 需要多模态输入（设计稿转代码）
+- CI/CD自动化流程
+- 开源/本地部署需求
+- 批量处理任务
+
+**Codex CLI的使用技巧**：
+```bash
+# 查看费用消耗
+codex --cost
+
+# 使用特定模型
+codex --model gpt-4o "任务描述"
+
+# 限制执行范围（安全）
+codex --sandbox "执行可能危险的命令"
+
+# 批量处理多个文件
+codex "给src/components/下的所有组件添加PropTypes"
 ```
 
 ### Agent模式的边界
