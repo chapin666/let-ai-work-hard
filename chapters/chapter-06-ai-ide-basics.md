@@ -1,440 +1,505 @@
-# 第6章：按Tab键比敲字母还多的日子
+# 第6章：Agent模式——AI IDE的新范式
 
-> **AI IDE入门——Cursor/Copilot深度使用**
+> **AI IDE进阶——从Tab补全到自主Agent**
 
 ---
 
-## 故事：小张的IDE革命
+## 故事：小张的Agent模式体验
 
-### 周一：从怀疑到真香
+### 周一：告别"Tab依赖"
 
-小张是全栈工程师，平时用VS Code写代码。他一直听说AI IDE很强，但总觉得——"不就是智能补全吗，能有多厉害？"
+小张用Cursor已经半年了。从最初的惊艳——"按Tab就能生成代码"——到现在的习以为常，他对AI编程有了新的理解。
 
-周一早上，产品经理催得急，要他在下午前完成一个用户管理后台的列表页面。按以往经验，这种页面至少需要半天：
+"Tab补全确实快，"他心想，"但它有个致命问题：我得一行行看着它生成，一行行按Tab。写一个新功能，手指头比脑子还累。"
 
-- 表格展示（分页、排序、筛选）
-- 新增/编辑弹窗
-- 删除确认
-- 加载状态、空状态
-- API对接
+周一早上，产品经理又扔来一个需求："给后台管理系统加个权限管理模块，要能动态分配角色和权限。"
 
-"要不试试Cursor？"旁边的同事说，"这种CRUD页面，它特别擅长。"
+按以前的做法，小张需要：
+1. 先写数据模型（用户、角色、权限）
+2. 写API接口（CRUD）
+3. 写前端页面（列表、表单）
+4. 写权限检查逻辑
+5. 联调测试
 
-小张半信半疑地下载了Cursor，导入项目。
+"至少得一整天吧，"他叹了口气，"而且权限逻辑最容易出bug。"
 
-他打开一个新文件，敲下一行注释：
+这时，他注意到Cursor界面右上角有个新按钮：**Agent Mode**。
 
-```typescript
-// UserList页面：展示用户列表，支持分页、搜索、编辑、删除
+"这是什么？试试。"
+
+---
+
+### 1:00 PM 第一次用Agent模式
+
+小张切换到Agent模式，界面变成了对话形式。
+
+他输入：
+
+```
+给项目添加一个完整的RBAC权限管理系统：
+1. 后端：用户、角色、权限三个模型，支持多对多关系
+2. 前端：角色管理页面、权限分配页面
+3. 实现权限检查中间件
+4. 使用项目中已有的技术栈（React + Node.js + MongoDB）
 ```
 
-然后按下Tab键。
+Cursor没有立刻生成代码，而是先**制定计划**：
 
-光标停顿了一秒，然后代码像瀑布一样涌出来——
+```
+我将为你实现完整的RBAC权限管理系统。以下是我的执行计划：
 
-```typescript
-import React, { useState, useEffect } from 'react';
-import { Table, Button, Input, Modal, Form, message, Popconfirm } from 'antd';
-import { SearchOutlined, PlusOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
-import { userApi } from '@/api/user';
-import type { User } from '@/types/user';
+**阶段1：后端实现**
+- [ ] 创建 models/Role.js - 角色模型
+- [ ] 创建 models/Permission.js - 权限模型  
+- [ ] 创建 models/User.js - 更新用户模型，添加角色关联
+- [ ] 创建 middleware/rbac.js - 权限检查中间件
+- [ ] 创建 routes/roles.js - 角色管理API
+- [ ] 创建 routes/permissions.js - 权限管理API
 
-const UserList: React.FC = () => {
-  const [users, setUsers] = useState<User[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [pagination, setPagination] = useState({ current: 1, pageSize: 10, total: 0 });
-  const [searchKeyword, setSearchKeyword] = useState('');
-  const [modalVisible, setModalVisible] = useState(false);
-  const [editingUser, setEditingUser] = useState<User | null>(null);
-  const [form] = Form.useForm();
+**阶段2：前端实现**
+- [ ] 创建 pages/Roles/index.jsx - 角色列表页面
+- [ ] 创建 pages/Roles/Edit.jsx - 角色编辑/创建页面
+- [ ] 创建 pages/Permissions/index.jsx - 权限列表页面
+- [ ] 更新 router.jsx - 添加新路由
 
-  // 获取用户列表
-  const fetchUsers = async (page = 1, pageSize = 10) => {
-    setLoading(true);
+**阶段3：验证**
+- [ ] 检查所有文件是否正确创建
+- [ ] 验证模型关系是否正确
+
+预计修改文件数：10+
+是否开始执行？(确认/修改计划/取消)
+```
+
+小张瞪大了眼睛。这不是直接生成代码，而是**先规划，再执行**。
+
+他点击"确认"。
+
+Cursor开始自动工作。他看着屏幕，一行行代码被写入文件，文件树不断刷新。几分钟后，所有文件都创建好了。
+
+"这就...完了？"小张不敢相信。
+
+他打开生成的代码检查：
+
+**Role模型**：
+```javascript
+const roleSchema = new mongoose.Schema({
+  name: { type: String, required: true, unique: true },
+  description: { type: String },
+  permissions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Permission' }],
+  createdAt: { type: Date, default: Date.now }
+});
+```
+
+**权限检查中间件**：
+```javascript
+const checkPermission = (requiredPermission) => {
+  return async (req, res, next) => {
     try {
-      const res = await userApi.getList({
-        page,
-        pageSize,
-        keyword: searchKeyword,
+      const user = await User.findById(req.userId).populate({
+        path: 'roles',
+        populate: { path: 'permissions' }
       });
-      setUsers(res.data.list);
-      setPagination({
-        current: page,
-        pageSize,
-        total: res.data.total,
-      });
+      
+      const hasPermission = user.roles.some(role =>
+        role.permissions.some(perm => perm.code === requiredPermission)
+      );
+      
+      if (!hasPermission) {
+        return res.status(403).json({ error: '没有权限' });
+      }
+      
+      next();
     } catch (error) {
-      message.error('获取用户列表失败');
-    } finally {
-      setLoading(false);
+      res.status(500).json({ error: '权限检查失败' });
     }
   };
-
-  // ... 还有编辑、删除、搜索等方法
+};
 ```
 
-小张瞪大了眼睛。
+**前端角色管理页面**：
+完整实现了列表展示、新增、编辑、删除功能，使用了项目中已有的组件库。
 
-这代码不仅结构完整，还：
-- 正确引入了项目中使用的antd组件
-- 使用了TypeScript类型
-- 引用了项目的API模块和类型定义
-- 包含了错误处理和加载状态
+小张看完，深吸一口气。
 
-他继续按Tab键，AI继续生成——编辑弹窗、删除确认、搜索逻辑...整个页面就这样"按"出来了。
-
-"这...这不对啊..."小张喃喃自语，"我这才按了几下Tab..."
-
-他看了一眼时间，从打开Cursor到现在，才过了15分钟。而页面已经完成了80%。
-
-"真香。"
+"这比我手写的还好...而且只用了5分钟。"
 
 ---
 
-### 周三：深度功能的探索
+### 周二：深入理解Agent模式
 
-周一开始用Cursor，到周三小张已经渐入佳境。但他发现Cursor不只是"按Tab生成代码"那么简单。
+周一开始用Agent模式后，小张决定深入了解这个新功能。
 
-#### 发现1：Chat模式
+他发现Agent模式有三个**核心特点**：
 
-按`Ctrl+L`打开Chat面板，可以直接和AI对话。
+#### 1. 自主规划
 
-小张试着问：
+传统Tab模式：你写注释，AI补全代码，你得一行行看着。
 
-```
-这个UserList组件有点复杂，能帮我把它拆分成小组件吗？
-```
-
-AI立刻给出了拆分方案：
+Agent模式：你描述需求，AI先分析、制定计划，你确认后才执行。
 
 ```
-建议拆分为：
-1. UserTable - 纯展示表格
-2. UserSearch - 搜索表单
-3. UserModal - 编辑弹窗
-4. useUserList - 自定义hook，管理数据逻辑
+用户：优化这个函数的性能
+
+AI分析：
+"我分析了processData函数，发现以下问题：
+1. 使用了O(n²)的嵌套循环
+2. 每次循环都重新计算相同值
+3. 可以考虑使用Map优化查找
+
+优化方案：
+- 使用Map存储中间结果，将查找降为O(1)
+- 提前计算不变量
+- 预计性能提升80%
+
+是否执行优化？"
 ```
 
-更厉害的是，点击"Apply"按钮，AI直接帮他重构了代码，创建了新的文件。
+#### 2. 多文件联动
 
-#### 发现2：代码解释
+传统模式只能处理单个文件。Agent模式可以同时修改多个文件，并保持它们之间的一致性。
 
-小张接手了一个遗留项目，有一段代码看不懂：
+比如添加一个新功能：
+- 后端：修改模型、添加路由、更新中间件
+- 前端：创建页面、更新路由、添加API调用
 
-```typescript
-const result = await Promise.all(
-  ids.map(async (id) => {
-    const item = await cache.get(id);
-    if (item) return item;
-    const fresh = await fetch(id);
-    await cache.set(id, fresh, 3600);
-    return fresh;
-  })
-);
-```
+Agent模式会自动处理这些文件的依赖关系。
 
-他选中这段代码，右键"Explain Code"，AI给出了解释：
+#### 3. 自主验证
+
+执行完成后，Agent会主动验证结果：
 
 ```
-这段代码实现了带缓存的批量数据获取：
-1. 对ids数组中的每个id并发执行
-2. 先尝试从缓存获取
-3. 缓存未命中则发起请求
-4. 将结果写入缓存（TTL=3600秒）
-5. 返回所有结果
+执行完成。正在验证结果...
 
-注意：这里的Promise.all可能会导致缓存雪崩，如果大量id同时未命中。
-```
-
-"原来如此..."小张恍然大悟，"而且还指出了潜在问题！"
-
-#### 发现3：Bug修复
-
-小张写了个函数，但测试一直通不过。他把错误信息和代码贴到Chat里：
-
-```
-测试报错：TypeError: Cannot read property 'name' of undefined
-
-代码：
-function greet(user) {
-  return `Hello, ${user.profile.name}!`;
-}
-```
-
-AI立刻识别出问题：
-
-```
-问题：没有处理user或user.profile为undefined的情况。
-
-修复方案：
-function greet(user) {
-  const name = user?.profile?.name ?? 'Guest';
-  return `Hello, ${name}!`;
-}
+✅ 所有文件创建成功
+✅ 语法检查通过
+✅ 依赖关系正确
+⚠️ 发现1个潜在问题：
+   - routes/roles.js 第45行缺少错误处理
+   
+是否修复这个问题？
 ```
 
 ---
 
-### 周五：Copilot的另一种体验
+### 周三：Plan模式与YOLO模式
 
-周五，小张切换到另一个项目——那个项目还在用VS Code，他装了GitHub Copilot。
+小张发现Cursor的Agent模式还有两种子模式：
 
-和Cursor的"瀑布式生成"不同，Copilot更像一个"默契的搭档"。
+#### Plan模式
 
-#### 体验1：上下文感知
+适合复杂任务，可控性更强。
 
-小张在写一个工具函数：
+```
+用户：重构整个项目的错误处理
 
-```typescript
-import { validateEmail } from '@/utils/validation';
+AI制定详细计划：
+1. 创建统一的错误类 (src/errors/)
+2. 修改所有API路由的错误处理
+3. 更新前端错误捕获逻辑
+4. 添加错误日志记录
+5. 编写测试用例
+
+每个步骤都会征求你的确认，你可以：
+- 批准执行
+- 修改计划
+- 跳过某一步
+- 取消整个任务
 ```
 
-刚敲完这一行，Copilot就建议：
+#### YOLO模式
 
-```typescript
-import { validateEmail, validatePhone } from '@/utils/validation';
+适合简单、可回滚的任务，速度快。
+
+```
+用户：给所有console.log添加时间戳前缀
+
+AI：直接执行，不需要每一步确认
+
+（30秒后）
+完成。修改了15个文件，添加了时间戳前缀。
 ```
 
-小张往下一看，原来下面确实要用到validatePhone。Copilot仿佛"读懂"了他的意图。
-
-#### 体验2：渐进式补全
-
-写React组件时：
-
-```typescript
-const [count, setCount] = useState(0);
-```
-
-Copilot建议接下来的代码：
-
-```typescript
-const increment = () => setCount(c => c + 1);
-const decrement = () => setCount(c => c - 1);
-```
-
-这种渐进式的补全让小张感觉掌控感更强——AI是在"配合"他，而不是"代替"他。
-
-#### 体验3：学习代码库
-
-小张在项目里看到一行：
-
-```typescript
-const data = useSWR('/api/users', fetcher);
-```
-
-他不熟悉useSWR，刚想搜索，Copilot已经根据项目中的其他用法给出了补全建议。通过观察Copilot的建议，他很快理解了useSWR的用法。
+小张总结：
+- **Plan模式**：复杂任务，需要把控，安全第一
+- **YOLO模式**：简单任务，追求速度，可回滚即可
 
 ---
 
-## 理论知识：AI IDE深度解析
+### 周四：MCP协议扩展
 
-### Cursor vs Copilot：核心差异
+周四下午，小张在文档里看到了一个新概念：**MCP**（Model Context Protocol）。
 
-| 维度 | Cursor | GitHub Copilot |
+"这是什么？"
+
+他研究了一下，发现MCP是Cursor支持的一种扩展协议，允许AI调用外部工具：
+
+```
+通过MCP，Cursor Agent可以：
+- 查询数据库
+- 调用外部API
+- 读取本地文件系统
+- 执行Shell命令
+```
+
+他配置了一个简单的MCP服务器，连接到了公司的测试数据库。
+
+然后他问Agent：
+
+```
+查看users表里有多少用户，然后生成一个用户统计页面
+```
+
+Agent执行了：
+1. 通过MCP查询数据库：`SELECT COUNT(*) FROM users`
+2. 获取结果：1523个用户
+3. 生成用户统计页面，包含真实数据
+
+"这太强大了，"小张惊叹，"AI不再只是'看'代码，它可以'操作'真实世界。"
+
+---
+
+### 周五：正确使用Agent模式
+
+周五，小张总结了一周的使用经验，写下了**Agent模式的最佳实践**：
+
+#### ✅ 正确使用方式
+
+**1. 明确需求，提供上下文**
+
+```
+❌ 不好的描述：
+"优化这个页面"
+
+✅ 好的描述：
+"优化UserList页面的性能。当前页面加载时有明显的卡顿，
+列表有1000+条数据。使用虚拟列表或分页优化，
+保持现有的筛选和排序功能。"
+```
+
+**2. 审查计划，不要盲信**
+
+```
+AI生成的计划：
+- [ ] 修改数据库模型
+- [ ] 更新API接口
+- [ ] 修改前端页面
+
+你的审查：
+"等等，修改数据库模型会影响线上数据吗？
+先让我看看具体的修改方案。"
+```
+
+**3. 分阶段确认，保持控制**
+
+复杂任务拆分成多个小任务，每个小任务执行完都检查：
+
+```
+Task 1: 创建数据库模型 ✓ 确认无误
+Task 2: 编写API接口 ✓ 确认无误
+Task 3: 编写前端页面 ✓ 确认无误
+Task 4: 联调测试 ✓ 确认无误
+```
+
+**4. 验证结果，特别是安全性**
+
+```
+AI："任务完成。添加了用户认证功能。"
+
+你：检查生成的代码
+- ✅ JWT验证逻辑正确
+- ✅ 密码加密使用了bcrypt
+- ⚠️ token过期时间设置太长（7天）
+  → 要求修改："token过期时间改为2小时"
+```
+
+#### ❌ 错误使用方式
+
+**1. 完全放手，不审查**
+
+```
+用户："重构整个项目"
+AI：执行中...
+用户：喝咖啡去了，完全不看
+（回来后发现项目崩了）
+```
+
+**2. 描述模糊，期望AI猜**
+
+```
+用户："改进一下"
+AI："请问您想改进什么方面？"
+用户："就是改进啊"
+（AI只能瞎改一通）
+```
+
+**3. 忽视业务规则**
+
+```
+AI生成的权限系统逻辑正确，但：
+- 没有考虑公司的特殊权限规则
+- 没有对接现有的用户系统
+（上线后业务逻辑混乱）
+```
+
+---
+
+## 理论知识：Agent模式深度解析
+
+### 什么是Agent模式？
+
+Agent模式是AI编程工具的**第三次进化**：
+
+| 阶段 | 代表工具 | 交互方式 | 用户角色 |
+|:---|:---|:---|:---|
+| **补全时代** | Copilot | Tab补全 | 主导者，AI辅助 |
+| **对话时代** | Cursor Chat | 对话生成 | 主导者，AI执行单任务 |
+| **Agent时代** | Cursor Agent, Claude Code | 自主规划-执行-验证 | 指挥官，AI自主执行 |
+
+### Agent模式的核心能力
+
+```
+┌─────────────────────────────────────────┐
+│            Agent模式工作流               │
+├─────────────────────────────────────────┤
+│                                         │
+│  1. 需求理解                             │
+│     ↓ 解析用户描述，识别任务目标          │
+│                                         │
+│  2. 上下文分析                            │
+│     ↓ 读取项目结构、相关文件、依赖关系    │
+│                                         │
+│  3. 计划制定                              │
+│     ↓ 分解任务，列出步骤，预估影响范围    │
+│                                         │
+│  4. 人工确认                              │
+│     ↓ 用户审查计划，确认或修改            │
+│                                         │
+│  5. 自主执行                              │
+│     ↓ 按计划修改文件、运行命令            │
+│                                         │
+│  6. 结果验证                              │
+│     ↓ 检查语法、运行测试、验证结果        │
+│                                         │
+│  7. 人工审查                              │
+│     ↓ 用户审查修改，确认或回滚            │
+│                                         │
+└─────────────────────────────────────────┘
+```
+
+### Cursor Agent vs Claude Code
+
+| 维度 | Cursor Agent | Claude Code |
 |:---|:---|:---|
-| **交互模式** | Tab生成 + Chat对话 | 实时补全 |
-| **生成粒度** | 大块代码、整个函数 | 行级、片段级 |
-| **上下文范围** | 整个项目（通过@codebase） | 当前文件 + 相关文件 |
-| **对话能力** | 强（内置Chat） | 弱（需配合Copilot Chat） |
-| **代码修改** | 支持多文件编辑 | 单文件补全 |
-| **价格** | $20/月 | $10/月 |
-| **上手难度** | 需要学习Chat模式 | 开箱即用 |
+| **界面** | IDE集成（图形化） | 纯命令行 |
+| **上下文** | 通过@引用文件 | 自动分析整个代码库 |
+| **交互** | 点击确认/修改 | 输入y/n/revise |
+| **MCP支持** | 需要配置 | 原生支持 |
+| **适用场景** | 日常开发、复杂任务 | 大型重构、自动化脚本 |
+| **学习曲线** | 较低 | 较高 |
 
-### Cursor核心功能详解
+### 什么时候用Agent模式？
 
-#### 1. Tab生成（Cmd/Ctrl+K）
-
-**适用场景**：快速生成代码块
-
-**使用技巧**：
-- 先用注释描述需求，再按Tab
-- 生成过程中可以按Esc取消
-- 生成后按Cmd+Z可以撤销
-
-**最佳实践**：
-```typescript
-// ❌ 不好的提示
-function processData
-
-// ✅ 好的提示
-// 处理订单数据：过滤已取消订单，按金额排序，返回前10条
-function processData
-```
-
-#### 2. Chat模式（Cmd/Ctrl+L）
-
-**适用场景**：复杂任务、代码解释、重构
-
-**常用指令**：
-```
-@file 文件名 - 引用特定文件
-@codebase - 引用整个代码库
-@web - 搜索网络信息
-@lint - 检查代码规范
-```
-
-**高效对话技巧**：
-1. **先给上下文**："这个函数在项目中被多处调用..."
-2. **明确输出格式**："请以表格形式列出..."
-3. **要求解释**："请解释为什么要这样实现"
-
-#### 3. Composer模式
-
-**适用场景**：多文件编辑、大型重构
-
-**使用方法**：
-1. 打开Composer（Cmd/Ctrl+I）
-2. 描述需求："给所有API添加错误重试逻辑"
-3. AI会分析影响范围，列出要修改的文件
-4. 确认后批量应用
-
-### Copilot核心功能详解
-
-#### 1. 实时代码补全
-
-**触发方式**：开始输入，自动建议
-
-**接受建议**：
-- Tab：接受全部
-- Ctrl+→：接受下一个词
-- Ctrl+↓：查看下一个建议
-
-**高效使用技巧**：
-1. **写好函数签名**：Copilot会根据签名推断实现
-2. **添加类型注释**：TypeScript类型能帮助Copilot理解意图
-3. **保持编码风格**：Copilot会学习你的风格
-
-#### 2. Copilot Chat（VS Code插件）
-
-**适用场景**：代码解释、Bug修复、测试生成
-
-**使用方法**：
-1. 选中代码
-2. 右键"Copilot" → "Explain This"
-3. 或在侧边栏打开Copilot Chat
-
-### 提示词在IDE中的应用
-
-即使是AI IDE，好的提示词依然重要。
-
-#### Cursor中的提示词技巧
-
-**1. 使用@引用**
-
-```
-@file UserList.tsx 这个文件的第45行为什么要用useCallback？
-```
-
-**2. 提供上下文**
-
-```
-我们的项目使用React Query做数据获取。请帮我把这个组件改为使用React Query。
-```
-
-**3. 明确输出要求**
-
-```
-请优化这个函数的性能。要求：
-1. 时间复杂度从O(n²)降到O(n)
-2. 保持原有功能不变
-3. 添加注释说明优化思路
-```
-
-#### Copilot中的提示词技巧
-
-**1. 用注释引导**
-
-```typescript
-// 使用二分查找找到目标值的索引
-// 如果找不到返回-1
-function binarySearch(arr: number[], target: number): number
-```
-
-**2. 提供示例**
-
-```typescript
-// 示例：formatCurrency(1234.5) => "¥1,234.50"
-function formatCurrency(amount: number): string
-```
-
-**3. 指定算法/模式**
-
-```typescript
-// 使用发布-订阅模式实现事件总线
-class EventBus
-```
+| 场景 | 推荐模式 | 原因 |
+|:---|:---|:---|
+| 写单个函数 | Tab补全 | 快速，不需要规划 |
+| 解释代码/问问题 | Chat模式 | 对话交互更合适 |
+| 修改多个文件 | Agent模式 | 自主处理依赖关系 |
+| 大型重构 | Agent模式/Claude Code | 需要规划和批量执行 |
+| 自动化任务 | Agent模式 + MCP | 可以调用外部工具 |
 
 ---
 
-## 实践案例：高效工作流
+## 实践案例：Agent模式工作流
 
-### 工作流1：从零开始新功能
+### 案例1：添加新功能（多文件修改）
 
-**场景**：开发一个新页面/模块
+**任务**：添加"用户评论"功能
 
-**Cursor工作流**：
+**传统方式**：
+1. 手动创建Comment模型
+2. 手动编写API路由
+3. 手动创建前端组件
+4. 手动更新相关页面
+5. 手动测试联调
 
-1. **生成骨架**：
-   ```
-   // 用户管理页面，包含列表、搜索、新增、编辑、删除
-   ```
-   按Tab生成基础结构
+**Agent模式**：
 
-2. **完善细节**：
-   打开Chat，问：
-   ```
-   请为这个页面添加表单验证逻辑，使用react-hook-form和zod
-   ```
+```
+用户：添加用户评论功能，包含：
+- 评论模型（关联用户和内容）
+- 评论的增删改查API
+- 前端评论列表和表单
+- 使用项目中已有的组件和API规范
 
-3. **对接API**：
-   ```
-   项目中已有的userApi在@file api/user.ts，请对接真实的API
-   ```
+AI：制定计划...
+      阶段1：后端 (4个文件)
+      阶段2：前端 (3个文件)
+      阶段3：验证
+      
+用户：确认计划
 
-4. **代码审查**：
-   ```
-   请审查这个组件，检查是否有性能问题或不良实践
-   ```
+AI：执行阶段1...完成
+用户：检查后端代码 ✓
 
-### 工作流2：Bug修复
+AI：执行阶段2...完成
+用户：检查前端代码 ✓
 
-**场景**：修复线上Bug
+AI：执行阶段3...完成
+用户：运行测试 ✓
 
-**Copilot工作流**：
+总耗时：15分钟（vs 传统方式2小时+）
+```
 
-1. **理解代码**：
-   选中相关代码，Copilot Explain
+### 案例2：代码重构
 
-2. **添加日志**：
-   在关键位置开始输入`console.log`，让Copilot补全要打印的变量
+**任务**：将回调式代码改为async/await
 
-3. **修复代码**：
-   根据日志定位问题后，用注释引导修复：
-   ```typescript
-   // 如果user为null返回默认值
-   const name = user
-   ```
-   Copilot会建议：`?.name ?? 'Anonymous'`
+**Agent模式执行**：
 
-### 工作流3：代码重构
+```
+用户：将src/services/下的所有回调式API调用改为async/await
 
-**场景**：重构遗留代码
+AI：
+1. 分析src/services/目录，发现5个文件需要修改
+2. 制定计划：
+   - 修改userService.js
+   - 修改orderService.js
+   - ...
+3. 用户确认
+4. 逐文件修改，保持API接口不变
+5. 验证语法正确
+6. 询问是否运行测试
 
-**Cursor Composer工作流**：
+用户：运行测试
+AI：执行npm test...
+      所有测试通过 ✓
+```
 
-1. **打开Composer**（Cmd/Ctrl+I）
+### 案例3：Bug修复（多步骤）
 
-2. **描述重构目标**：
-   ```
-   将项目中所有的class组件重构为functional组件，使用hooks替代生命周期方法。
-   保持原有功能不变，添加必要的类型定义。
-   ```
+**任务**：修复"用户偶尔登录失效"的问题
 
-3. **审查修改计划**：
-   AI会列出要修改的文件，逐一确认
+```
+用户：用户反馈偶尔会自动登出，帮我排查原因
 
-4. **批量应用**：
-   确认后一键重构
+AI：
+1. 分析认证相关代码...
+2. 发现可能原因：
+   - token过期时间不一致（前端2小时，后端1小时）
+   - 刷新token逻辑有race condition
+   
+3. 制定修复计划：
+   - [ ] 统一token过期时间为2小时
+   - [ ] 修复刷新token的race condition
+   - [ ] 添加更详细的日志
+   
+4. 用户确认
+5. 执行修复
+6. 验证修改
+
+用户：测试通过，部署上线
+```
 
 ---
 
@@ -442,60 +507,96 @@ class EventBus
 
 完成本章后，你应该拥有：
 
-1. **个人AI IDE配置**
-   - 安装并配置好Cursor或Copilot
-   - 自定义规则和快捷键
+1. **Agent模式使用经验**
+   - 至少完成3个实际任务
+   - 理解Plan模式和YOLO模式的区别
 
-2. **常用代码片段库**
-   - 项目中常用的AI生成代码模式
-   - 保存为模板或代码片段
+2. **个人工作流文档**
+   - 什么时候用Tab/Chat/Agent
+   - 审查清单（必须检查的项目）
 
-3. **IDE使用手册**
-   - 记录你的高效工作流
-   - 常用提示词汇总
+3. **安全使用原则**
+   - 哪些任务可以完全交给AI
+   - 哪些任务必须人工审查
 
 ---
 
 ## 行动清单
 
-- [ ] 安装Cursor或Copilot（建议两个都试用）
-- [ ] 导入你的项目，体验Tab生成
-- [ ] 用Chat模式解决一个实际问题
-- [ ] 尝试Composer多文件编辑
-- [ ] 记录3个最常用的提示词模式
-- [ ] 对比Cursor和Copilot在你的项目中的表现
+- [ ] 在Cursor中试用Agent模式完成一个实际任务
+- [ ] 对比Tab模式和Agent模式的效率差异
+- [ ] 试用Plan模式处理一个复杂任务
+- [ ] 试用YOLO模式处理一个简单任务
+- [ ] 制定自己的Agent模式审查清单
+- [ ] 了解MCP协议，尝试配置一个外部工具
 
 ---
 
 ## 本章彩蛋
 
-### Cursor隐藏技巧
+### Cursor Agent的隐藏技巧
 
-**1. 快速修复**：
-选中代码按`Cmd+K`，直接输入修复指令，不需要打开Chat
+**1. 快捷键**：
+- `Cmd/Ctrl + I`：快速打开Agent模式
+- `@`：在对话中引用文件、代码块
+- `@codebase`：引用整个代码库
 
-**2. 代码对比**：
-AI修改代码后会显示diff，点击"Accept"或"Reject"
+**2. 特殊指令**：
+```
+/show plan - 显示当前计划
+/revise - 修改计划
+/skip - 跳过当前步骤
+/rollback - 回滚修改
+```
 
-**3. 终端集成**：
-在终端选中错误信息，右键"Add to Chat"，AI会帮你分析
+**3. MCP配置示例**：
+```json
+{
+  "mcpServers": {
+    "database": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "DATABASE_URL": "postgresql://..."
+      }
+    }
+  }
+}
+```
 
-### Copilot隐藏技巧
+### Agent模式的边界
 
-**1. 多行建议**：
-输入`{`后，Copilot可能建议整个代码块，按Tab接受
+即使是最先进的Agent模式，也有明确边界：
 
-**2. 测试生成**：
-在测试文件中输入`describe('UserList',`，Copilot会建议测试用例
+1. **不能替代架构决策**
+   - AI可以执行，但重大架构决策需要人工判断
 
-**3. 文档生成**：
-输入`/**`，Copilot会自动生成JSDoc注释
+2. **不能保证业务正确性**
+   - AI不懂你的业务规则，生成的代码需要业务验证
+
+3. **不能承担安全责任**
+   - 安全相关代码必须人工审查
+
+4. **不能处理未知问题**
+   - 遇到意外情况，AI会停下来询问
+
+记住：**你是指挥官，AI是执行者**。指挥得当，效率翻倍；盲目信任，事故难免。
 
 ---
 
-> **小张的效率报告**：>
-> "用AI IDE一周后的数据：> - 编写CRUD页面的时间：从4小时降到30分钟�
-> - 接手遗留代码的理解速度：提升3倍
-> - Bug修复平均时间：从2小时降到40分钟�
+> **小张的Agent模式使用报告**：
 > 
-> 最重要的是，我现在写代码更有'掌控感'了。AI是副驾驶，我才是主驾驶。"
+> "用Agent模式一周后：
+> - 开发CRUD功能：从2小时降到20分钟
+> - 代码重构：从半天降到30分钟
+> - Bug定位：从随机猜测变为系统化分析
+> 
+> 最重要的是心态转变——我不再是'写代码的人'，
+> 而是'设计系统、把控质量的人'。
+> 
+> AI负责执行，我负责思考和决策。
+> 这才是真正的'让AI卷，我躺平'。"
+
+---
+
+*下一章：从Cursor到Claude Code——终端AI编程工具的使用技巧。*
