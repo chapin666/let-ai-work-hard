@@ -3,7 +3,7 @@
 > **程序员效率提升10倍的偷懒指南**
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Progress](https://img.shields.io/badge/progress-1%2F39-brightgreen.svg)]()
+[![Progress](https://img.shields.io/badge/progress-7%2F39-brightgreen.svg)]()
 
 ---
 
@@ -37,18 +37,18 @@
 | 章节 | 标题 | 主角 | 核心内容 |
 |:---:|:---|:---:|:---|
 | 1 | [第一次用AI，我被惊艳到了](./chapters/chapter-01-first-ai-experience.md) | 小王 | 认识AI——从零开始的第一印象 |
-| 2 | AI不是万能，但确实很强 | 小李 | AI的能力边界——能做什么，不能做什么 |
-| 3 | 选对工具，事半功倍 | 小张 | AI工具选型——找到适合自己的 |
+| 2 | [AI不是万能，但确实很强](./chapters/chapter-02-ai-boundaries.md) | 小李 | AI的能力边界——能做什么，不能做什么 |
+| 3 | [选对工具，事半功倍](./chapters/chapter-03-tool-selection.md) | 小张 | AI工具选型——找到适合自己的 |
 
 ### 第二部分：核心技能（8章）
 学会与AI高效协作的核心方法
 
 | 章节 | 标题 | 主角 | 核心内容 |
 |:---:|:---|:---:|:---|
-| 4 | 一句话需求变完美代码的秘密 | 小李 | 提示工程基础——RPCT框架 |
-| 5 | 让AI一步步思考复杂问题 | 小陈 | 提示工程进阶——CoT与结构化输出 |
-| 6 | 按Tab键比敲字母还多的日子 | 小张 | AI IDE入门——Cursor/Copilot深度使用 |
-| 7 | 和AI结对编程的正确姿势 | 小王 | AI IDE进阶——复杂项目实战 |
+| 4 | [一句话需求变完美代码的秘密](./chapters/chapter-04-prompt-engineering-basics.md) | 小李 | 提示工程基础——RPCT框架 |
+| 5 | [让AI一步步思考复杂问题](./chapters/chapter-05-cot-structured-output.md) | 小陈 | 提示工程进阶——CoT与结构化输出 |
+| 6 | [按Tab键比敲字母还多的日子](./chapters/chapter-06-ai-ide-basics.md) | 小张 | AI IDE入门——Cursor/Copilot深度使用 |
+| 7 | [和AI结对编程的正确姿势](./chapters/chapter-07-ai-ide-advanced.md) | 小王 | AI IDE进阶——复杂项目实战 |
 | 8 | 从月更困难到周更3篇的逆袭 | 小美 | AI辅助技术写作——博客篇 |
 | 9 | 从博客到技术小册的进阶 | 小美 | AI辅助技术写作——小册篇 |
 | 10 | 从PPT恐惧到演讲自如 | 小张 | AI辅助演讲与分享 |
