@@ -651,3 +651,19 @@ WHERE u.status = 'active'
 
 > **小陈的成长感悟**：>
 > "以前遇到复杂问题就慌，现在我知道怎么拆解了。CoT不只是和AI沟通的技巧，更是一种解决问题的思维方式——先理解，再分析，最后执行。"
+
+---
+
+## 下一章预告
+
+**第6章：《和AI结对编程的第一天》**
+
+小张将开启AI IDE的实战之旅。从Cursor的Agent模式到Claude Code的终端智能，他将学习如何与AI进行真正的"结对编程"——不是简单的代码补全，而是让AI理解需求、规划方案、执行任务的完整协作流程。
+
+---
+
+## 下一章预告
+
+**第6章：《和AI结对编程的第一天》**
+
+小张将开启Agent模式编程的探索之旅。从简单的代码补全到AI自主规划-执行-验证的完整工作流， he'll experience how AI IDE transforms from a "typing assistant" to a true "pair programmer" capable of handling complex refactoring tasks.

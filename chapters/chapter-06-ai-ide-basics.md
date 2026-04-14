@@ -656,4 +656,10 @@ codex "给src/components/下的所有组件添加PropTypes"
 
 ---
 
-*下一章：从Cursor到Claude Code——终端AI编程工具的使用技巧。*
+---
+
+## 下一章预告
+
+**第7章：《和AI结对编程的正确姿势》**
+
+小王将挑战更高难度的任务——用AI辅助进行复杂项目的重构。通过Plan模式规划、YOLO模式执行、人在回路验证的三阶段工作流， he'll show how to safely delegate large-scale refactoring to AI while maintaining code quality and architectural integrity.
