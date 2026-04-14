@@ -54,7 +54,7 @@
 我需要快速掌握NestJS框架，用于后端API开发。
 
 我的背景：
-- 3年前端开发经验（React/TypeScript）
+- 1年前端开发经验（React/TypeScript）
 - 了解基本的Node.js和Express
 - 不了解依赖注入、装饰器等概念
 
