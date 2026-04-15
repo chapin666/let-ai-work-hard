@@ -1,0 +1,69 @@
+# Source: chapter-35-ai-batch-processing.md
+# Lines: 152-218
+# Language: yaml
+
+# batch_migration.yaml
+batch_migration:
+  name: "Vue 2 to Vue 3 批量迁移"
+  
+  # 输入配置
+  input:
+    source_dir: "./src"
+    file_patterns:
+      - "**/*.vue"
+      - "**/*.js"
+    exclude:
+      - "**/node_modules/**"
+      - "**/vendor/**"
+  
+  # 处理阶段
+  phases:
+    # 阶段1：代码分析
+    - name: analysis
+      description: "分析所有文件，分类处理优先级"
+      agent: code_analyzer
+      output: migration_plan.json
+    
+    # 阶段2：批量自动替换
+    - name: auto_replace
+      description: "处理高置信度的语法替换"
+      agent: batch_transformer
+      rules:
+        - rule_file: "rules/basic_syntax.json"
+          confidence_threshold: 0.95
+      output: auto_migrated_files/
+    
+    # 阶段3：AI辅助转换
+    - name: ai_conversion
+      description: "AI处理复杂的Options API转换"
+      agent: ai_converter
+      batch_size: 10  # 每批处理10个文件
+      parallel: true  # 并行处理
+      model: gpt-4
+      output: ai_converted_files/
+    
+    # 阶段4：验证
+    - name: validation
+      description: "验证转换结果"
+      agent: code_validator
+      checks:
+        - syntax_check
+        - lint_check
+        - test_run
+      output: validation_report.json
+    
+    # 阶段5：人工审查
+    - name: review
+      description: "标记需要人工审查的文件"
+      agent: review_marker
+      criteria:
+        - complexity_score > 0.7
+        - ai_confidence < 0.8
+        - test_coverage < 0.5
+      output: review_list.json
+  
+  # 输出配置
+  output:
+    migrated_dir: "./src_migrated"
+    report_file: "./migration_report.md"
+    stats_file: "./migration_stats.json"

@@ -1,0 +1,17 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 848-862
+# Language: yaml
+
+learning:
+  # 从用户反馈学习
+  feedback:
+    - when: "user_edits_draft_reply"
+      learn: "preferred_reply_style"
+    
+    - when: "user_overrides_classification"
+      learn: "classification_rules"
+  
+  # 从行为模式学习
+  patterns:
+    - observe: "user_check_emails_time"
+      learn: "preferred_schedule"

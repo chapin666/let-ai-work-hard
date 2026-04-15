@@ -1,0 +1,48 @@
+# Source: chapter-19-ai-api-test.md
+# Lines: 725-770
+# Language: yaml
+
+name: Contract-Driven Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  # 1. 消费者契约测试
+  consumer-contract-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          cd consumer
+          npm ci
+          npm run test:contract
+      - name: Upload to Pact Broker
+        run: |
+          docker run pactfoundation/pact-cli:latest \
+            publish \
+            --broker-base-url ${{ secrets.PACT_BROKER_URL }} \
+            --broker-token ${{ secrets.PACT_BROKER_TOKEN }} \
+            ./pacts
+
+  # 2. 提供者契约验证
+  provider-contract-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          cd provider
+          npm ci
+          npm run test:contract:verify
+
+  # 3. 部署前检查
+  can-i-deploy:
+    needs: [consumer-contract-test, provider-contract-verify]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check contract compatibility
+        run: |
+          docker run pactfoundation/pact-cli:latest \
+            can-i-deploy \
+            --pacticipant ${{ matrix.service }} \
+            --version ${{ github.sha }} \
+            --to-environment production

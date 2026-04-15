@@ -1,0 +1,48 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 1047-1092
+# Language: yaml
+
+agent:
+  name: "晨间简报助手"
+  description: "每天早上生成一份综合简报"
+  
+  # 引入其他Agent作为工具
+  agents:
+    - email_agent
+    - schedule_agent
+    - code_agent
+  
+  workflows:
+    - name: morning_briefing
+      steps:
+        - call:
+            agent: email_agent
+            skill: get_email_summary
+            params:
+              since: "yesterday 18:00"
+        
+        - call:
+            agent: schedule_agent
+            skill: get_today_schedule
+        
+        - call:
+            agent: code_agent
+            skill: get_pr_summary
+        
+        - combine:
+            template: |
+              # 🌅 晨间简报 - {{ date }}
+              
+              ## 📧 邮件 ({{ email_agent.unread_count }} 封未读)
+              {{ email_agent.summary }}
+              
+              ## 📅 今日日程
+              {{ schedule_agent.schedule }}
+              
+              ## 💻 代码
+              {{ code_agent.summary }}
+  
+  triggers:
+    - type: schedule
+      cron: "0 9 * * *"
+      action: workflows.morning_briefing

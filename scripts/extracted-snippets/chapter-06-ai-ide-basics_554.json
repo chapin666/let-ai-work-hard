@@ -1,0 +1,15 @@
+# Source: chapter-06-ai-ide-basics.md
+# Lines: 554-566
+# Language: json
+
+{
+  "mcpServers": {
+    "database": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "DATABASE_URL": "postgresql://..."
+      }
+    }
+  }
+}

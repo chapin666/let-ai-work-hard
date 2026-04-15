@@ -1,0 +1,30 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 686-713
+# Language: yaml
+
+skill:
+  name: "技能名称"
+  description: "技能描述"
+  
+  # 输入参数定义
+  parameters:
+    - name: param1
+      type: string
+      required: true
+    - name: param2
+      type: number
+      default: 10
+  
+  # 执行逻辑
+  prompt: |
+    请执行以下任务：
+    参数1：{param1}
+    参数2：{param2}
+    
+    要求：...
+  
+  # 后处理
+  post_process:
+    - type: json_parse
+    - type: validate
+      schema: ...

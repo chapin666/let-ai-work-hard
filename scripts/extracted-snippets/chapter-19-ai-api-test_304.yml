@@ -1,0 +1,71 @@
+# Source: chapter-19-ai-api-test.md
+# Lines: 304-372
+# Language: yaml
+
+# .github/workflows/contract-test.yml
+name: Contract Tests
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  # 消费者契约测试
+  consumer-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run consumer contract tests
+        run: |
+          cd frontend
+          npm ci
+          npm run test:contract
+          
+      - name: Upload pact files
+        uses: actions/upload-artifact@v3
+        with:
+          name: pacts
+          path: frontend/pacts/
+
+  # 提供者契约验证
+  provider-verify:
+    needs: consumer-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Download pact files
+        uses: actions/download-artifact@v3
+        with:
+          name: pacts
+          path: pacts/
+          
+      - name: Start provider service
+        run: |
+          cd backend
+          npm ci
+          npm run start:test &
+          sleep 5
+          
+      - name: Verify provider
+        run: |
+          cd backend
+          npm run test:contract:verify
+
+  # 契约兼容性检查
+  can-i-deploy:
+    needs: [consumer-test, provider-verify]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if safe to deploy
+        run: |
+          docker run --rm \
+            -e PACT_BROKER_BASE_URL=${{ secrets.PACT_BROKER_URL }} \
+            -e PACT_BROKER_TOKEN=${{ secrets.PACT_BROKER_TOKEN }} \
+            pactfoundation/pact-cli:latest \
+            can-i-deploy \
+            --pacticipant UserFrontend \
+            --version ${{ github.sha }} \
+            --to-environment production

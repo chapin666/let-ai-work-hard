@@ -1,0 +1,17 @@
+# Source: chapter-24-ai-cicd.md
+# Lines: 687-701
+# Language: yaml
+
+# 使用相同的Docker镜像在所有环境
+build:
+  script:
+    - docker build -t myapp:$CI_COMMIT_SHA .
+
+deploy_dev:
+  script:
+    - kubectl set image deployment/myapp myapp=myapp:$CI_COMMIT_SHA
+
+deploy_prod:
+  script:
+    - kubectl set image deployment/myapp myapp=myapp:$CI_COMMIT_SHA
+# 只有配置不同，镜像完全相同

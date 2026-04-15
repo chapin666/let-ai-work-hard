@@ -1,0 +1,52 @@
+# Source: chapter-35-ai-batch-processing.md
+# Lines: 832-881
+# Language: yaml
+
+# batch_processing_pipeline.yaml
+pipeline:
+  name: "代码批量处理流水线"
+  
+  stages:
+    - name: scan
+      description: "扫描代码库"
+      task: find_all_target_files
+      output: file_list.json
+    
+    - name: analyze
+      description: "分析每个文件"
+      task: analyze_each_file
+      parallel: true
+      output: analysis_results.json
+    
+    - name: classify
+      description: "分类处理策略"
+      task: classify_files
+      rules:
+        - condition: "complexity < 0.3 and confidence > 0.95"
+          category: "auto"
+        - condition: "complexity < 0.7 and confidence > 0.8"
+          category: "ai_assisted"
+        - condition: "complexity >= 0.7 or confidence <= 0.8"
+          category: "manual"
+      output: classification.json
+    
+    - name: transform
+      description: "执行转换"
+      parallel_categories:
+        auto:
+          processor: rule_based_transformer
+        ai_assisted:
+          processor: ai_transformer
+          batch_size: 10
+        manual:
+          processor: skip
+      output: transformed_files/
+    
+    - name: validate
+      description: "验证结果"
+      task: validate_all
+      checks:
+        - syntax
+        - lint
+        - test
+      output: validation_report.json

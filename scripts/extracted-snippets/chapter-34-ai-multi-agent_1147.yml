@@ -1,0 +1,19 @@
+# Source: chapter-34-ai-multi-agent.md
+# Lines: 1147-1163
+# Language: yaml
+
+error_handling:
+  retry:
+    max_attempts: 3
+    backoff: exponential
+  
+  fallback:
+    - if: "agent_timeout"
+      action: "escalate_to_human"
+    
+    - if: "agent_error"
+      action: "retry_with_alternative_agent"
+  
+  rollback:
+    - on_failure: "notify_all_agents"
+    - on_failure: "restore_previous_state"

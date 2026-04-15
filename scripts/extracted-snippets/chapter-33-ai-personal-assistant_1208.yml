@@ -1,0 +1,35 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 1208-1240
+# Language: yaml
+
+# 定时触发器
+triggers:
+  # 每天上午9点
+  - type: schedule
+    cron: "0 9 * * *"
+  
+  # 每周一上午
+  - type: schedule
+    cron: "0 9 * * 1"
+  
+  # 每小时
+  - type: schedule
+    cron: "0 * * * *"
+
+# 事件触发器
+triggers:
+  # GitHub PR创建
+  - type: webhook
+    source: github
+    event: pull_request
+    filter: "action == 'opened'"
+  
+  # 邮件到达
+  - type: event
+    source: email
+    filter: "subject contains '紧急'"
+  
+  # 条件触发
+  - type: condition
+    condition: "unread_count > 20"
+    cooldown: "1h"  # 冷却时间

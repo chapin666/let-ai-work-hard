@@ -1,0 +1,30 @@
+# Source: chapter-34-ai-multi-agent.md
+# Lines: 1219-1246
+# Language: yaml
+
+# team.yaml
+multi_agent_system:
+  name: "我的AI团队"
+  
+  agents:
+    - name: project_manager
+      config_file: agents/pm_agent.yaml
+      
+    - name: business_analyst
+      config_file: agents/ba_agent.yaml
+      
+    - name: architect
+      config_file: agents/arch_agent.yaml
+      
+    - name: developer
+      config_file: agents/dev_agent.yaml
+      
+    - name: qa_engineer
+      config_file: agents/qa_agent.yaml
+  
+  workflows:
+    - name: software_development
+      file: workflows/dev_workflow.yaml
+    
+    - name: bug_fix
+      file: workflows/bugfix_workflow.yaml

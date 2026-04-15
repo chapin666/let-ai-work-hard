@@ -1,0 +1,42 @@
+# Source: chapter-37-ai-harness-platform.md
+# Lines: 418-457
+# Language: yaml
+
+# prompts/code-review.yaml
+name: code-review
+version: 1.2.0
+variables:
+  - name: code_diff
+    type: string
+    description: 代码diff内容
+  - name: language
+    type: string
+    description: 编程语言
+  - name: context
+    type: string
+    description: 项目上下文
+
+template: |
+  请对以下{{language}}代码变更进行评审。
+  
+  项目上下文：
+  {{context}}
+  
+  代码变更：
+  ```diff
+  {{code_diff}}
+  ```
+  
+  请从以下维度评审：
+  1. 代码规范
+  2. 潜在bug
+  3. 性能问题
+  4. 安全隐患
+  
+  输出JSON格式结果。
+
+tests:
+  - input:
+      code_diff: "..."
+      language: "typescript"
+    expected: "..."

@@ -1,0 +1,11 @@
+# Source: chapter-18-ai-automation-test.md
+# Lines: 405-413
+# Language: yaml
+
+# .github/workflows/test.yml
+strategy:
+  matrix:
+    shard: [1, 2, 3, 4]
+    
+steps:
+  - run: npm test -- --shard=${{ matrix.shard }}/4

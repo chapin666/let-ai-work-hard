@@ -1,0 +1,120 @@
+# Source: chapter-17-ai-test-design.md
+# Lines: 479-596
+# Language: json
+
+{
+  "validUsers": [
+    {
+      "description": "标准用户",
+      "email": "user1@example.com",
+      "password": "SecurePass123"
+    },
+    {
+      "description": "包含数字的邮箱",
+      "email": "user123@test-domain.com",
+      "password": "MyP@ssw0rd"
+    },
+    {
+      "description": "包含加号的邮箱",
+      "email": "user+tag@example.com",
+      "password": "C0mpl3x!Pass"
+    },
+    {
+      "description": "刚好8位的密码（边界值）",
+      "email": "boundary@example.com",
+      "password": "Ab1Ab1Ab1"
+    },
+    {
+      "description": "很长的密码",
+      "email": "longpass@example.com",
+      "password": "ThisIsAVeryLongPasswordThatExceedsNormalLength123!@#"
+    },
+    {
+      "description": "包含特殊字符的密码",
+      "email": "special@example.com",
+      "password": "P@$$w0rd!#$%^"
+    },
+    {
+      "description": "公司邮箱",
+      "email": "employee@company.co.uk",
+      "password": "WorkPass99"
+    },
+    {
+      "description": "子域名邮箱",
+      "email": "user@mail.example.com",
+      "password": "SubD0main!"
+    },
+    {
+      "description": "大写邮箱（应与小写视为相同）",
+      "email": "UPPERCASE@EXAMPLE.COM",
+      "password": "CaseTest1"
+    },
+    {
+      "description": "混合大小写邮箱",
+      "email": "MixedCase@Test.COM",
+      "password": "Mixed123!"
+    }
+  ],
+  "invalidUsers": [
+    {
+      "description": "缺少@符号",
+      "email": "invalidemail.com",
+      "password": "SecurePass123",
+      "expectedError": "INVALID_EMAIL_FORMAT"
+    },
+    {
+      "description": "缺少域名",
+      "email": "user@",
+      "password": "SecurePass123",
+      "expectedError": "INVALID_EMAIL_FORMAT"
+    },
+    {
+      "description": "缺少用户名",
+      "email": "@example.com",
+      "password": "SecurePass123",
+      "expectedError": "INVALID_EMAIL_FORMAT"
+    },
+    {
+      "description": "密码只有7位",
+      "email": "test@example.com",
+      "password": "Short12",
+      "expectedError": "PASSWORD_TOO_SHORT"
+    },
+    {
+      "description": "密码只有小写字母",
+      "email": "test@example.com",
+      "password": "lowercase",
+      "expectedError": "PASSWORD_NO_UPPERCASE"
+    },
+    {
+      "description": "密码只有大写字母",
+      "email": "test@example.com",
+      "password": "UPPERCASE",
+      "expectedError": "PASSWORD_NO_LOWERCASE"
+    },
+    {
+      "description": "密码只有数字",
+      "email": "test@example.com",
+      "password": "12345678",
+      "expectedError": "PASSWORD_NO_LETTER"
+    },
+    {
+      "description": "空邮箱",
+      "email": "",
+      "password": "SecurePass123",
+      "expectedError": "EMAIL_REQUIRED"
+    },
+    {
+      "description": "空密码",
+      "email": "test@example.com",
+      "password": "",
+      "expectedError": "PASSWORD_REQUIRED"
+    },
+    {
+      "description": "包含SQL注入尝试",
+      "email": "test@example.com'; DROP TABLE users;--",
+      "password": "SecurePass123",
+      "expectedError": "INVALID_EMAIL_FORMAT"
+    }
+  ]
+}

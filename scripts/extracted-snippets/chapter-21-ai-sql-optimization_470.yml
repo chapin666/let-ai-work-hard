@@ -1,0 +1,33 @@
+# Source: chapter-21-ai-sql-optimization.md
+# Lines: 470-500
+# Language: yaml
+
+# .github/workflows/sql-review.yml
+name: SQL Review
+
+on:
+  pull_request:
+    paths:
+      - '**/*.sql'
+      - '**/migrations/**'
+
+jobs:
+  sql-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Extract SQL changes
+        run: |
+          git diff HEAD~1 -- '*.sql' > sql_changes.sql
+      
+      - name: AI SQL Review
+        run: |
+          node scripts/ai-sql-review.js sql_changes.sql
+      
+      - name: Post review comments
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const review = require('./sql-review-result.json');
+            // 在PR中发布审查意见

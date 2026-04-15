@@ -515,7 +515,7 @@ results = transformer.transform_batch(simple_files, './migrated/auto/')
 
 这是最关键的部分。小林设计了一个AI批量转换脚本：
 
-```python
+```text
 # ai_batch_convert.py
 import os
 import json
@@ -795,7 +795,7 @@ AI API调用：     ~$45
 
 ### 批量处理的Prompt设计
 
-```python
+```text
 # 批量转换的标准Prompt结构
 BATCH_CONVERT_PROMPT = """
 【角色】

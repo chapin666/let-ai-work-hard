@@ -1,0 +1,37 @@
+# Source: chapter-34-ai-multi-agent.md
+# Lines: 1336-1370
+# Language: yaml
+
+message:
+  header:
+    message_id: "uuid"
+    correlation_id: "关联ID"
+    from: "sender_agent"
+    to: "receiver_agent"
+    timestamp: "2024-03-20T10:00:00Z"
+    priority: "high/medium/low"
+  
+  body:
+    message_type: "TASK_ASSIGNMENT"
+    
+    task:
+      id: "task_001"
+      title: "需求分析"
+      description: "..."
+      deadline: "2024-03-21"
+      
+    context:
+      original_requirement: "..."
+      related_deliverables:
+        - "doc_001"
+    
+    deliverables:
+      expected:
+        - name: "requirement_spec.md"
+          format: "markdown"
+          criteria: "..."
+  
+  attachments:
+    - name: "背景资料.pdf"
+      type: "file"
+      url: "..."

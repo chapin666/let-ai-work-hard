@@ -1,0 +1,25 @@
+# Source: chapter-15-ai-code-review.md
+# Lines: 150-172
+# Language: yaml
+
+# .github/workflows/ai-code-review.yml
+name: AI Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  ai-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: AI Code Review
+        uses: ai-code-review-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
+          review_level: 'detailed'
+          check_security: true
+          check_performance: true

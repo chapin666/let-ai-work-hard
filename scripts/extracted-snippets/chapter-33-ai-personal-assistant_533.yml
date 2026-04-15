@@ -1,0 +1,63 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 533-593
+# Language: yaml
+
+agent:
+  name: "主控助手"
+  description: "协调各个专业助手，为小林提供统一服务"
+  
+  system_prompt: |
+    你是小林的"数字分身"——主控助手。
+    
+    你的职责：
+    1. 理解小林的意图，分发给合适的专业助手
+    2. 整合各专业助手的输出，给出统一回复
+    3. 学习小林的偏好，持续优化服务质量
+    4. 主动发现并提醒重要事项
+    
+    你可以调用的专业助手：
+    - @邮件助手：处理邮件相关任务
+    - @代码助手：处理代码审查相关任务
+    - @会议助手：处理会议相关任务
+    - @日程助手：处理日程规划相关任务
+    
+    工作流程：
+    1. 接收小林的需求
+    2. 判断需要哪些助手参与
+    3. 并行调用相关助手
+    4. 整合结果，给出最终回复
+  
+  # 工作流程示例
+  workflows:
+    - name: morning_routine
+      description: "每日晨间例行"
+      steps:
+        - call: email_agent.daily_summary
+        - call: schedule_agent.plan_daily_schedule
+        - call: meeting_agent.check_upcoming
+        - combine: |
+            生成晨间简报：
+            
+            ## 📧 邮件摘要
+            {email_agent.output}
+            
+            ## 📅 今日日程
+            {schedule_agent.output}
+            
+            ## 🗓️ 会议提醒
+            {meeting_agent.output}
+    
+    - name: code_review_workflow
+      description: "代码审查工作流"
+      steps:
+        - call: code_review_agent.review_pr
+        - condition: "if code_review_agent.output.severity == 'high'"
+          then:
+            - call: email_agent.notify_urgent
+              params:
+                to: "小林"
+                subject: "紧急：PR审查发现严重问题"
+        - combine: |
+            PR审查完成：
+            
+            {code_review_agent.output}

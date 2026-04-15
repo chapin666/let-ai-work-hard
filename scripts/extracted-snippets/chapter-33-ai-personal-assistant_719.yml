@@ -1,0 +1,27 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 719-743
+# Language: yaml
+
+tool:
+  name: "邮件工具"
+  type: email
+  
+  actions:
+    - name: fetch_emails
+      description: "获取邮件列表"
+      parameters:
+        folder: string
+        limit: number
+        since: datetime
+    
+    - name: send_email
+      description: "发送邮件"
+      parameters:
+        to: string
+        subject: string
+        body: string
+    
+    - name: mark_read
+      description: "标记已读"
+      parameters:
+        message_id: string

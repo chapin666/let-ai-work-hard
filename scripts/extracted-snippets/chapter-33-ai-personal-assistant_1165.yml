@@ -1,0 +1,42 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 1165-1204
+# Language: yaml
+
+# config.yaml 完整示例
+name: "我的AI助手"
+version: "1.0"
+
+# LLM配置
+model:
+  provider: openai  # openai/anthropic/local
+  model: gpt-4
+  temperature: 0.7
+  max_tokens: 2000
+
+# 记忆配置
+memory:
+  short_term:
+    type: buffer
+    max_turns: 10
+  long_term:
+    type: vector_db
+    provider: chroma
+    path: ./memory
+
+# 工具注册
+tools:
+  - name: email
+    module: openclaw.tools.email
+    config:
+      imap_server: imap.gmail.com
+  
+  - name: github
+    module: openclaw.tools.github
+    config:
+      token: ${GITHUB_TOKEN}
+
+# 通道配置（飞书/Slack/钉钉等）
+channels:
+  - name: feishu
+    type: lark
+    webhook_url: ${FEISHU_WEBHOOK}
