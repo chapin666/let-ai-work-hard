@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f3f4f6"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937" font-family="system-ui">思维方式对比</text>
+  
+  <!-- 左侧 -->
+  <rect x="50" y="70" width="330" height="400" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="50" y="70" width="330" height="50" rx="12" fill="#ef4444"/>
+  <text x="215" y="102" text-anchor="middle" font-size="16" font-weight="bold" fill="white" font-family="system-ui">直接回答</text>
+  <text x="180" y="180" text-anchor="middle" font-size="13" fill="#1f2937">• 一步到位给出答案</text><text x="180" y="215" text-anchor="middle" font-size="13" fill="#1f2937">• 容易遗漏边界情况</text><text x="180" y="250" text-anchor="middle" font-size="13" fill="#1f2937">• 难以追溯思考过程</text><text x="180" y="285" text-anchor="middle" font-size="13" fill="#1f2937">• 复杂问题易出错</text>
+  
+  <!-- 右侧 -->
+  <rect x="420" y="70" width="330" height="400" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="420" y="70" width="330" height="50" rx="12" fill="#10b981"/>
+  <text x="585" y="102" text-anchor="middle" font-size="16" font-weight="bold" fill="white" font-family="system-ui">思维链(CoT)</text>
+  <text x="620" y="180" text-anchor="middle" font-size="13" fill="#1f2937">• 分步骤拆解问题</text><text x="620" y="215" text-anchor="middle" font-size="13" fill="#1f2937">• 全面考虑各种情况</text><text x="620" y="250" text-anchor="middle" font-size="13" fill="#1f2937">• 逻辑清晰可验证</text><text x="620" y="285" text-anchor="middle" font-size="13" fill="#1f2937">• 复杂任务更准确</text>
+  
+  <!-- VS -->
+  <circle cx="400" cy="270" r="25" fill="#3b82f6"/>
+  <text x="400" y="276" text-anchor="middle" font-size="14" font-weight="bold" fill="white" font-family="system-ui">VS</text>
+</svg>

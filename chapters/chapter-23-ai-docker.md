@@ -35,6 +35,11 @@
 
 ---
 
+
+![Docker容器化流程](../images/chapter-23-docker-workflow.svg)
+
+
+
 ### 周四：Dockerfile也能AI生成？
 
 周四早上，老周在刷技术公众号时，看到一篇文章：《用AI生成Dockerfile，5分钟容器化你的应用》。

@@ -22,6 +22,11 @@
 
 ---
 
+
+![多Agent协作架构](../images/chapter-34-multi-agent.svg)
+
+
+
 ### 周二：设计AI团队架构
 
 周二上午，小林开始设计他的"AI团队"。

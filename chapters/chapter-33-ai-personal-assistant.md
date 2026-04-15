@@ -44,6 +44,13 @@
 
 ---
 
+
+![OpenClaw个人助手架构](../images/chapter-33-openclaw-arch.svg)
+
+![个人助手工作流](../images/chapter-33-assistant-workflow.svg)
+
+
+
 ### 周二下午：遇见OpenClaw
 
 转机发生在一个技术分享会上。

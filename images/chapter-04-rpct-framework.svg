@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f3f4f6"/>
+  <text x="400" y="45" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937" font-family="system-ui">RPCT提示框架</text>
+  
+                <rect x="50" y="100" width="175" height="150" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+                <text x="137" y="135" text-anchor="middle" font-size="16" font-weight="bold" fill="#3b82f6" font-family="system-ui">Role</text>
+                <text x="137" y="175" text-anchor="middle" font-size="12" fill="#6b7280" font-family="system-ui">定义AI角色身份</text>
+                <path d="M230 175 L235 175" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowhead)"/>
+                <rect x="235" y="100" width="175" height="150" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+                <text x="322" y="135" text-anchor="middle" font-size="16" font-weight="bold" fill="#3b82f6" font-family="system-ui">Profile</text>
+                <text x="322" y="175" text-anchor="middle" font-size="12" fill="#6b7280" font-family="system-ui">设定背景信息</text>
+                <path d="M415 175 L420 175" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowhead)"/>
+                <rect x="420" y="100" width="175" height="150" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+                <text x="507" y="135" text-anchor="middle" font-size="16" font-weight="bold" fill="#3b82f6" font-family="system-ui">Constraint</text>
+                <text x="507" y="175" text-anchor="middle" font-size="12" fill="#6b7280" font-family="system-ui">列出约束条件</text>
+                <path d="M600 175 L605 175" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowhead)"/>
+                <rect x="605" y="100" width="175" height="150" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+                <text x="692" y="135" text-anchor="middle" font-size="16" font-weight="bold" fill="#3b82f6" font-family="system-ui">Task</text>
+                <text x="692" y="175" text-anchor="middle" font-size="12" fill="#6b7280" font-family="system-ui">明确具体任务</text>
+                
+</svg>

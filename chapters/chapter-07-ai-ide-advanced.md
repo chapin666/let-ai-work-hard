@@ -26,6 +26,11 @@
 
 ---
 
+
+![复杂项目AI协作流程](../images/chapter-07-advanced-workflow.svg)
+
+
+
 ### 周三：先理解，再动手
 
 周三，小王没有急着写代码，而是打开了Cursor的Chat模式。

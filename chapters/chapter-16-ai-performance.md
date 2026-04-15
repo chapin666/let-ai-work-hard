@@ -40,6 +40,11 @@
 
 ---
 
+
+![AI辅助性能优化流程](../images/chapter-16-performance-flow.svg)
+
+
+
 ### 周二：AI性能顾问上线
 
 周二一早，小陈决定试试用AI帮忙做性能优化。
