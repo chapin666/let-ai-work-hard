@@ -40,6 +40,13 @@ AI开始生成代码，一行行跳出来。但小张越看眉头皱得越紧—
 
 ---
 
+
+![AI工具选型决策流程](../images/chapter-03-tool-selection-flow.svg)
+
+![主流AI编程工具对比](../images/chapter-03-tools-compare.svg)
+
+
+
 ### 周二：配置地狱
 
 周二一整天，小张都在研究Cursor的配置。

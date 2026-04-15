@@ -57,6 +57,11 @@ function downloadFile(content, filename) {
 
 ---
 
+
+![RPCT提示框架](../images/chapter-04-rpct-framework.svg)
+
+
+
 ### 周三下午：意外的启发
 
 周三下午，小李去茶水间倒水，碰到前端组的小王。
@@ -249,6 +254,9 @@ async function generateExcel(data: any[], filename: string, res: Response) {
 ---
 
 ## 理论知识：RPCT框架详解
+
+![高质量Prompt构建流程](../images/chapter-04-prompt-structure.svg)
+
 
 ### 为什么需要结构化提示？
 

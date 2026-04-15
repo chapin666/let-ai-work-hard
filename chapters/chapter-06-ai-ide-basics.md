@@ -29,6 +29,11 @@
 
 ---
 
+
+![Cursor Agent模式架构](../images/chapter-06-agent-architecture.svg)
+
+
+
 ### 1:00 PM 第一次用Agent模式
 
 小张切换到Agent模式，界面变成了对话形式。

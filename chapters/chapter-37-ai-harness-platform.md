@@ -26,6 +26,11 @@ Cowork模式在团队里推广了一个月，老吴收到了 mixed 的反馈。
 
 ---
 
+
+![Harness平台架构](../images/chapter-37-harness-arch.svg)
+
+
+
 ### 周二：认识Harness
 
 周二，老吴发现了一个开源项目——**Harness**，一个专为AI原生工程设计的平台。

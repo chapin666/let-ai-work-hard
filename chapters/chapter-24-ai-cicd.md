@@ -656,6 +656,9 @@ if __name__ == '__main__':
 
 ### CI/CD流水线设计原则
 
+![CI/CD流水线架构](../images/chapter-24-cicd-architecture.svg)
+
+
 #### 原则1：Fail Fast（快速失败）
 
 **❌ 错误顺序**：

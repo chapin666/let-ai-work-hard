@@ -32,6 +32,11 @@
 
 ---
 
+
+![AI辅助SQL优化流程](../images/chapter-21-sql-optimization.svg)
+
+
+
 ### 现状分析：为什么SQL这么慢？
 
 小陈回到工位，开始深入分析问题。

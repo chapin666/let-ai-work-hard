@@ -20,6 +20,11 @@
 
 ---
 
+
+![AI辅助小册出版流程](../images/chapter-09-booklet-workflow.svg)
+
+
+
 ### 周六：从兴奋到迷茫
 
 周六早上，小美兴致勃勃地开始规划。

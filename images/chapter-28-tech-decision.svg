@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f3f4f6"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937" font-family="system-ui">技术选型评估维度</text>
+  
+  <!-- 左侧 -->
+  <rect x="50" y="70" width="330" height="400" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="50" y="70" width="330" height="50" rx="12" fill="#ef4444"/>
+  <text x="215" y="102" text-anchor="middle" font-size="16" font-weight="bold" fill="white" font-family="system-ui">传统方式</text>
+  <text x="180" y="180" text-anchor="middle" font-size="13" fill="#1f2937">• 主观经验判断</text><text x="180" y="215" text-anchor="middle" font-size="13" fill="#1f2937">• 信息收集耗时</text><text x="180" y="250" text-anchor="middle" font-size="13" fill="#1f2937">• 容易遗漏方案</text><text x="180" y="285" text-anchor="middle" font-size="13" fill="#1f2937">• 难以量化对比</text>
+  
+  <!-- 右侧 -->
+  <rect x="420" y="70" width="330" height="400" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="420" y="70" width="330" height="50" rx="12" fill="#10b981"/>
+  <text x="585" y="102" text-anchor="middle" font-size="16" font-weight="bold" fill="white" font-family="system-ui">AI辅助方式</text>
+  <text x="620" y="180" text-anchor="middle" font-size="13" fill="#1f2937">• 多维度分析</text><text x="620" y="215" text-anchor="middle" font-size="13" fill="#1f2937">• 快速生成对比表</text><text x="620" y="250" text-anchor="middle" font-size="13" fill="#1f2937">• 全面方案调研</text><text x="620" y="285" text-anchor="middle" font-size="13" fill="#1f2937">• 客观评分机制</text>
+  
+  <!-- VS -->
+  <circle cx="400" cy="270" r="25" fill="#3b82f6"/>
+  <text x="400" y="276" text-anchor="middle" font-size="14" font-weight="bold" fill="white" font-family="system-ui">VS</text>
+</svg>

@@ -39,6 +39,11 @@
 
 ---
 
+
+![Cowork模式对比](../images/chapter-36-cowork-comparison.svg)
+
+
+
 ### 周二：意外的启发
 
 周二的部门负责人会议上，CTO分享了一个案例。

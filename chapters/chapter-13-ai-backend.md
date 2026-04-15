@@ -32,6 +32,11 @@
 
 ---
 
+
+![AI辅助后端开发流程](../images/chapter-13-backend-workflow.svg)
+
+
+
 ### 周二：用AI快速上手NestJS
 
 周二一早，小陈找到后端组的张哥。

@@ -64,6 +64,13 @@ AI又生成了一段代码，加了一些简单的计数逻辑，但核心问题
 
 ---
 
+
+![思维方式对比](../images/chapter-05-cot-comparison.svg)
+
+![结构化输出工作流程](../images/chapter-05-structured-output.svg)
+
+
+
 ### 周三：同事的点拨
 
 周三下午，小陈在茶水间碰到了小李——那个用AI用得飞起的后端工程师。

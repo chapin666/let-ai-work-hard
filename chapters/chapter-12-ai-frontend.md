@@ -41,6 +41,11 @@
 
 ---
 
+
+![AI辅助前端开发流程](../images/chapter-12-frontend-workflow.svg)
+
+
+
 ### 周二：偶然的发现
 
 周二午休，小陈去茶水间倒水，听到两个 senior 同事在聊天。
