@@ -1,0 +1,23 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 749-769
+# Language: yaml
+
+memory:
+  # 短期记忆（当前会话）
+  short_term:
+    type: conversation
+    max_turns: 20
+  
+  # 长期记忆（持久化）
+  long_term:
+    type: vector_store
+    path: ~/.openclaw/memory
+    
+    # 记忆类型
+    topics:
+      - name: user_preferences
+        description: "用户偏好"
+      - name: conversation_history
+        description: "历史对话"
+      - name: learned_patterns
+        description: "学习到的模式"

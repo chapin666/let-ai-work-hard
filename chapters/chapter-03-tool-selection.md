@@ -94,17 +94,19 @@ import { validateEmail, validatePassword } from '@/utils/validation';
 
 他继续写：
 
-```typescript
+```text
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+// ... 以下 Copilot 自动补全
 ```
 
 Copilot立刻补全了：
 
-```typescript
+```text
   const [errors, setErrors] = useState<{email?: string; password?: string}>({});
-  
+  // ... 继续处理表单逻辑
+```
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     // TODO: 验证并提交
@@ -987,3 +989,4 @@ Copilot虽然没有显式的规则文件，但你可以通过注释引导它：
 **第4章：《一句话需求变完美代码的秘密》**
 
 小李将揭秘如何用结构化提示词（Prompt）让AI精准理解需求。通过RPCT框架（角色-任务-上下文-模板），他学会了把模糊的"帮我写个功能"转化为AI能完美执行的详细指令，代码一次通过率从30%提升到90%。
+90%。

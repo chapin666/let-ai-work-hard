@@ -1,0 +1,17 @@
+# Source: chapter-34-ai-multi-agent.md
+# Lines: 1396-1410
+# Language: yaml
+
+# 开启调试模式
+debug:
+  # 记录所有通信
+  log_all_messages: true
+  
+  # 可视化工作流
+  visualize_workflow: true
+  
+  # 单步执行
+  step_by_step: true
+  
+  # Agent思考过程
+  show_agent_thinking: true

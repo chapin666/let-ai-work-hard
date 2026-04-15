@@ -1,0 +1,20 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 775-792
+# Language: yaml
+
+triggers:
+  # 定时触发
+  - type: schedule
+    cron: "0 9 * * *"
+    action: morning_summary
+  
+  # 事件触发
+  - type: event
+    source: github
+    filter: "event_type == 'pull_request' and action == 'opened'"
+    action: review_pr
+  
+  # 条件触发
+  - type: condition
+    condition: "unread_emails > 10"
+    action: alert_user

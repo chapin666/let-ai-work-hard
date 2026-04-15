@@ -1,0 +1,20 @@
+# Source: chapter-34-ai-multi-agent.md
+# Lines: 1124-1141
+# Language: yaml
+
+# 标准交付物格式
+deliverable:
+  meta:
+    id: "交付物ID"
+    type: "交付物类型"
+    author: "作者Agent"
+    created_at: "创建时间"
+    version: "版本"
+  
+  content:
+    # 具体内容
+  
+  review:
+    status: "pending/approved/rejected"
+    reviewer: "审查者"
+    comments: "审查意见"

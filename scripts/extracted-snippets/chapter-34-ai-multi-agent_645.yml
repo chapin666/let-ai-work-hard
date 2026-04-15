@@ -1,0 +1,66 @@
+# Source: chapter-34-ai-multi-agent.md
+# Lines: 645-708
+# Language: yaml
+
+# Agent间通信协议
+communication:
+  # 消息格式
+  message_format:
+    header:
+      - message_id: "唯一标识"
+      - from: "发送方Agent"
+      - to: "接收方Agent"
+      - timestamp: "发送时间"
+      - message_type: "消息类型"
+    body:
+      - content: "消息内容"
+      - context: "上下文信息"
+      - deliverables: "交付物"
+    
+  # 消息类型
+  message_types:
+    - TASK_ASSIGNMENT: "任务分配"
+    - DELIVERABLE: "交付物提交"
+    - REVIEW_REQUEST: "审查请求"
+    - REVIEW_FEEDBACK: "审查反馈"
+    - STATUS_UPDATE: "状态更新"
+    - BLOCKER: "阻塞问题"
+  
+  # 通信示例
+  example_conversation:
+    - message:
+        from: project_manager
+        to: business_analyst
+        type: TASK_ASSIGNMENT
+        content: |
+          请分析以下需求：
+          需求：用户需要一个文件上传功能
+          截止日期：3天后
+        
+    - message:
+        from: business_analyst
+        to: project_manager
+        type: DELIVERABLE
+        content: |
+          需求分析完成，详见附件。
+        deliverables:
+          - requirement_spec.md
+    
+    - message:
+        from: project_manager
+        to: architect
+        type: TASK_ASSIGNMENT
+        content: |
+          请基于BA的需求分析设计技术方案。
+        context:
+          requirement_spec: requirement_spec.md
+    
+    - message:
+        from: architect
+        to: project_manager
+        type: DELIVERABLE
+        content: |
+          技术方案已设计完成。
+        deliverables:
+          - architecture_doc.md
+          - api_spec.yaml

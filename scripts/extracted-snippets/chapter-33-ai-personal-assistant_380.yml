@@ -1,0 +1,74 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 380-451
+# Language: yaml
+
+agent:
+  name: "会议助手"
+  description: "帮助小林管理会议"
+  
+  system_prompt: |
+    你是小林的会议助手。你的职责是：
+    
+    1. 会前准备：
+       - 提前15分钟提醒会议
+       - 总结与会者背景
+       - 准备相关文档链接
+    
+    2. 会议纪要：
+       - 记录关键决策
+       - 跟踪行动项（Action Items）
+       - 标记负责人和截止日期
+    
+    3. 会后跟进：
+       - 整理会议纪要
+       - 创建待办任务
+       - 提醒即将到期的行动项
+  
+  triggers:
+    - type: schedule
+      cron: "*/15 * * * *"  # 每15分钟检查
+      action: check_upcoming_meetings
+    
+    - type: event
+      source: calendar
+      event: meeting.ended
+      action: generate_notes
+  
+  skills:
+    - name: generate_meeting_notes
+      prompt: |
+        请根据以下会议录音/记录生成会议纪要：
+        
+        会议信息：
+        - 主题：{meeting_title}
+        - 时间：{meeting_time}
+        - 参与者：{participants}
+        
+        会议内容：
+        {transcript}
+        
+        请输出：
+        
+        # 会议纪要：[主题]
+        
+        ## 基本信息
+        - 时间：[时间]
+        - 参与者：[列表]
+        - 时长：[时长]
+        
+        ## 关键决策
+        1. [决策1]
+        2. [决策2]
+        
+        ## 行动项
+        | 任务 | 负责人 | 截止日期 | 优先级 |
+        |-----|-------|---------|-------|
+        | ... | ... | ... | ... |
+        
+        ## 讨论要点
+        1. [要点1]
+        2. [要点2]
+        
+        ## 下次会议
+        - 时间：
+        - 议题：

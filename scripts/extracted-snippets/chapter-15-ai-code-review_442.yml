@@ -1,0 +1,26 @@
+# Source: chapter-15-ai-code-review.md
+# Lines: 442-465
+# Language: yaml
+
+# ai-review-config.yml
+rules:
+  security:
+    - no-innerHTML-with-user-input
+    - no-eval
+    - no-document-write
+    - require-https-for-sensible-data
+    
+  performance:
+    - no-unused-deps-in-useEffect
+    - memoize-expensive-calculations
+    - avoid-anonymous-functions-in-render
+    
+  reliability:
+    - require-error-handling-in-async
+    - no-floating-promises
+    - require-default-props
+    
+  maintainability:
+    - max-function-length: 50
+    - max-file-length: 300
+    - require-jsdoc-for-public-api

@@ -1,0 +1,19 @@
+# Source: chapter-36-ai-cowork-mode.md
+# Lines: 183-199
+# Language: yaml
+
+name: AI Code Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  ai-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: AI Code Review
+        run: |
+          # 调用AI API分析代码变更
+          # 检查：规范符合度、潜在bug、性能问题、安全漏洞
+          # 输出review报告作为评论

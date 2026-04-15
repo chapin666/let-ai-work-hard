@@ -1,0 +1,15 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 830-842
+# Language: yaml
+
+# 自动执行低风险操作
+auto_execute:
+  - classify_email
+  - generate_summary
+  - draft_reply
+
+# 人工确认高风险操作
+manual_confirm:
+  - send_email
+  - approve_pr
+  - delete_data

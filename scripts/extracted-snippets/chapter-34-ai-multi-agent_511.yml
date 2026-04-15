@@ -1,0 +1,131 @@
+# Source: chapter-34-ai-multi-agent.md
+# Lines: 511-639
+# Language: yaml
+
+workflow:
+  name: "软件开发协作流程"
+  description: "多Agent协作完成软件开发"
+  
+  # 流程触发条件
+  trigger:
+    type: user_request
+    description: "用户提交新需求"
+  
+  # 流程步骤
+  steps:
+    # Step 1: PM接收需求，创建项目计划
+    - step: 1
+      name: "项目规划"
+      agent: project_manager
+      action: create_project_plan
+      input:
+        - requirement
+        - deadline
+      output:
+        - project_plan
+      next: [2, 3]
+    
+    # Step 2: BA分析需求（并行）
+    - step: 2
+      name: "需求分析"
+      agent: business_analyst
+      action: analyze_requirement
+      input:
+        - requirement
+      output:
+        - requirement_spec
+      next: [4]
+    
+    # Step 3: Arch设计技术方案（并行）
+    - step: 3
+      name: "技术设计"
+      agent: architect
+      action: design_architecture
+      input:
+        - requirement
+        - requirement_spec
+      output:
+        - architecture_doc
+      next: [4]
+    
+    # Step 4: PM确认方案
+    - step: 4
+      name: "方案确认"
+      agent: project_manager
+      action: confirm_plan
+      input:
+        - requirement_spec
+        - architecture_doc
+      output:
+        - confirmed_plan
+      next: [5]
+    
+    # Step 5: Dev开发（并行可拆解）
+    - step: 5
+      name: "代码开发"
+      agent: developer
+      action: implement_feature
+      input:
+        - requirement_spec
+        - architecture_doc
+      output:
+        - source_code
+        - unit_tests
+      next: [6]
+    
+    # Step 6: QA测试
+    - step: 6
+      name: "测试"
+      agent: qa_engineer
+      action: test_feature
+      input:
+        - source_code
+        - requirement_spec
+      output:
+        - test_report
+      decision:
+        - if: "test_report.pass_rate >= 90%"
+          then: 7
+          else: 5
+    
+    # Step 7: Ops发布
+    - step: 7
+      name: "部署发布"
+      agent: devops_engineer
+      action: deploy
+      input:
+        - source_code
+        - deployment_config
+      output:
+        - deployment_result
+      next: [8]
+    
+    # Step 8: PM项目总结
+    - step: 8
+      name: "项目总结"
+      agent: project_manager
+      action: project_retrospective
+      input:
+        - project_plan
+        - all_deliverables
+      output:
+        - project_summary
+      next: []
+  
+  # 全局设置
+  settings:
+    # 自动执行低风险步骤
+    auto_execute:
+      - step_2
+      - step_3
+      - step_5
+    
+    # 人工确认高风险步骤
+    manual_confirm:
+      - step_4
+      - step_7
+    
+    # 失败处理
+    on_failure:
+      action: notify_project_manager
+      retry: 3

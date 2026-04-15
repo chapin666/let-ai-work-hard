@@ -1,0 +1,10 @@
+# Source: chapter-24-ai-cicd.md
+# Lines: 705-712
+# Language: yaml
+
+security_scan:
+  stage: security
+  script:
+    - trivy image myapp:$CI_COMMIT_SHA  # 镜像扫描
+    - sonar-scanner                     # 代码扫描
+    - dependency-check                  # 依赖扫描

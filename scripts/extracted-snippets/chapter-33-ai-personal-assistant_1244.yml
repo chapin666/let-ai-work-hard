@@ -1,0 +1,28 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 1244-1269
+# Language: yaml
+
+# 好的Prompt结构
+skill:
+  prompt: |
+    # 角色定义
+    你是[角色]，负责[职责]。
+    
+    # 背景信息
+    当前情况：
+    {context}
+    
+    # 具体任务
+    请执行以下任务：
+    1. [步骤1]
+    2. [步骤2]
+    
+    # 输出格式
+    请按以下格式输出：
+    ```
+    [格式示例]
+    ```
+    
+    # 约束条件
+    - [约束1]
+    - [约束2]

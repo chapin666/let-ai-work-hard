@@ -1,0 +1,18 @@
+# Source: chapter-34-ai-multi-agent.md
+# Lines: 1252-1267
+# Language: yaml
+
+metrics:
+  # 效率指标
+  - task_completion_time
+  - agent_utilization
+  - workflow_success_rate
+  
+  # 质量指标
+  - deliverable_acceptance_rate
+  - rework_rate
+  - bug_escape_rate
+  
+  # 协作指标
+  - communication_overhead
+  - coordination_bottlenecks

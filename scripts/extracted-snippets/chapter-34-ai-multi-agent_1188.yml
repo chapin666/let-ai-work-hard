@@ -1,0 +1,18 @@
+# Source: chapter-34-ai-multi-agent.md
+# Lines: 1188-1203
+# Language: yaml
+
+roles:
+  - name: business_analyst
+    responsibilities:
+      - 需求分析
+      - 用户故事编写
+    deliverables:
+      - requirement_spec.md
+    
+  - name: architect
+    responsibilities:
+      - 技术方案设计
+      - 数据库设计
+    deliverables:
+      - architecture_doc.md

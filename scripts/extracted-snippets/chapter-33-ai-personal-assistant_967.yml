@@ -1,0 +1,27 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 967-991
+# Language: yaml
+
+tool:
+  name: github
+  type: api
+  
+  config:
+    base_url: "https://api.github.com"
+    auth:
+      type: token
+      token: ${GITHUB_TOKEN}
+  
+  actions:
+    - name: get_pr_list
+      endpoint: "/repos/{owner}/{repo}/pulls"
+      method: GET
+      parameters:
+        state: { type: string, default: "open" }
+        per_page: { type: number, default: 10 }
+    
+    - name: get_pr_diff
+      endpoint: "/repos/{owner}/{repo}/pulls/{pr_number}"
+      method: GET
+      headers:
+        Accept: "application/vnd.github.v3.diff"

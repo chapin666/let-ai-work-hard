@@ -1,0 +1,3047 @@
+{
+  "meta": {
+    "generated_at": "2026-04-15T10:24:03.707014",
+    "total_prompts": 303,
+    "categories": {
+      "testing": 44,
+      "explanation": 41,
+      "documentation": 27,
+      "code_generation": 28,
+      "general": 140,
+      "review": 22,
+      "system": 1
+    }
+  },
+  "prompts": [
+    {
+      "chapter": 1,
+      "chapter_title": "第1章：第一次用AI，我被惊艳到了",
+      "file": "chapter-01-first-ai-experience.md",
+      "line": 61,
+      "type": "code_block",
+      "category": "testing",
+      "length": 406,
+      "preview": "下面还有详细的解释：\n- `^` 匹配字符串开头\n- `1` 匹配数字1（手机号都以1开头）\n- `[3-9]` 匹配3到9之间的任意数字（第二位）\n- `\\d{9}` 匹配9位数字（后面九位）\n- ..."
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "第1章：第一次用AI，我被惊艳到了",
+      "file": "chapter-01-first-ai-experience.md",
+      "line": 89,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 580,
+      "preview": "下面列出了北京010、上海021、广州020等常见区号规则，还说明了座机号码的特点（区号3-4位，号码7-8位，中间可能有分隔符）。\n\n小王的手指停在键盘上方。他突然意识到，如果自己去查座机号码的规则..."
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "第1章：第一次用AI，我被惊艳到了",
+      "file": "chapter-01-first-ai-experience.md",
+      "line": 276,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 372,
+      "preview": "一百多行代码，结构完整，注释清晰，甚至还带了错误处理。\n\n小王的眼睛亮了。\n\n\"这也太强了吧！\"他自言自语，\"以后不用写代码了，让AI写就行了！我以后就是AI指挥员，告诉它我要什么，它给我写！\"\n\n他..."
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "第1章：第一次用AI，我被惊艳到了",
+      "file": "chapter-01-first-ai-experience.md",
+      "line": 332,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 1815,
+      "preview": "由于`'1'='1'`永远为真，攻击者不需要知道密码就能以任意用户身份登录。\n\n这是教科书级别的SQL注入漏洞。\n\n\"我...我刚才差点把这个提交上去...\"小王的声音有些发抖。\n\n老张拍拍他的肩膀：..."
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "第1章：第一次用AI，我被惊艳到了",
+      "file": "chapter-01-first-ai-experience.md",
+      "line": 436,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 3441,
+      "preview": "Claude Code开始工作。它不是一次性生成代码，而是：\n\n1. **先分析项目结构** —— \"我发现项目使用了Express，API路由在routes/目录下\"\n2. **制定计划** —— ..."
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "第1章：第一次用AI，我被惊艳到了",
+      "file": "chapter-01-first-ai-experience.md",
+      "line": 658,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 1000,
+      "preview": "**建议**：连续记录一周，你会发现自己的提示词技巧快速提升。\n\n---\n\n## 本章小结\n\n通过一个下午到晚上的经历，小王完成了从\"怀疑\"到\"惊艳\"到\"理性认知\"的转变。\n\n**他学到的**：\n\n1..."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "第2章：AI不是万能，但确实很强",
+      "file": "chapter-02-ai-boundaries.md",
+      "line": 177,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 343,
+      "preview": "改了一上午，所有涉及资源操作的接口都加上了归属检查。小李揉着太阳穴，有点沮丧。\n\n\"至少基础代码是AI生成的，\"他安慰自己，\"我省了一半时间。\"\n\n但他心里开始有点不安：如果AI连这么重要的业务逻辑都..."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "第2章：AI不是万能，但确实很强",
+      "file": "chapter-02-ai-boundaries.md",
+      "line": 218,
+      "type": "code_block",
+      "category": "general",
+      "length": 108,
+      "preview": "`jwt.decode()`只是解码token，不验证签名。任何人都可以伪造一个token，把userId改成任意值，系统都会认为他是合法用户。\n\n正确的做法是用`jwt.verify()`，还需要密..."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "第2章：AI不是万能，但确实很强",
+      "file": "chapter-02-ai-boundaries.md",
+      "line": 226,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 1699,
+      "preview": "![JWT验证漏洞对比](../images/chapter-02-jwt-vulnerability.svg)\n\n*一字之差（decode vs verify），安全与漏洞的分界*\n\n小李的手在发抖..."
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "第2章：AI不是万能，但确实很强",
+      "file": "chapter-02-ai-boundaries.md",
+      "line": 369,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 1541,
+      "preview": "\"有意思，\"小李想，\"它比Cursor更有'自我意识'，会主动说明自己的能力边界。\"\n\n他让Claude Code生成了修复方案，然后逐行审查、测试、验证，最后才提交。\n\n这个过程花了他两个小时，比直..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 89,
+      "type": "code_block",
+      "category": "general",
+      "length": 81,
+      "preview": "\"嗯？它怎么知道我还需要validatePassword？\"\n\n小张往下滚动，发现下面确实要用到密码验证。Copilot似乎\"读懂\"了他的意图。\n\n他继续写：..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 164,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 890,
+      "preview": "Codex的表现让他惊讶：\n\n1. **首先分析项目结构**，识别出所有路由文件\n2. **制定执行计划**，列出需要修改的文件\n3. **生成代码**，创建一个日志中间件\n4. **自动应用修改**..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 219,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 319,
+      "preview": "**适合谁**：在意开源、需要本地部署、怕\"断粮\"被封号的开发者\n\n---\n\n**Kiro：亚马逊的\"规格驱动开发\"IDE**\n\n\"Kiro是AWS推出的新工具，\"组长继续介绍，\"它最大的特点是'规格..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 254,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 391,
+      "preview": "**适合谁**：需要严格需求管理、从原型到生产的企业级项目\n\n---\n\n**Antigravity：谷歌的\"Agent-First\"IDE**\n\n\"还有谷歌的Antigravity，\"组长最后提到，\"..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 283,
+      "type": "code_block",
+      "category": "general",
+      "length": 483,
+      "preview": "**适合谁**：需要端到端自动化、快速原型、多模态需求的开发者\n\n---\n\n### 周五：找到适合自己的组合\n\n周五，小张根据自己的工作流设计了一套工具组合：\n\n**日常开发**：GitHub Cop..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 427,
+      "type": "code_block",
+      "category": "review",
+      "length": 437,
+      "preview": "**Plan模式**：\n- AI先制定详细执行计划\n- 你审查计划后才执行\n- 适合复杂任务，可控性更强\n\n**YOLO模式**：\n- AI直接执行，不需要每一步确认\n- 速度快，但风险高\n- 适合简..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 487,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 554,
+      "preview": "**适合场景**：\n- 大型项目重构\n- 自动化任务执行\n- 代码质量分析\n- 需要处理整个代码库的场景\n\n**不足之处**：\n- 纯CLI，没有图形界面\n- 按量计费，重度使用成本较高\n- 需要一定..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 552,
+      "type": "code_block",
+      "category": "general",
+      "length": 102,
+      "preview": "**适合场景**：\n- 自动化脚本编写\n- CI/CD流程集成\n- 设计稿转代码（多模态）\n- 批量处理任务\n- 需要自定义AI工作流\n\n**Codex的三大优势**：\n\n1. **多模态能力**..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 616,
+      "type": "code_block",
+      "category": "testing",
+      "length": 532,
+      "preview": "**适合场景**：\n- 在意开源、可控性\n- 需要本地部署（数据安全）\n- 怕\"断粮\"被封号\n- 强监管行业（金融、政务、医疗）\n\n**优势对比（vs Claude Code）**：\n| 维度 | O..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 661,
+      "type": "code_block",
+      "category": "review",
+      "length": 415,
+      "preview": "**适合场景**：\n- 企业级项目（从原型到生产）\n- 需要严格需求管理\n- 团队协作（规格文档即共识）\n- AWS云原生开发\n\n**价格**：预览期间免费，后续分免费/专业/专业增强版\n\n---\n\n..."
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "第3章：选对工具，事半功倍",
+      "file": "chapter-03-tool-selection.md",
+      "line": 707,
+      "type": "code_block",
+      "category": "general",
+      "length": 468,
+      "preview": "**适合场景**：\n- 需要端到端自动化\n- 快速原型开发\n- 多模态需求（设计稿/截图转代码）\n- 追求极致Agent体验\n\n**注意事项**：\n- 需要美国Google账号\n- 使用Open VS..."
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "第4章：一句话需求变完美代码的秘密",
+      "file": "chapter-04-prompt-engineering-basics.md",
+      "line": 44,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 936,
+      "preview": "小李皱起眉头。这代码有问题：\n\n1. 只实现了CSV，Excel呢？\n2. 没有错误处理，数据格式不对怎么办？\n3. 大数据量怎么办？会不会卡死浏览器？\n4. 没有进度提示，用户怎么知道导出成功了？\n..."
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "第4章：一句话需求变完美代码的秘密",
+      "file": "chapter-04-prompt-engineering-basics.md",
+      "line": 221,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 625,
+      "preview": "小李惊呆了。\n\n这次生成的代码不仅包含了他要求的所有功能，还额外考虑了：\n- 批量查询避免内存溢出\n- WebSocket进度推送的格式设计\n- 文件名格式化\n- 完整的错误处理\n\n\"这就是RPCT的..."
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "第4章：一句话需求变完美代码的秘密",
+      "file": "chapter-04-prompt-engineering-basics.md",
+      "line": 289,
+      "type": "code_block",
+      "category": "testing",
+      "length": 457,
+      "preview": "#### R - Role（角色）\n\n给AI设定一个具体的身份，让它以相应的 expertise 来回答。\n\n**示例**：\n\n| 场景 | 不明确的角色 | 明确的角色 |\n|:---|:---|:..."
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "第4章：一句话需求变完美代码的秘密",
+      "file": "chapter-04-prompt-engineering-basics.md",
+      "line": 326,
+      "type": "code_block",
+      "category": "testing",
+      "length": 422,
+      "preview": "#### C - Constraint（约束）\n\n列出所有的限制条件和质量要求，这是生成高质量代码的关键。\n\n**常见的约束类型**：\n\n| 类别 | 示例 |\n|:---|:---|\n| 性能约束 ..."
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "第4章：一句话需求变完美代码的秘密",
+      "file": "chapter-04-prompt-engineering-basics.md",
+      "line": 593,
+      "type": "code_block",
+      "category": "review",
+      "length": 433,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **个人RPCT模板库**\n   - API开发模板\n   - 前端组件模板\n   - 重构任务模板\n   - Bug修复模板\n\n2. ..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 50,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 602,
+      "preview": "小陈看着这段代码，总觉得哪里不对。这个实现太简单了——\n\n- 没有考虑公平性（有人可能一周都是夜班）\n- 没有处理冲突（两个人被排到同一个班次）\n- 没有考虑工作负载均衡\n- 没有处理无解的情况\n\n他..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 116,
+      "type": "code_block",
+      "category": "general",
+      "length": 563,
+      "preview": "这次AI的回答完全不同了：\n\n**步骤1：约束条件分析**\n\n硬约束（必须满足）：\n- 每个班次人数在2-3人之间\n- 员工每周工作不超过5天\n- 员工不能被排在自己不可用的时间段\n- 每个班次至少有..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 181,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 134,
+      "preview": "这次生成的代码质量明显高了很多——结构清晰，考虑了各种约束，还有错误处理。\n\n---\n\n### 周五：更进一步——结构化输出\n\n周五，小陈想把排班结果展示给产品经理看。他需要把算法输出转换成特定的JS..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 239,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 573,
+      "preview": "AI完美地按照指定格式转换了数据。小陈惊讶地发现，他甚至不需要写转换代码——AI直接生成了正确的JSON。\n\n\"这就是结构化输出的威力...\"\n\n---\n\n## 理论知识：Chain of Thoug..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 323,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 187,
+      "preview": "### 结构化输出\n\n结构化输出是指让AI按照**预定义的格式**返回结果。\n\n#### 为什么需要结构化输出？\n\n1. **便于解析**：程序可以直接处理，不需要额外解析\n2. **确保完整**：不..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 492,
+      "type": "code_block",
+      "category": "review",
+      "length": 309,
+      "preview": "我需要为[项目/场景]选择[技术/工具]。请用Tree of Thoughts方法分析：\n\n候选方案：\n1. [方案A]\n2. [方案B]\n3. [方案C]\n\n评估维度：\n- 功能完整性（是否满足核心..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 523,
+      "type": "code_block",
+      "category": "review",
+      "length": 67,
+      "preview": "请帮我排查这个Bug，按以下步骤进行：\n\n现象：\n[描述Bug现象]\n\n复现步骤：\n1. [步骤1]\n2. [步骤2]\n\n相关代码：..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 541,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 306,
+      "preview": "请按以下步骤分析：\n\n步骤1：现象分析\n- 这是什么类型的问题？（逻辑错误、性能问题、并发问题、环境问题）\n- 影响范围有多大？\n\n步骤2：可能原因分析\n列出至少3个可能的原因，按可能性排序：\n- 原..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 607,
+      "type": "code_block",
+      "category": "general",
+      "length": 112,
+      "preview": "我有一个问题：[问题描述]\n\n请帮我设计一个分析这个问题的步骤清单。要求：\n1. 步骤要具体可执行\n2. 每个步骤有明确的产出\n3. 步骤之间有逻辑递进关系\n4. 最后一步是具体的输出格式\n\n然后按照..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 623,
+      "type": "code_block",
+      "category": "general",
+      "length": 64,
+      "preview": "请回答以下问题，然后自我验证：\n\n问题：...\n\n回答：...\n\n验证：请检查上述回答是否有错误，列出可能的错误点和修正建议。..."
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "第5章：让AI一步步思考复杂问题",
+      "file": "chapter-05-cot-structured-output.md",
+      "line": 637,
+      "type": "code_block",
+      "category": "general",
+      "length": 128,
+      "preview": "请从以下三个角色的角度分析这个方案：\n\n1. 开发工程师：关注实现难度、代码质量\n2. 产品经理：关注用户需求、功能完整性\n3. 运维工程师：关注部署、监控、故障处理\n\n每个角色给出：\n- 最担心的1..."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "第6章：Agent模式——AI IDE的新范式",
+      "file": "chapter-06-ai-ide-basics.md",
+      "line": 48,
+      "type": "code_block",
+      "category": "general",
+      "length": 520,
+      "preview": "我将为你实现完整的RBAC权限管理系统。以下是我的执行计划：\n\n**阶段1：后端实现**\n- [ ] 创建 models/Role.js - 角色模型\n- [ ] 创建 models/Permissi..."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "第6章：Agent模式——AI IDE的新范式",
+      "file": "chapter-06-ai-ide-basics.md",
+      "line": 221,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 190,
+      "preview": "小张总结：\n- **Plan模式**：复杂任务，需要把控，安全第一\n- **YOLO模式**：简单任务，追求速度，可回滚即可\n\n---\n\n### 周四：MCP协议扩展\n\n周四下午，小张在文档里看到了一..."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "第6章：Agent模式——AI IDE的新范式",
+      "file": "chapter-06-ai-ide-basics.md",
+      "line": 251,
+      "type": "code_block",
+      "category": "general",
+      "length": 227,
+      "preview": "Agent执行了：\n1. 通过MCP查询数据库：`SELECT COUNT(*) FROM users`\n2. 获取结果：1523个用户\n3. 生成用户统计页面，包含真实数据\n\n\"这太强大了，\"小张惊..."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "第6章：Agent模式——AI IDE的新范式",
+      "file": "chapter-06-ai-ide-basics.md",
+      "line": 388,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 661,
+      "preview": "### Cursor Agent vs Claude Code\n\n| 维度 | Cursor Agent | Claude Code |\n|:---|:---|:---|\n| **界面** | IDE..."
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "第6章：Agent模式——AI IDE的新范式",
+      "file": "chapter-06-ai-ide-basics.md",
+      "line": 601,
+      "type": "code_block",
+      "category": "general",
+      "length": 93,
+      "preview": "**Codex CLI的优势场景**：\n- 需要多模态输入（设计稿转代码）\n- CI/CD自动化流程\n- 开源/本地部署需求\n- 批量处理任务\n\n**Codex CLI的使用技巧**：..."
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "第7章：和AI结对编程的正确姿势",
+      "file": "chapter-07-ai-ide-advanced.md",
+      "line": 35,
+      "type": "code_block",
+      "category": "general",
+      "length": 250,
+      "preview": "我需要重构一个遗留的数据可视化平台。请先帮我分析这个项目的问题。\n\n项目结构：\n- src/\n  - legacy/ (jQuery代码)\n  - components/ (React组件)\n  - ..."
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "第7章：和AI结对编程的正确姿势",
+      "file": "chapter-07-ai-ide-advanced.md",
+      "line": 82,
+      "type": "code_block",
+      "category": "testing",
+      "length": 147,
+      "preview": "我需要创建一个新的状态管理模块，使用Zustand。\n\n要求：\n1. 管理图表数据、用户配置、加载状态\n2. 支持持久化到localStorage\n3. 包含TypeScript类型定义\n4. 便于测..."
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "第7章：和AI结对编程的正确姿势",
+      "file": "chapter-07-ai-ide-advanced.md",
+      "line": 240,
+      "type": "code_block",
+      "category": "general",
+      "length": 125,
+      "preview": "小王确认后，AI开始批量重构。整个过程自动化程度很高，他只需要在关键点做决策。\n\n---\n\n### 周五：验证与优化\n\n周五，重构基本完成。但小王知道，重构不完成，验证和优化才是关键。\n\n#### 性..."
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "第7章：和AI结对编程的正确姿势",
+      "file": "chapter-07-ai-ide-advanced.md",
+      "line": 296,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 820,
+      "preview": "AI生成了完整的测试套件，覆盖了主要场景。\n\n---\n\n### 周五下午：总结\n\n重构完成，小王统计了一下：\n\n- **原计划**：2个月手工重构\n- **实际用时**：2周（借助AI）\n- **代码..."
+    },
+    {
+      "chapter": 7,
+      "chapter_title": "第7章：和AI结对编程的正确姿势",
+      "file": "chapter-07-ai-ide-advanced.md",
+      "line": 476,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 305,
+      "preview": "请帮我解决这个合并冲突。\n\n冲突文件：UserService.ts\n\n冲突内容：\n<<<<<<< HEAD\n  const user = await db.user.findById(id);\n===..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 83,
+      "type": "code_block",
+      "category": "general",
+      "length": 156,
+      "preview": "我想写一篇关于React useEffect依赖数组问题的技术博客。\n\n目标读者：1-3年经验的前端开发者\n文章目标：帮助读者理解useEffect闭包陷阱，避免常见错误\n\n请帮我分析：\n1. 这个选..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 110,
+      "type": "code_block",
+      "category": "review",
+      "length": 273,
+      "preview": "基于以上分析，请帮我生成一篇文章大纲。\n\n核心素材：\n- 我在一个用户详情页组件中使用了useEffect获取数据\n- 组件有一个\"刷新\"按钮，点击后应该重新获取数据\n- 但发现点击刷新后，页面数据没..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 173,
+      "type": "code_block",
+      "category": "testing",
+      "length": 90,
+      "preview": "用户详情页组件有一个刷新按钮，点击后应该重新获取用户数据。我用了useEffect来触发数据获取，依赖数组里放了userId。但是测试的时候发现，点击刷新按钮，页面数据没有更新。..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 179,
+      "type": "code_block",
+      "category": "testing",
+      "length": 173,
+      "preview": "请帮我改写这段文字，要求：\n1. 更有场景感，让读者能代入\n2. 保留技术细节（useEffect、依赖数组、userId）\n3. 语言简洁，不要太学术化\n\n原文：\n用户详情页组件有一个刷新按钮，点击..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 209,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 85,
+      "preview": "请帮我把以下代码格式化为适合技术博客的markdown格式，并添加必要的注释：\n\n[代码内容]\n\n要求：\n1. 关键行高亮\n2. 添加行号\n3. 配合文字说明，分块展示..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 222,
+      "type": "code_block",
+      "category": "general",
+      "length": 124,
+      "preview": "请用Mermaid语法生成一个流程图，展示：\n1. 点击刷新按钮 → refreshKey递增\n2. useEffect依赖数组检测到变化\n3. 执行副作用函数\n4. 但闭包中捕获的是旧的refres..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 238,
+      "type": "code_block",
+      "category": "general",
+      "length": 94,
+      "preview": "请基于以下原标题，生成5个备选标题，要求：\n1. 更吸引眼球但不标题党\n2. 明确传达文章价值\n3. 适合技术社区传播\n\n原标题：React useEffect依赖数组的坑，我踩了三个月..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 332,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 71,
+      "preview": "请帮我改写这段话，要求：\n1. 语言更口语化，像是在跟读者聊天\n2. 去掉技术文档式的生硬表达\n3. 保留所有技术细节\n\n原文：[你的原文]..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 363,
+      "type": "code_block",
+      "category": "general",
+      "length": 123,
+      "preview": "我想写一篇关于[主题]的技术博客。\n\n核心素材：\n- [你的真实经历/项目/问题]\n\n目标读者：[具体描述]\n文章目标：[具体描述]\n\n请帮我生成文章大纲，要求：\n1. 采用[结构类型]结构\n2. 每..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 390,
+      "type": "code_block",
+      "category": "general",
+      "length": 71,
+      "preview": "我在文章中提到\"[某个观点]\"，但觉得讲得不够深入。\n\n请帮我：\n1. 列出读者可能会追问的3个问题\n2. 针对每个问题，给出简要的回答要点..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 402,
+      "type": "code_block",
+      "category": "general",
+      "length": 74,
+      "preview": "请帮我验证以下技术描述是否准确，并补充必要的细节：\n\n[你的描述]\n\n目标读者水平：[新手/中级/高级]\n需要补充的方向：原理/最佳实践/常见误区..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 415,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 87,
+      "preview": "请帮我生成一个代码示例，用于说明[某个概念]。\n\n要求：\n1. 代码简洁，不超过30行\n2. 有实际业务场景，不要foo/bar\n3. 包含关键注释\n4. 展示[具体效果]..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 435,
+      "type": "code_block",
+      "category": "general",
+      "length": 108,
+      "preview": "请基于以下文章内容，生成5个不同风格的标题：\n\n文章内容摘要：[摘要]\n\n风格要求：\n1. 悬念型（引发好奇）\n2. 数字型（具体量化）\n3. 痛点型（直击问题）\n4. 干货型（明确价值）\n5. 故事..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 450,
+      "type": "code_block",
+      "category": "general",
+      "length": 78,
+      "preview": "请帮我把这篇文章改写成适合[平台]的版本：\n\n原文：[你的文章]\n\n[平台]特点：\n- 读者画像：[描述]\n- 内容偏好：[描述]\n- 排版要求：[描述]..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 463,
+      "type": "code_block",
+      "category": "general",
+      "length": 85,
+      "preview": "请为这篇文章生成：\n1. 5个关键词（用于SEO）\n2. 10个标签（适合掘金/知乎/CSDN）\n3. 1段推荐语（50字以内，适合分享到技术群）\n\n文章内容：[摘要]..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 494,
+      "type": "code_block",
+      "category": "general",
+      "length": 152,
+      "preview": "我有以下技术经验，请帮我评估哪些适合写成博客，并给出选题建议：\n\n经验列表：\n1. [经验1简述]\n2. [经验2简述]\n3. [经验3简述]\n\n评估维度：\n1. 受众广度（多少人会遇到这个问题）\n2..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 550,
+      "type": "code_block",
+      "category": "general",
+      "length": 89,
+      "preview": "请基于以下模板，帮我填充文章大纲：\n\n[模板内容]\n\n核心素材：\n[你的素材]\n\n要求：\n1. 每个部分给出具体内容要点\n2. 标记需要代码示例的位置\n3. 预估每个部分的字数..."
+    },
+    {
+      "chapter": 8,
+      "chapter_title": "第8章：从月更困难到周更3篇的逆袭",
+      "file": "chapter-08-ai-writing-blog.md",
+      "line": 612,
+      "type": "code_block",
+      "category": "general",
+      "length": 114,
+      "preview": "我的文章数据如下：\n- 阅读量：X\n- 点赞数：X\n- 评论数：X\n- 收藏数：X\n\n请帮我分析：\n1. 这个数据表现如何？（相对于同类文章）\n2. 可能的原因是什么？\n3. 下一篇可以优化的地方有哪..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 101,
+      "type": "code_block",
+      "category": "general",
+      "length": 149,
+      "preview": "我想写一本关于\"React性能优化\"的技术小册，目标读者是有1-3年经验的前端开发者。\n\n请帮我设计一个完整的知识体系，要求：\n1. 从基础概念到高级技巧，循序渐进\n2. 每个知识点标注难度等级（初级..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 196,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 142,
+      "preview": "基于以上知识树，请帮我设计一本技术小册的详细目录。\n\n要求：\n1. 约10-12章，每章3-5节\n2. 章节之间有逻辑递进关系\n3. 每章开头说明本章目标和前置知识\n4. 每章结尾有总结和下一章预告\n..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 257,
+      "type": "code_block",
+      "category": "general",
+      "length": 146,
+      "preview": "请帮我分析各章节之间的依赖关系，并规划交叉引用。\n\n具体要求：\n1. 列出每章需要引用的前置章节\n2. 列出每章会被后续章节引用的地方\n3. 规划统一的术语表（确保同一概念前后叫法一致）\n4. 规划代..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 337,
+      "type": "code_block",
+      "category": "general",
+      "length": 100,
+      "preview": "我要写第4章《避免不必要的渲染》。\n\n请帮我确认：\n1. 本章在全书中的定位是什么？\n2. 读者读完本章应该掌握什么？\n3. 本章与前后的衔接点在哪里？\n4. 有哪些概念已经在前面讲过，不需要重复？..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 351,
+      "type": "code_block",
+      "category": "general",
+      "length": 86,
+      "preview": "请为第4章生成详细的大纲，要求：\n1. 每节拆分为2-3个小节\n2. 标注每个小节需要的代码示例数量\n3. 标注需要引用的前置章节内容\n4. 标注需要为后续章节埋下的伏笔..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 363,
+      "type": "code_block",
+      "category": "general",
+      "length": 142,
+      "preview": "请帮我检查第4章的一致性：\n\n1. 术语使用是否与术语表一致？\n2. 代码示例是否符合代码规范？\n3. 引用的前置章节内容是否准确？\n4. 是否为后续章节埋下了必要的伏笔？\n5. 本章小结是否准确总结..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 381,
+      "type": "code_block",
+      "category": "general",
+      "length": 149,
+      "preview": "我已经完成了第2-4章的初稿。请帮我检查：\n\n1. 这三章的递进关系是否自然？\n2. 第4章引用的第2、3章内容是否准确？\n3. 这三章的示例代码风格是否一致？\n4. 是否有重复讲解的内容？\n5. 从..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 407,
+      "type": "code_block",
+      "category": "general",
+      "length": 142,
+      "preview": "请帮我检查整本小册的质量：\n\n1. 目录结构是否完整？\n2. 各章之间的逻辑关系是否通顺？\n3. 术语使用是否前后一致？\n4. 代码示例是否有冲突？\n5. 难度曲线是否合理？\n6. 是否有明显的内容遗..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 461,
+      "type": "code_block",
+      "category": "general",
+      "length": 95,
+      "preview": "我想写一本关于[主题]的技术小册，目标读者是[描述]。\n\n请帮我设计知识树：\n1. 列出所有相关知识点\n2. 标注每个知识点的难度等级\n3. 标注知识点之间的依赖关系\n4. 输出为层级结构..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 483,
+      "type": "code_block",
+      "category": "general",
+      "length": 84,
+      "preview": "基于以下知识树，请帮我设计详细目录：\n\n[知识树]\n\n要求：\n1. 约X章，每章Y节\n2. 每章标注：学习目标、前置知识\n3. 章节之间有逻辑递进\n4. 预估每章字数..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 508,
+      "type": "code_block",
+      "category": "general",
+      "length": 79,
+      "preview": "请帮我制定写作规范：\n\n1. 术语表：统一用词\n2. 代码规范：语言、风格、命名\n3. 示例场景：统一的业务背景\n4. 难度分级：初级/中级/高级的判定标准..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 538,
+      "type": "code_block",
+      "category": "general",
+      "length": 98,
+      "preview": "我要写一本关于[主题]的技术小册。\n\n请帮我分析：\n1. 目标读者是谁？（经验水平、岗位类型）\n2. 与市面上同类书籍的差异化在哪里？\n3. 读者读完能获得什么价值？\n4. 预估总字数和章节数？..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 550,
+      "type": "code_block",
+      "category": "general",
+      "length": 58,
+      "preview": "基于以上定位，请生成完整的知识树：\n1. 列出所有知识点\n2. 标注难度等级\n3. 标注依赖关系\n4. 按层级输出..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 570,
+      "type": "code_block",
+      "category": "general",
+      "length": 68,
+      "preview": "请制定写作规范：\n1. 术语表（中英文对照）\n2. 代码规范（语言、风格、命名）\n3. 示例场景（统一的业务背景）\n4. 交叉引用格式..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 598,
+      "type": "code_block",
+      "category": "general",
+      "length": 79,
+      "preview": "请帮我检查整本小册：\n\n1. 目录完整性\n2. 术语一致性\n3. 代码示例一致性\n4. 交叉引用准确性\n5. 难度曲线合理性\n6. 内容完整性（是否有遗漏）..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 611,
+      "type": "code_block",
+      "category": "general",
+      "length": 72,
+      "preview": "请从读者角度评估：\n\n1. 初学者能否顺畅阅读？\n2. 每个概念是否都有足够铺垫？\n3. 示例是否足够清晰？\n4. 章与章之间的过渡是否自然？..."
+    },
+    {
+      "chapter": 9,
+      "chapter_title": "第9章：从博客到技术小册的进阶",
+      "file": "chapter-09-ai-writing-booklet.md",
+      "line": 708,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 82,
+      "preview": "我要写第X章《标题》。\n\n请帮我用黄金圈法则分析：\n1. Why：这一章对读者的价值是什么？\n2. How：核心方法是什么？\n3. What：具体要讲解哪些内容？..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 94,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 196,
+      "preview": "我要做一个关于微服务架构演进的技术分享，时长45分钟。\n\n我的核心经验：\n1. 我们团队从单体架构迁移到微服务的过程\n2. 迁移中遇到的3个关键问题：服务拆分粒度、数据一致性、服务间通信\n3. 我们的..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 131,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 130,
+      "preview": "基于以上故事线，请帮我生成详细的PPT大纲。\n\n要求：\n1. 总共15-20页，符合45分钟演讲节奏\n2. 每页标注建议的演讲时长\n3. 说明每页的核心信息和建议的视觉呈现方式（文字/图表/截图）\n4..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 187,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 144,
+      "preview": "请帮我准备P12的内容：用\"下单扣库存\"的生活化例子解释分布式事务。\n\n要求：\n1. 用讲故事的方式，从用户视角切入\n2. 先描述问题场景，再引出技术概念\n3. 语言口语化，避免生硬的技术术语\n4. ..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 229,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 149,
+      "preview": "请帮我优化以下演讲开场，让它更有感染力和节奏感：\n\n原文：\n大家好，我是小张，今天我要分享的是微服务架构演进实践。我将从为什么做、怎么做、做得怎么样三个部分来讲解。\n\n要求：\n1. 增加故事性和悬念\n..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 258,
+      "type": "code_block",
+      "category": "general",
+      "length": 165,
+      "preview": "请帮我预判以下技术分享可能遇到的10个问题，并给出简明扼要的回答要点：\n\n分享主题：微服务架构演进实践\n核心内容：从单体迁移到微服务的过程、三个关键挑战（服务拆分、数据一致性、服务通信）\n\n要求：\n1..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 416,
+      "type": "code_block",
+      "category": "general",
+      "length": 142,
+      "preview": "我有以下技术经验，请帮我设计一个适合技术分享的叙事线：\n\n经验内容：\n[你的项目/技术经验]\n\n目标听众：[描述听众背景]\n分享时长：[时长]\n\n要求：\n1. 找到一个能引发共鸣的切入点\n2. 设计\"..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 435,
+      "type": "code_block",
+      "category": "general",
+      "length": 125,
+      "preview": "以下是我准备的技术内容，请帮我做颗粒度调整：\n\n原始内容：\n[你的技术内容]\n\n要求：\n1. 识别过于细节、需要简化的部分\n2. 识别过于笼统、需要展开的部分\n3. 为每个技术概念设计一个生活化的类比..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 468,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 153,
+      "preview": "基于以下故事线和内容，请帮我生成详细的PPT大纲：\n\n故事线：\n[你的故事线]\n\n核心内容：\n[你的核心内容]\n\n要求：\n1. 总页数控制在[X]页，符合[时长]演讲\n2. 每页标注建议的演讲时长\n3..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 489,
+      "type": "code_block",
+      "category": "general",
+      "length": 102,
+      "preview": "请为以下两部分内容设计过渡语：\n\n上一部分：[内容摘要]\n下一部分：[内容摘要]\n\n要求：\n1. 用承上启下的方式，回顾上一部分并引出下一部分\n2. 可以用问题、悬念或对比来过渡\n3. 控制在3句话以..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 516,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 129,
+      "preview": "请帮我将以下技术内容改写成口语化的演讲表达：\n\n原文：\n[你的原文]\n\n要求：\n1. 去掉书面语和技术文档式的表达\n2. 加入适当的口语化连接词（\"其实……\"、\"大家想象一下……\"、\"这里有个坑……\"..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 533,
+      "type": "code_block",
+      "category": "general",
+      "length": 106,
+      "preview": "请帮我优化以下演讲开场/结尾：\n\n原文：\n[你的原文]\n\n要求：\n1. 开场：用悬念、故事或问题引发兴趣，10秒内抓住注意力\n2. 结尾：总结核心价值，留下印象或开放问题，引发思考\n3. 语言简洁有力..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 549,
+      "type": "code_block",
+      "category": "general",
+      "length": 104,
+      "preview": "请帮我在以下演讲中设计2-3个自然的幽默点：\n\n演讲内容：\n[内容摘要]\n\n要求：\n1. 幽默要自然，不要强行搞笑\n2. 可以自嘲、调侃常见的程序员梗、用夸张对比\n3. 不要冒犯任何群体\n4. 标注插..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 572,
+      "type": "code_block",
+      "category": "general",
+      "length": 150,
+      "preview": "请帮我预判以下技术演讲可能遇到的问题，并准备回答：\n\n演讲主题：[主题]\n核心内容：[内容摘要]\n听众背景：[描述]\n\n要求：\n1. 预判5-10个问题，覆盖不同难度层次\n2. 每个回答控制在3句话以..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 590,
+      "type": "code_block",
+      "category": "testing",
+      "length": 112,
+      "preview": "请帮我在以下演讲中设计2-3个互动环节：\n\n演讲内容：[内容摘要]\n听众规模：[人数]\n\n要求：\n1. 互动形式可以是提问、举手表决、小测试等\n2. 互动要自然，不要打断演讲节奏\n3. 标注插入位置\n..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 623,
+      "type": "code_block",
+      "category": "general",
+      "length": 123,
+      "preview": "我有以下工作或学习经历，请帮我提炼成适合技术分享的素材：\n\n经历描述：\n[你的经历]\n\n要求：\n1. 提取最有分享价值的核心经验\n2. 找出能引发听众共鸣的切入点\n3. 识别可能的演讲角度（问题解决型..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 674,
+      "type": "code_block",
+      "category": "general",
+      "length": 106,
+      "preview": "请基于以下演讲模板，帮我填充内容大纲：\n\n[模板内容]\n\n我的素材：\n[你的素材]\n\n要求：\n1. 每个部分给出具体内容要点\n2. 标注需要可视化辅助的地方\n3. 预估每个部分的时长\n4. 标注可能的..."
+    },
+    {
+      "chapter": 10,
+      "chapter_title": "第10章：从PPT恐惧到演讲自如",
+      "file": "chapter-10-ai-speaking.md",
+      "line": 723,
+      "type": "code_block",
+      "category": "general",
+      "length": 103,
+      "preview": "我的演讲脚本如下：\n[你的脚本]\n\n请帮我分析：\n1. 哪些部分可能让听众困惑，需要简化或展开？\n2. 哪些部分的节奏可能太快或太慢？\n3. 有哪些地方可以增加互动或停顿？\n4. 整体的语言风格是否一..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 112,
+      "type": "code_block",
+      "category": "general",
+      "length": 306,
+      "preview": "我需要学习区块链智能合约开发，用于一个溯源项目。\n\n我的背景：\n- 3年Java后端开发经验\n- 熟悉Spring Boot、MySQL、Redis\n- 有基本的密码学概念（哈希、非对称加密）\n- 没..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 211,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 148,
+      "preview": "基于以上学习计划，请帮我推荐每个主题的最佳学习资源：\n\n要求：\n1. 优先推荐官方文档和权威教程\n2. 标注每个资源预计的学习时间\n3. 说明每个资源的核心价值（不要重复推荐相似内容）\n4. 对于初学..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 269,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 81,
+      "preview": "我在学习Solidity，遇到了一个概念不懂：\n\n什么是\"view\"函数？和普通函数有什么区别？\n\n请用Java程序员能理解的方式解释，并给一个具体的代码示例。..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 331,
+      "type": "code_block",
+      "category": "review",
+      "length": 102,
+      "preview": "请帮我检查以下Solidity代码是否有问题：\n\n[代码]\n\n要求：\n1. 检查语法错误\n2. 检查常见的安全隐患（如整数溢出、访问控制缺失）\n3. 给出代码风格建议\n4. 如果有更好的实现方式，请说..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 363,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 261,
+      "preview": "我需要实现一个多角色权限控制的智能合约，用于商品溯源：\n\n角色需求：\n1. 生产商：可以写入商品生产信息（产地、生产日期、批次号）\n2. 物流商：可以写入物流信息（运输路径、温度记录）\n3. 零售商：..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 516,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 78,
+      "preview": "请帮我检查我昨天写的溯源合约是否有重入攻击风险：\n\n[合约代码]\n\n如果有风险，请说明：\n1. 风险点在哪里\n2. 如何修复\n3. 防御重入攻击的最佳实践..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 581,
+      "type": "code_block",
+      "category": "testing",
+      "length": 207,
+      "preview": "我是Java程序员，熟悉JUnit。请用JUnit类比的方式，教我如何写Solidity合约的Hardhat测试：\n\n包括：\n1. 测试框架的基本结构（类似@Test注解）\n2. 如何部署合约进行测试..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 878,
+      "type": "code_block",
+      "category": "general",
+      "length": 351,
+      "preview": "---\n\n## 实践：从0到1建立你的AI辅助学习工作流\n\n### Step 1：准备你的\"技术学习清单\"\n\n不要等到要学的时候才临时抱佛脚，平时就要积累想学的技术。\n\n**技术来源**：\n\n| 来源..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 964,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 752,
+      "preview": "### Step 3：建立你的\"AI Prompt库\"\n\n把常用的Prompt整理成模板，学习时直接复制使用。\n\n**必备Prompt清单**：\n\n| 用途 | Prompt模板 |\n|:---|:-..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 1043,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 521,
+      "preview": "### 交付物2：你的AI学习Prompt库\n\n至少包含以下Prompt：\n- 学习地图Prompt\n- 资源推荐Prompt\n- 概念解释Prompt\n- 代码检查Prompt\n- 项目设计Prom..."
+    },
+    {
+      "chapter": 11,
+      "chapter_title": "第11章：5天学会一项新技术的魔法",
+      "file": "chapter-11-ai-learning.md",
+      "line": 1089,
+      "type": "code_block",
+      "category": "general",
+      "length": 63,
+      "preview": "### 彩蛋2：间隔重复 × AI\n\n对抗遗忘的最佳方法是间隔重复。AI可以帮你生成复习计划。\n\n**示例Prompt**：..."
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "第12章：新人一周完成老员工一个月的任务",
+      "file": "chapter-12-ai-frontend.md",
+      "line": 85,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 93,
+      "preview": "@components/README.md - 组件库文档\n@src/pages/UserList/example.tsx - 现有示例\n@src/api/user.ts - 接口定义..."
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "第12章：新人一周完成老员工一个月的任务",
+      "file": "chapter-12-ai-frontend.md",
+      "line": 97,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 354,
+      "preview": "请帮我创建一个用户列表页面，使用我们公司的组件库。\n\n页面功能：\n1. 搜索栏：支持按用户名、手机号、状态搜索\n2. 操作区：新增用户按钮、批量导出按钮\n3. 数据表格：展示用户列表，包含用户名、手机..."
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "第12章：新人一周完成老员工一个月的任务",
+      "file": "chapter-12-ai-frontend.md",
+      "line": 123,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 150,
+      "preview": "我将为你创建用户列表页面。执行计划：\n\n1. 分析组件库文档，识别可用组件\n2. 生成页面主文件（UserList/index.tsx）\n3. 生成类型定义文件（UserList/types.ts）\n..."
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "第12章：新人一周完成老员工一个月的任务",
+      "file": "chapter-12-ai-frontend.md",
+      "line": 179,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 708,
+      "preview": "\"你看，AI不仅生成了页面代码，还正确地使用了我们的组件库、React Query、Hook Form。\"张哥指着屏幕，\"而且类型定义、表单验证都处理得很好。\"\n\n小陈看得目瞪口呆。这段代码的质量，丝..."
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "第12章：新人一周完成老员工一个月的任务",
+      "file": "chapter-12-ai-frontend.md",
+      "line": 402,
+      "type": "code_block",
+      "category": "general",
+      "length": 83,
+      "preview": "---\n\n### 周五：疯狂产出\n\n有了模板，小陈的开发速度像坐了火箭。\n\n**上午：批量生成列表页**\n\n小陈把需要做的25个列表页列出来，用AI批量生成配置：..."
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "第12章：新人一周完成老员工一个月的任务",
+      "file": "chapter-12-ai-frontend.md",
+      "line": 428,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 165,
+      "preview": "Cursor花了10分钟，生成了25个页面的基础代码。\n\n小陈逐个检查，发现大部分都没问题，只需要微调几个字段的验证规则。\n\n**下午：处理复杂表单**\n\n12个表单页比较复杂，涉及到：\n- 动态增减..."
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "第12章：新人一周完成老员工一个月的任务",
+      "file": "chapter-12-ai-frontend.md",
+      "line": 450,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 846,
+      "preview": "AI生成了完整的动态表单实现，包括添加、删除、排序功能。\n\n**晚上：联调测试**\n\n周五晚上，小陈完成了所有47个页面的基础代码。剩下的就是联调测试了。\n\n\"太不可思议了...\"小陈看着满屏的代码文..."
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "第12章：新人一周完成老员工一个月的任务",
+      "file": "chapter-12-ai-frontend.md",
+      "line": 612,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 56,
+      "preview": "### Prompt工程：前端开发的黄金模板\n\n要让AI生成高质量的前端代码，Prompt需要包含以下要素：..."
+    },
+    {
+      "chapter": 12,
+      "chapter_title": "第12章：新人一周完成老员工一个月的任务",
+      "file": "chapter-12-ai-frontend.md",
+      "line": 790,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 516,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n### 1. 你的模板库\n\n至少包含：\n- 列表页模板（createListPage）\n- 表单页模板（createFormPage）\n- 详..."
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "第13章：前端转后端，我的代码被同事夸了",
+      "file": "chapter-13-ai-backend.md",
+      "line": 53,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 255,
+      "preview": "我需要快速掌握NestJS框架，用于后端API开发。\n\n我的背景：\n- 1年前端开发经验（React/TypeScript）\n- 了解基本的Node.js和Express\n- 不了解依赖注入、装饰器等..."
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "第13章：前端转后端，我的代码被同事夸了",
+      "file": "chapter-13-ai-backend.md",
+      "line": 94,
+      "type": "code_block",
+      "category": "general",
+      "length": 121,
+      "preview": "请帮我分析这个NestJS项目的代码结构：\n\n[粘贴项目src目录结构和关键代码]\n\n请分析：\n1. 项目的分层架构是怎样的？\n2. 有哪些设计模式在使用？\n3. 代码规范是什么？（命名、目录组织等）..."
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "第13章：前端转后端，我的代码被同事夸了",
+      "file": "chapter-13-ai-backend.md",
+      "line": 130,
+      "type": "code_block",
+      "category": "testing",
+      "length": 434,
+      "preview": "请帮我生成用户管理模块的完整代码，使用NestJS + Prisma。\n\n功能需求：\n1. 用户列表查询（支持分页、搜索、筛选）\n2. 创建用户\n3. 更新用户\n4. 删除用户\n5. 获取用户详情\n\n..."
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "第13章：前端转后端，我的代码被同事夸了",
+      "file": "chapter-13-ai-backend.md",
+      "line": 438,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 372,
+      "preview": "小陈仔细阅读了生成的代码，质量非常高：\n- 错误处理完善（NotFoundException, ConflictException）\n- 密码加密处理\n- 关联数据查询优化\n- 返回数据过滤敏感字段（..."
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "第13章：前端转后端，我的代码被同事夸了",
+      "file": "chapter-13-ai-backend.md",
+      "line": 779,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 925,
+      "preview": "AI生成的代码涵盖了所有需求，小陈只需要做一些微调就能使用。\n\n---\n\n### 周五：代码审查与惊喜\n\n周五，小陈把所有的代码提交给张哥做最终审查。\n\n张哥花了半天时间仔细review，最后在小陈的..."
+    },
+    {
+      "chapter": 13,
+      "chapter_title": "第13章：前端转后端，我的代码被同事夸了",
+      "file": "chapter-13-ai-backend.md",
+      "line": 970,
+      "type": "code_block",
+      "category": "testing",
+      "length": 473,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **后端开发Prompt库**\n   - 框架学习Prompt\n   - 数据库设计Prompt\n   - API开发Prompt\n  ..."
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "第14章：让遗留项目焕发新生的手术",
+      "file": "chapter-14-ai-refactoring.md",
+      "line": 41,
+      "type": "code_block",
+      "category": "general",
+      "length": 279,
+      "preview": "order-system/\n├── admin/              # 后台管理\n│   ├── js/\n│   │   ├── app.js      # 5000+行\n│   │   ├─..."
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "第14章：让遗留项目焕发新生的手术",
+      "file": "chapter-14-ai-refactoring.md",
+      "line": 63,
+      "type": "code_block",
+      "category": "general",
+      "length": 172,
+      "preview": "请帮我分析这个遗留项目的代码结构和问题：\n\n项目背景：\n- 5年历史的老项目\n- 前端：jQuery + 原生JS\n- 后端：PHP\n- 核心文件几千行，没有模块化\n\n[粘贴关键代码片段]\n\n请分析：..."
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "第14章：让遗留项目焕发新生的手术",
+      "file": "chapter-14-ai-refactoring.md",
+      "line": 112,
+      "type": "code_block",
+      "category": "general",
+      "length": 221,
+      "preview": "请帮我制定一个渐进式重构方案：\n\n项目概况：\n- 前端：jQuery项目，约2万行JS代码\n- 后端：PHP项目，约1.5万行代码\n- 核心功能：订单管理、用户管理、报表统计\n\n目标技术栈：\n- 前端..."
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "第14章：让遗留项目焕发新生的手术",
+      "file": "chapter-14-ai-refactoring.md",
+      "line": 165,
+      "type": "code_block",
+      "category": "general",
+      "length": 161,
+      "preview": "请帮我将以下jQuery代码改造为模块化结构：\n\n原始代码：\n[粘贴app.js的部分代码]\n\n目标：\n- 使用ES6模块（import/export）\n- 按功能拆分文件\n- 保持现有功能不变\n- ..."
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "第14章：让遗留项目焕发新生的手术",
+      "file": "chapter-14-ai-refactoring.md",
+      "line": 386,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 66,
+      "preview": "AI生成了完整的重构代码，小陈只需要做少量的调整就能运行。\n\n**数据迁移**\n\n最复杂的是数据迁移。小陈用AI生成了迁移脚本：..."
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "第14章：让遗留项目焕发新生的手术",
+      "file": "chapter-14-ai-refactoring.md",
+      "line": 630,
+      "type": "code_block",
+      "category": "testing",
+      "length": 822,
+      "preview": "---\n\n### 第二周：收获与成果\n\n两周过去，小陈向王总汇报重构进展：\n\n**已完成**：\n1. ✓ 代码模块化改造（前端+后端）\n2. ✓ 用户管理模块重构完成\n3. ✓ 自动化测试覆盖80%+..."
+    },
+    {
+      "chapter": 14,
+      "chapter_title": "第14章：让遗留项目焕发新生的手术",
+      "file": "chapter-14-ai-refactoring.md",
+      "line": 834,
+      "type": "code_block",
+      "category": "testing",
+      "length": 409,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **重构分析模板**\n   - 代码质量检查清单\n   - 技术债务评估表\n   - 重构计划模板\n\n2. **AI辅助重构Prompt..."
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "第15章：在Bug进入仓库前就抓住它",
+      "file": "chapter-15-ai-code-review.md",
+      "line": 172,
+      "type": "code_block",
+      "category": "review",
+      "length": 170,
+      "preview": "现在，每次提交PR，AI会自动审查并发表评论：\n\n---\n\n**🤖 AI Code Review Bot** commented:\n\n### 审查摘要\n\n**文件**: `src/components..."
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "第15章：在Bug进入仓库前就抓住它",
+      "file": "chapter-15-ai-code-review.md",
+      "line": 209,
+      "type": "code_block",
+      "category": "review",
+      "length": 248,
+      "preview": "📋 PR审查助手\n\n变更概览：\n- 新增文件: 3个\n- 修改文件: 12个\n- 删除文件: 1个\n- 总行数变化: +450, -120\n\n关键变更：\n1. 新增PaymentService模块（核..."
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "第15章：在Bug进入仓库前就抓住它",
+      "file": "chapter-15-ai-code-review.md",
+      "line": 243,
+      "type": "code_block",
+      "category": "general",
+      "length": 874,
+      "preview": "$ git commit -m \"feat: 添加优惠券功能\"\n🤖 正在运行AI代码检查...\n\n检查文件：src/payment/CouponSelector.jsx, src/services/p..."
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "第15章：在Bug进入仓库前就抓住它",
+      "file": "chapter-15-ai-code-review.md",
+      "line": 465,
+      "type": "code_block",
+      "category": "review",
+      "length": 83,
+      "preview": "### Step 3：编写有效的审查Prompt\n\n如果你使用OpenAI/Claude API自定义审查，Prompt很关键：\n\n**基础Prompt模板**：..."
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "第15章：在Bug进入仓库前就抓住它",
+      "file": "chapter-15-ai-code-review.md",
+      "line": 507,
+      "type": "code_block",
+      "category": "review",
+      "length": 221,
+      "preview": "请从以下维度进行审查：\n1. **安全性**：是否有潜在的安全漏洞？\n2. **正确性**：逻辑是否正确，边界情况是否处理？\n3. **性能**：是否有性能隐患？\n4. **可维护性**：代码是否清晰..."
+    },
+    {
+      "chapter": 15,
+      "chapter_title": "第15章：在Bug进入仓库前就抓住它",
+      "file": "chapter-15-ai-code-review.md",
+      "line": 575,
+      "type": "code_block",
+      "category": "review",
+      "length": 457,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **AI代码审查配置文件**\n   - 适合你团队技术栈的审查规则\n   - Git Hook或CI集成配置\n\n2. **审查Promp..."
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "第16章：从10秒到100毫秒的优化之路",
+      "file": "chapter-16-ai-performance.md",
+      "line": 49,
+      "type": "code_block",
+      "category": "general",
+      "length": 348,
+      "preview": "我负责的数据大屏页面性能很差，以下是性能报告：\n\nLighthouse评分：\n- Performance: 32/100\n- First Contentful Paint: 2.1s\n- Larges..."
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "第16章：从10秒到100毫秒的优化之路",
+      "file": "chapter-16-ai-performance.md",
+      "line": 137,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 95,
+      "preview": "我需要实现一个虚拟列表组件，要求：\n1. 支持1000+条数据流畅滚动\n2. 固定行高80px\n3. 保留筛选和排序功能\n4. 使用React\n\n请提供完整的组件代码，并解释关键实现原理。..."
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "第16章：从10秒到100毫秒的优化之路",
+      "file": "chapter-16-ai-performance.md",
+      "line": 673,
+      "type": "code_block",
+      "category": "general",
+      "length": 168,
+      "preview": "1. 先度量，再优化\n   → 不要凭感觉优化，数据说了算\n\n2. 先做大优化，再做小优化\n   → 80%的性能问题来自20%的代码\n\n3. 优化是有成本的\n   → 代码复杂度、维护成本、开发时间..."
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "第16章：从10秒到100毫秒的优化之路",
+      "file": "chapter-16-ai-performance.md",
+      "line": 696,
+      "type": "code_block",
+      "category": "general",
+      "length": 211,
+      "preview": "请对我的网页进行性能审计。\n\n性能数据：\n- [粘贴Lighthouse报告]\n- [粘贴Performance面板截图或数据]\n- [粘贴Network面板数据]\n\n页面信息：\n- 框架：[Reac..."
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "第16章：从10秒到100毫秒的优化之路",
+      "file": "chapter-16-ai-performance.md",
+      "line": 718,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 52,
+      "preview": "请优化以下代码的性能。\n\n当前性能问题：\n- [描述问题，如\"渲染1000条数据卡顿\"]\n\n当前代码：..."
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "第16章：从10秒到100毫秒的优化之路",
+      "file": "chapter-16-ai-performance.md",
+      "line": 727,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 98,
+      "preview": "约束条件：\n- 使用[框架]\n- 保持现有功能不变\n- [其他约束]\n\n请提供：\n1. 性能分析（为什么这段代码慢）\n2. 优化后的代码\n3. 复杂度分析（时间/空间）\n4. 其他可能的优化方案..."
+    },
+    {
+      "chapter": 16,
+      "chapter_title": "第16章：从10秒到100毫秒的优化之路",
+      "file": "chapter-16-ai-performance.md",
+      "line": 766,
+      "type": "code_block",
+      "category": "general",
+      "length": 421,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **性能优化检查清单**\n   - 前端性能检查项目\n   - 各指标的健康阈值\n\n2. **AI优化Prompt库**\n   - 性能..."
+    },
+    {
+      "chapter": 17,
+      "chapter_title": "第17章：线上Bug减少80%的秘密武器",
+      "file": "chapter-17-ai-test-design.md",
+      "line": 802,
+      "type": "code_block",
+      "category": "testing",
+      "length": 492,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **测试场景模板库**\n   - 不同类型功能的测试场景模板\n   - 常见边界情况清单\n\n2. **AI测试Prompt库**\n   ..."
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "第18章：从2天到2小时的回归测试",
+      "file": "chapter-18-ai-automation-test.md",
+      "line": 54,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 756,
+      "preview": "**第二个阶段：测试变得脆弱**\n\n随着UI迭代，测试开始频繁失败。按钮的className改了个名字，测试挂了；接口返回的字段顺序变了，测试挂了；页面加载慢了100毫秒，测试挂了。\n\n**第三个阶段..."
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "第18章：从2天到2小时的回归测试",
+      "file": "chapter-18-ai-automation-test.md",
+      "line": 174,
+      "type": "code_block",
+      "category": "general",
+      "length": 75,
+      "preview": "---\n\n### 第二周：AI辅助重构实战\n\n#### Day 1：修复选择器问题\n\n小王先用AI批量修复选择器问题。\n\n他写了一个Prompt：..."
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "第18章：从2天到2小时的回归测试",
+      "file": "chapter-18-ai-automation-test.md",
+      "line": 200,
+      "type": "code_block",
+      "category": "testing",
+      "length": 118,
+      "preview": "AI不仅帮他改写了测试代码，还列出了需要在组件中添加的data-testid清单。\n\n一个上午，他就修复了50多个测试的选择器问题。\n\n#### Day 2：优化异步等待\n\n接下来处理异步等待问题。\n..."
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "第18章：从2天到2小时的回归测试",
+      "file": "chapter-18-ai-automation-test.md",
+      "line": 432,
+      "type": "code_block",
+      "category": "testing",
+      "length": 105,
+      "preview": "AI生成的测试不是100%完美，但已经覆盖了主要场景。小王只需要做些微调就能用。\n\n通过这种方式，他一周内补充了200多个缺失的测试。\n\n#### 智能失败分析\n\n最后，小王用AI做了一个测试失败分析..."
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "第18章：从2天到2小时的回归测试",
+      "file": "chapter-18-ai-automation-test.md",
+      "line": 571,
+      "type": "code_block",
+      "category": "testing",
+      "length": 60,
+      "preview": "---\n\n## 实践：AI辅助测试工作流\n\n### Step 1：测试诊断\n\n**Prompt模板 - 失败分析**：..."
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "第18章：从2天到2小时的回归测试",
+      "file": "chapter-18-ai-automation-test.md",
+      "line": 695,
+      "type": "code_block",
+      "category": "testing",
+      "length": 503,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **测试质量诊断报告**\n   - 失败原因分类统计\n   - 测试代码质量评估\n   - 改进优先级清单\n\n2. **测试重构方案**..."
+    },
+    {
+      "chapter": 18,
+      "chapter_title": "第18章：从2天到2小时的回归测试",
+      "file": "chapter-18-ai-automation-test.md",
+      "line": 766,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 249,
+      "preview": "### 彩蛋2：测试稳定性检查清单\n\n每次写测试前，问自己这5个问题：\n\n1. **选择器稳定吗？** 使用的是role/name/data-testid，而不是CSS class\n2. **异步正确..."
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "第19章：让前后端不再扯皮的契约测试",
+      "file": "chapter-19-ai-api-test.md",
+      "line": 113,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 245,
+      "preview": "我们需要设计一个获取用户列表的API契约。\n\n需求：\n- 支持分页（page, pageSize）\n- 支持搜索（keyword可选）\n- 返回用户列表和总数\n- 每个用户包含：id, name, e..."
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "第19章：让前后端不再扯皮的契约测试",
+      "file": "chapter-19-ai-api-test.md",
+      "line": 253,
+      "type": "code_block",
+      "category": "general",
+      "length": 219,
+      "preview": "我计划对以下API进行变更，请分析对契约的影响：\n\n当前契约：\n[粘贴当前契约]\n\n计划变更：\n1. 移除avatar字段（改用单独的获取头像接口）\n2. 添加status字段（active/inac..."
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "第19章：让前后端不再扯皮的契约测试",
+      "file": "chapter-19-ai-api-test.md",
+      "line": 439,
+      "type": "code_block",
+      "category": "testing",
+      "length": 170,
+      "preview": "---\n\n### 第三周：实战验证\n\n契约测试体系搭建完成，小王找了一个小功能来实战验证。\n\n**场景**：新增\"项目设置\"页面，需要调用以下接口：\n1. `GET /api/projects/:id..."
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "第19章：让前后端不再扯皮的契约测试",
+      "file": "chapter-19-ai-api-test.md",
+      "line": 594,
+      "type": "code_block",
+      "category": "testing",
+      "length": 121,
+      "preview": "**契约测试的独特价值**：\n- 比单元测试更高层，验证服务间交互\n- 比集成测试更轻量，不需要同时启动所有服务\n- 比E2E测试更快速，聚焦数据契约而非业务逻辑\n\n### 消费者驱动 vs 提供者驱..."
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "第19章：让前后端不再扯皮的契约测试",
+      "file": "chapter-19-ai-api-test.md",
+      "line": 606,
+      "type": "code_block",
+      "category": "general",
+      "length": 54,
+      "preview": "- 优点：消费者需求优先，避免过度设计\n- 缺点：多个消费者需求冲突时需要协调\n\n**提供者驱动契约**：..."
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "第19章：让前后端不再扯皮的契约测试",
+      "file": "chapter-19-ai-api-test.md",
+      "line": 653,
+      "type": "code_block",
+      "category": "testing",
+      "length": 66,
+      "preview": "---\n\n## 实践：AI辅助契约测试工作流\n\n### Step 1：从零开始建立契约\n\n**Prompt - 初始契约生成**：..."
+    },
+    {
+      "chapter": 19,
+      "chapter_title": "第19章：让前后端不再扯皮的契约测试",
+      "file": "chapter-19-ai-api-test.md",
+      "line": 770,
+      "type": "code_block",
+      "category": "testing",
+      "length": 493,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **契约测试基础设施**\n   - Pact配置（消费者和提供者）\n   - CI/CD集成脚本\n   - Pact Broker配置\n..."
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "第20章：在被黑客攻击之前发现问题",
+      "file": "chapter-20-ai-security-test.md",
+      "line": 61,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 684,
+      "preview": "\"为什么...\"小王声音沙哑，\"为什么这个漏洞没被测试发现？\"\n\n\"我们的测试主要关注功能，\"QA负责人叹了口气，\"安全测试...基本靠人工检查，覆盖面有限。\"\n\n老周补充道：\"其实类似的漏洞，在我们..."
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "第20章：在被黑客攻击之前发现问题",
+      "file": "chapter-20-ai-security-test.md",
+      "line": 149,
+      "type": "code_block",
+      "category": "general",
+      "length": 224,
+      "preview": "第一次扫描结果让小王倒吸一口凉气：\n\n| 漏洞类型 | 高危 | 中危 | 低危 |\n|:---|:---:|:---:|:---:|\n| 依赖漏洞 | 5 | 12 | 23 |\n| 代码漏洞 | ..."
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "第20章：在被黑客攻击之前发现问题",
+      "file": "chapter-20-ai-security-test.md",
+      "line": 228,
+      "type": "code_block",
+      "category": "testing",
+      "length": 219,
+      "preview": "请为以下API生成完整的安全测试用例：\n\nAPI信息：\n- 端点：POST /api/login\n- 功能：用户登录\n- 参数：{ email: string, password: string }\n..."
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "第20章：在被黑客攻击之前发现问题",
+      "file": "chapter-20-ai-security-test.md",
+      "line": 316,
+      "type": "code_block",
+      "category": "general",
+      "length": 137,
+      "preview": "---\n\n### 第二周：AI辅助代码审计\n\n#### AI驱动的安全审计\n\n小王发现，现有的安全扫描工具虽然能发现常见问题，但对于业务逻辑漏洞（如越权访问、支付绕过）就无能为力了。\n\n他开始尝试用A..."
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "第20章：在被黑客攻击之前发现问题",
+      "file": "chapter-20-ai-security-test.md",
+      "line": 694,
+      "type": "code_block",
+      "category": "general",
+      "length": 55,
+      "preview": "---\n\n## 实践：AI辅助安全工作流\n\n### Prompt库\n\n**Prompt 1 - 漏洞分析**..."
+    },
+    {
+      "chapter": 20,
+      "chapter_title": "第20章：在被黑客攻击之前发现问题",
+      "file": "chapter-20-ai-security-test.md",
+      "line": 755,
+      "type": "code_block",
+      "category": "testing",
+      "length": 489,
+      "preview": "---\n\n## 本章交付物\n\n1. **安全测试流水线**\n   - CI/CD安全配置\n   - Pre-commit hooks\n   - 自动化扫描工具集成\n\n2. **AI安全审计流程**\n ..."
+    },
+    {
+      "chapter": 21,
+      "chapter_title": "第21章：让慢如蜗牛的报表飞起来",
+      "file": "chapter-21-ai-sql-optimization.md",
+      "line": 279,
+      "type": "code_block",
+      "category": "general",
+      "length": 113,
+      "preview": "**从15分钟降到8秒！** 🎉\n\n小陈激动得差点跳起来。\n\n---\n\n### 周三：更深度的优化\n\n虽然8秒已经很快了，但小陈想：能不能更快？\n\n他继续用AI探索更多优化方案。\n\n**Prompt ..."
+    },
+    {
+      "chapter": 21,
+      "chapter_title": "第21章：让慢如蜗牛的报表飞起来",
+      "file": "chapter-21-ai-sql-optimization.md",
+      "line": 396,
+      "type": "code_block",
+      "category": "general",
+      "length": 75,
+      "preview": "**预期提升**：\n- 查询时间：8秒 → 50毫秒\n- 但需要定期刷新数据\n\n### 4. 缓存策略\n\n对于实时性要求不高的报表，可以引入缓存：..."
+    },
+    {
+      "chapter": 21,
+      "chapter_title": "第21章：让慢如蜗牛的报表飞起来",
+      "file": "chapter-21-ai-sql-optimization.md",
+      "line": 648,
+      "type": "code_block",
+      "category": "general",
+      "length": 425,
+      "preview": "### 常见SQL性能问题与AI解决方案\n\n| 问题 | 症状 | AI检测方法 | 解决方案 |\n|:---|:---|:---|:---|\n| 全表扫描 | type=ALL | 分析执行计划 |..."
+    },
+    {
+      "chapter": 21,
+      "chapter_title": "第21章：让慢如蜗牛的报表飞起来",
+      "file": "chapter-21-ai-sql-optimization.md",
+      "line": 688,
+      "type": "code_block",
+      "category": "general",
+      "length": 136,
+      "preview": "数据统计：\n- 表A：X行\n- 表B：Y行\n...\n\n请输出：\n1. 性能瓶颈分析（具体原因）\n2. 索引优化建议（CREATE INDEX语句）\n3. SQL重写建议（优化后的SQL）\n4. 架构优..."
+    },
+    {
+      "chapter": 21,
+      "chapter_title": "第21章：让慢如蜗牛的报表飞起来",
+      "file": "chapter-21-ai-sql-optimization.md",
+      "line": 712,
+      "type": "code_block",
+      "category": "general",
+      "length": 132,
+      "preview": "常见查询模式：\n1. [查询1]\n2. [查询2]\n3. [查询3]\n\n约束：\n- 写操作比例：X%\n- 读操作比例：Y%\n- 存储空间有限制\n\n请输出：\n1. 推荐的索引列表（带理由）\n2. 每个索..."
+    },
+    {
+      "chapter": 21,
+      "chapter_title": "第21章：让慢如蜗牛的报表飞起来",
+      "file": "chapter-21-ai-sql-optimization.md",
+      "line": 733,
+      "type": "code_block",
+      "category": "general",
+      "length": 241,
+      "preview": "请生成慢查询分析报告：\n\n慢查询列表：\n[粘贴慢查询日志]\n\n请按以下格式输出：\n\n## 慢查询分析摘要\n- 慢查询总数：X\n- 最严重查询：Y（影响分析）\n- 优化优先级排序\n\n## Top 5问题..."
+    },
+    {
+      "chapter": 21,
+      "chapter_title": "第21章：让慢如蜗牛的报表飞起来",
+      "file": "chapter-21-ai-sql-optimization.md",
+      "line": 807,
+      "type": "code_block",
+      "category": "system",
+      "length": 239,
+      "preview": "你是一位拥有20年经验的数据库性能优化专家，精通MySQL、PostgreSQL等主流数据库。\n\n请对以下SQL进行深度优化分析，遵循以下原则：\n\n1. 正确性优先：优化不能改变查询结果\n2. 性能量..."
+    },
+    {
+      "chapter": 22,
+      "chapter_title": "第22章：告别重复劳动的脚本自动化",
+      "file": "chapter-22-ai-scripting.md",
+      "line": 52,
+      "type": "code_block",
+      "category": "general",
+      "length": 339,
+      "preview": "我需要写一个Python脚本来批量更新服务器的SSL证书。\n\n场景：\n- 有50台Linux服务器，IP列表存在ips.txt里\n- 每台服务器需要用SSH登录，使用密钥认证\n- 更新步骤：\n  1...."
+    },
+    {
+      "chapter": 22,
+      "chapter_title": "第22章：告别重复劳动的脚本自动化",
+      "file": "chapter-22-ai-scripting.md",
+      "line": 386,
+      "type": "code_block",
+      "category": "general",
+      "length": 317,
+      "preview": "### 脚本类型与AI Prompt模板\n\n| 脚本类型 | 核心Prompt要素 | 示例场景 |\n|:---|:---|:---|\n| **批量操作** | 目标列表、操作步骤、并发控制、失败处理..."
+    },
+    {
+      "chapter": 22,
+      "chapter_title": "第22章：告别重复劳动的脚本自动化",
+      "file": "chapter-22-ai-scripting.md",
+      "line": 597,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 450,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **个人脚本库**（至少5个实用脚本）\n   - 服务器巡检脚本\n   - 日志分析脚本\n   - 批量操作脚本\n   - 备份验证脚本..."
+    },
+    {
+      "chapter": 23,
+      "chapter_title": "第23章：让\"我本地是好的\"成为历史",
+      "file": "chapter-23-ai-docker.md",
+      "line": 50,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 365,
+      "preview": "我需要为一个Python Flask应用编写Dockerfile。\n\n应用信息：\n- Python 3.11\n- Flask + Gunicorn + Celery\n- 依赖：requirements..."
+    },
+    {
+      "chapter": 23,
+      "chapter_title": "第23章：让\"我本地是好的\"成为历史",
+      "file": "chapter-23-ai-docker.md",
+      "line": 323,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 507,
+      "preview": "老周看完这个方案，直接惊了。\n\n\"这比我之前写的Dockerfile专业太多了，\"他想，\"多阶段构建、非root用户、健康检查、优雅的日志配置...这些都是我知道应该做，但懒得查文档实现的东西。\"\n\n..."
+    },
+    {
+      "chapter": 23,
+      "chapter_title": "第23章：让\"我本地是好的\"成为历史",
+      "file": "chapter-23-ai-docker.md",
+      "line": 534,
+      "type": "code_block",
+      "category": "general",
+      "length": 130,
+      "preview": "---\n\n## 实践部分：常见应用容器化实战\n\n### 实战1：Python数据科学应用\n\n**特点**：\n- 依赖复杂（numpy, pandas, scipy, scikit-learn）\n- 数..."
+    },
+    {
+      "chapter": 23,
+      "chapter_title": "第23章：让\"我本地是好的\"成为历史",
+      "file": "chapter-23-ai-docker.md",
+      "line": 690,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 511,
+      "preview": "---\n\n## 本章交付物\n\n完成本章后，你应该拥有：\n\n1. **容器化最佳实践手册**\n   - Dockerfile编写规范\n   - 多阶段构建模板\n   - 安全加固清单\n\n2. **常用应..."
+    },
+    {
+      "chapter": 24,
+      "chapter_title": "第24章：一键发布，不再熬夜的版本上线",
+      "file": "chapter-24-ai-cicd.md",
+      "line": 52,
+      "type": "code_block",
+      "category": "testing",
+      "length": 373,
+      "preview": "我需要为一个微服务应用设计完整的CI/CD流水线。\n\n技术栈：\n- 后端：Python Flask应用\n- 前端：Vue.js\n- 数据库：PostgreSQL\n- 部署：Kubernetes\n- 代..."
+    },
+    {
+      "chapter": 24,
+      "chapter_title": "第24章：一键发布，不再熬夜的版本上线",
+      "file": "chapter-24-ai-cicd.md",
+      "line": 613,
+      "type": "code_block",
+      "category": "testing",
+      "length": 696,
+      "preview": "---\n\n### 周四到周五：验证新流程\n\n周四，老周用新搭建的CI/CD流程进行了一次完整的发布。\n\n**发布流程**：\n1. 开发者提交代码到main分支\n2. 自动触发流水线：\n   - ✅ 单..."
+    },
+    {
+      "chapter": 24,
+      "chapter_title": "第24章：一键发布，不再熬夜的版本上线",
+      "file": "chapter-24-ai-cicd.md",
+      "line": 759,
+      "type": "code_block",
+      "category": "general",
+      "length": 107,
+      "preview": "---\n\n## 实践部分：常见CI/CD场景实战\n\n### 实战1：前端项目CI/CD\n\n**特点**：\n- 需要构建（npm run build）\n- 产出静态文件\n- 需要CDN刷新\n\n**Pro..."
+    },
+    {
+      "chapter": 24,
+      "chapter_title": "第24章：一键发布，不再熬夜的版本上线",
+      "file": "chapter-24-ai-cicd.md",
+      "line": 781,
+      "type": "code_block",
+      "category": "testing",
+      "length": 476,
+      "preview": "### 实战2：移动端项目CI/CD\n\n**特点**：\n- 需要证书和签名\n- 多渠道打包\n- 上传到应用商店\n\n### 实战3：AI模型项目CI/CD\n\n**特点**：\n- 需要GPU资源\n- 模型..."
+    },
+    {
+      "chapter": 25,
+      "chapter_title": "第25章：在用户发现之前解决问题",
+      "file": "chapter-25-ai-monitoring.md",
+      "line": 45,
+      "type": "code_block",
+      "category": "general",
+      "length": 407,
+      "preview": "我需要设计一个完整的监控与告警系统。\n\n当前痛点：\n- 告警太多（平均每天50+条），大部分都是噪声\n- 真正的问题发现不及时\n- 故障根因定位慢，平均需要30分钟以上\n- 没有预测能力，总是事后救火..."
+    },
+    {
+      "chapter": 26,
+      "chapter_title": "第26章：从一堆数据中发现金矿",
+      "file": "chapter-26-ai-data-analysis.md",
+      "line": 68,
+      "type": "code_block",
+      "category": "general",
+      "length": 256,
+      "preview": "我需要分析上季度用户行为数据，找出提升留存的机会点。\n\n数据情况：\n- 用户表：100万+用户，包含注册时间、渠道、设备、地理位置\n- 行为表：每天500万+条事件，包含页面浏览、点击、购买等\n- 订..."
+    },
+    {
+      "chapter": 26,
+      "chapter_title": "第26章：从一堆数据中发现金矿",
+      "file": "chapter-26-ai-data-analysis.md",
+      "line": 608,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 199,
+      "preview": "### AI在数据分析中的定位\n\n**AI擅长的事**：\n- ✅ 代码生成（SQL、Python、R）\n- ✅ 语法检查和优化\n- ✅ 提供分析思路和方法\n- ✅ 生成标准化的报告模板\n- ✅ 解释统..."
+    },
+    {
+      "chapter": 26,
+      "chapter_title": "第26章：从一堆数据中发现金矿",
+      "file": "chapter-26-ai-data-analysis.md",
+      "line": 733,
+      "type": "code_block",
+      "category": "general",
+      "length": 120,
+      "preview": "---\n\n## 实践部分：数据分析场景实战\n\n### 场景1：用户留存分析（完整流程）\n\n**业务问题**：某App的30日留存率持续下降，需要找出原因并提出优化建议。\n\n**AI辅助分析流程**：\n..."
+    },
+    {
+      "chapter": 26,
+      "chapter_title": "第26章：从一堆数据中发现金矿",
+      "file": "chapter-26-ai-data-analysis.md",
+      "line": 820,
+      "type": "code_block",
+      "category": "general",
+      "length": 63,
+      "preview": "### 场景2：销售数据分析\n\n**业务问题**：分析上季度销售数据，找出增长/下降的原因。\n\n**Prompt示例**：..."
+    },
+    {
+      "chapter": 26,
+      "chapter_title": "第26章：从一堆数据中发现金矿",
+      "file": "chapter-26-ai-data-analysis.md",
+      "line": 847,
+      "type": "code_block",
+      "category": "general",
+      "length": 60,
+      "preview": "### 场景3：异常检测\n\n**业务问题**：系统检测到某指标异常波动，需要排查原因。\n\n**Prompt示例**：..."
+    },
+    {
+      "chapter": 26,
+      "chapter_title": "第26章：从一堆数据中发现金矿",
+      "file": "chapter-26-ai-data-analysis.md",
+      "line": 871,
+      "type": "code_block",
+      "category": "general",
+      "length": 602,
+      "preview": "---\n\n## 本章交付物\n\n完成本章学习后，你应该拥有：\n\n### 交付物1：SQL模板库\n\n收集并整理常用的SQL查询模板：\n- 留存分析模板\n- 漏斗分析模板\n- 用户画像分析模板\n- RFM分..."
+    },
+    {
+      "chapter": 26,
+      "chapter_title": "第26章：从一堆数据中发现金矿",
+      "file": "chapter-26-ai-data-analysis.md",
+      "line": 1028,
+      "type": "code_block",
+      "category": "general",
+      "length": 56,
+      "preview": "### 彩蛋3：快速生成仪表板的Prompt\n\n用这段Prompt可以快速生成一个Streamlit仪表板：..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 94,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 231,
+      "preview": "我需要为一个B2C电商平台设计后台管理系统的需求文档。\n\n背景信息：\n- 平台主营3C数码产品\n- 目前年GMV约5000万\n- 运营团队10人，客服团队15人\n- 当前使用第三方SaaS系统，功能受..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 117,
+      "type": "code_block",
+      "category": "testing",
+      "length": 177,
+      "preview": "现在请你分别扮演以下角色，对上述需求提出问题和建议：\n\n1. 后端开发工程师：关注技术可行性、数据模型、接口设计\n2. 前端开发工程师：关注交互复杂度、页面性能、组件复用\n3. 测试工程师：关注可测试..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 171,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 278,
+      "preview": "基于以上分析，请生成一份完整的PRD框架，包含以下内容：\n\n1. 文档信息（版本、作者、更新记录）\n2. 项目背景与目标\n3. 用户角色与权限矩阵\n4. 功能模块详细说明（每个模块包含：功能描述、业务..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 206,
+      "type": "code_block",
+      "category": "general",
+      "length": 110,
+      "preview": "请为\"商品上架\"功能写3个用户故事，格式：\n作为[角色]，我希望[功能]，以便[价值]\n\n要求：\n1. 覆盖主要场景（单个上架、批量上架、快速复制上架）\n2. 体现不同角色的需求差异\n3. 价值描述要..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 233,
+      "type": "code_block",
+      "category": "general",
+      "length": 177,
+      "preview": "请帮我梳理电商订单的完整业务流程，包括：\n\n1. 订单状态定义（列出所有可能的状态）\n2. 状态流转图（用Mermaid语法）\n3. 每个状态变更的触发条件\n4. 异常分支处理（如取消、退款、超时关闭..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 253,
+      "type": "code_block",
+      "category": "general",
+      "length": 155,
+      "preview": "我已经完成了\"订单管理\"模块的PRD，主要包含：\n- 订单列表（查询、筛选、导出）\n- 订单详情（基本信息、商品信息、物流信息、操作日志）\n- 订单操作（发货、取消、退款、备注）\n\n请帮我检查：\n1...."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 367,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 141,
+      "preview": "我需要设计一个[系统/功能]的需求文档。\n\n背景：\n[业务背景、用户群体、核心痛点]\n\n目标：\n[期望达成的业务目标、成功指标]\n\n请基于行业最佳实践，生成完整的PRD框架，包含：\n1. 功能模块清单..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 393,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 186,
+      "preview": "请扮演以下角色，对我的需求文档提出问题和建议：\n\n1. 后端开发：关注数据模型、接口设计、技术可行性\n2. 前端开发：关注交互复杂度、页面性能、组件复用\n3. 测试工程师：关注可测试性、边界情况、验收..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 416,
+      "type": "code_block",
+      "category": "testing",
+      "length": 147,
+      "preview": "请帮我完善[功能模块]的详细需求：\n\n功能概述：\n[一句话描述功能]\n\n用户场景：\n[描述典型使用场景]\n\n请输出：\n1. 详细的业务流程（含正常流程和异常分支）\n2. 页面原型描述（包含哪些元素、如..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 442,
+      "type": "code_block",
+      "category": "general",
+      "length": 180,
+      "preview": "请对我的PRD进行全面的质量检查：\n\n[粘贴PRD全文或关键部分]\n\n检查维度：\n1. 完整性：是否遗漏了常见的功能点？\n2. 一致性：术语、定义是否统一？\n3. 可验收性：每个需求是否有明确的验收标..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 478,
+      "type": "code_block",
+      "category": "general",
+      "length": 219,
+      "preview": "我需要设计一个电商平台的会员积分系统，请生成完整的需求框架。\n\n背景：\n- 现有用户200万，月活50万\n- 计划通过积分系统提升用户粘性和复购率\n- 需要支持积分获取、消耗、过期全生命周期管理\n\n目..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 500,
+      "type": "code_block",
+      "category": "testing",
+      "length": 141,
+      "preview": "基于以上框架，请扮演以下角色提出问题：\n\n1. 后端开发：积分并发发放如何处理？积分和金额的换算精度？\n2. 前端开发：积分展示的场景有哪些？实时性要求？\n3. 运营：如何配置积分规则？能否A/B测试..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 512,
+      "type": "code_block",
+      "category": "general",
+      "length": 117,
+      "preview": "请帮我详细设计\"积分获取规则配置\"功能：\n\n功能描述：\n运营后台可以灵活配置用户获得积分的规则\n\n请输出：\n1. 规则类型（购物返积分、签到、邀请好友等）\n2. 每种规则的配置字段\n3. 规则的生效/..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 527,
+      "type": "code_block",
+      "category": "general",
+      "length": 107,
+      "preview": "请对完整的积分系统PRD进行质量检查，重点关注：\n1. 积分计算的准确性（精度、并发）\n2. 积分过期的处理（提醒、清零逻辑）\n3. 退款的积分回退（部分退款如何处理）\n4. 跨平台一致性（APP、小..."
+    },
+    {
+      "chapter": 27,
+      "chapter_title": "第27章：把\"做个电商后台\"变成清晰PRD",
+      "file": "chapter-27-ai-requirements.md",
+      "line": 613,
+      "type": "code_block",
+      "category": "general",
+      "length": 75,
+      "preview": "请列出这个功能可能遇到的所有极端场景：\n- 数据量极端（极大或极小）\n- 用户行为极端（频繁操作、恶意操作）\n- 系统状态极端（网络中断、服务降级）..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 101,
+      "type": "code_block",
+      "category": "general",
+      "length": 207,
+      "preview": "我们需要为一个B2C电商平台选择后端架构，候选方案：\n1. 单体架构（Spring Boot）\n2. 微服务架构（Spring Cloud）\n3. 模块化单体（Modular Monolith）\n\n业..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 135,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 168,
+      "preview": "基于以上评估维度，请对三个候选方案进行评分（1-10分），并说明理由。\n\n评分要求：\n1. 基于我们团队的实际情况（5人团队、无微服务经验）\n2. 考虑3年内的业务发展（从10万日活到100万日活）\n..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 176,
+      "type": "code_block",
+      "category": "general",
+      "length": 174,
+      "preview": "基于以上评分，请计算加权总分，并给出最终建议。\n\n权重：\n- 开发效率：20%\n- 运维复杂度：20%\n- 扩展能力：15%\n- 团队适配性：15%\n- 性能表现：10%\n- 生态成熟度：10%\n- ..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 334,
+      "type": "code_block",
+      "category": "general",
+      "length": 129,
+      "preview": "我需要了解[技术领域]的主要解决方案。\n\n背景：\n[业务场景、技术栈、团队情况]\n\n请提供：\n1. 主流技术方案清单（3-5个）\n2. 每个方案的核心特点\n3. 各方案的适用场景\n4. 社区活跃度和维..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 360,
+      "type": "code_block",
+      "category": "general",
+      "length": 133,
+      "preview": "我们需要在[候选方案A]和[候选方案B]之间做选择。\n\n项目背景：\n[团队规模、业务规模、技术栈、约束条件]\n\n请帮我设计评估框架：\n1. 评估维度（覆盖技术、业务、团队三个层面）\n2. 各维度的权重..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 383,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 196,
+      "preview": "请基于以下场景，分析[候选方案]的表现：\n\n场景描述：\n[具体业务场景、用户量、数据量、性能要求]\n\n分析维度：\n1. 性能表现（吞吐量、延迟、资源占用）\n2. 可维护性（代码复杂度、调试难度、文档完..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 411,
+      "type": "code_block",
+      "category": "general",
+      "length": 130,
+      "preview": "基于以下评估结果，请给出最终决策建议：\n\n[粘贴评估矩阵或各维度评分]\n\n请输出：\n1. 推荐方案及理由\n2. 备选方案及适用场景\n3. 实施建议（关键步骤、注意事项、回滚方案）\n4. 风险预警（可能..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 428,
+      "type": "code_block",
+      "category": "general",
+      "length": 211,
+      "preview": "我们需要为新的管理后台项目选择前端框架。\n\n候选方案：Vue 3、React 18、Svelte\n\n项目背景：\n- 团队规模：3名前端开发\n- 团队经验：2年Vue 2经验，无React经验\n- 项目..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 449,
+      "type": "code_block",
+      "category": "general",
+      "length": 205,
+      "preview": "我们需要为电商平台选择数据库方案。\n\n候选方案：MySQL、PostgreSQL、MongoDB\n\n业务特点：\n- 数据类型：结构化数据为主（订单、商品、用户），部分半结构化数据（商品属性）\n- 读写..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 468,
+      "type": "code_block",
+      "category": "general",
+      "length": 167,
+      "preview": "我们需要选择云服务商部署新的业务系统。\n\n候选方案：阿里云、腾讯云、AWS\n\n约束条件：\n- 预算：年预算50万以内\n- 合规要求：数据需要在国内\n- 技术栈：Kubernetes + 微服务\n- 特..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 497,
+      "type": "code_block",
+      "category": "general",
+      "length": 120,
+      "preview": "请介绍消息队列的主流方案：RabbitMQ、RocketMQ、Kafka。\n\n请对比：\n1. 核心特点和设计目标\n2. 性能指标（吞吐量、延迟）\n3. 功能特性（消息可靠性、顺序性、事务支持）\n4. ..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 510,
+      "type": "code_block",
+      "category": "general",
+      "length": 168,
+      "preview": "基于以下业务需求，设计消息队列的评估框架：\n\n业务需求：\n- 订单消息：需要高可靠、顺序性、事务支持\n- 日志消息：高吞吐、可接受部分丢失\n- 通知消息：低延迟、高可用\n\n团队情况：\n- 有1名熟悉R..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 530,
+      "type": "code_block",
+      "category": "general",
+      "length": 102,
+      "preview": "基于以上评估框架，请对三个方案进行评分。\n\n输出格式：\n维度名（权重）：\n- RabbitMQ：X分（理由）\n- RocketMQ：X分（理由）\n- Kafka：X分（理由）\n\n最后输出加权总分和排序..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 544,
+      "type": "code_block",
+      "category": "general",
+      "length": 80,
+      "preview": "基于评分结果，请给出最终建议：\n\n1. 推荐方案及核心理由\n2. 如果选择该方案，实施步骤建议\n3. 可能的风险和应对\n4. 验证指标（如何评估选型是否成功）..."
+    },
+    {
+      "chapter": 28,
+      "chapter_title": "第28章：让技术选型会不再争论不休",
+      "file": "chapter-28-ai-tech-decision.md",
+      "line": 623,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 88,
+      "preview": "请对比Vue和React，并说明：\n1. 在什么场景下Vue更合适？为什么？\n2. 在什么场景下React更合适？为什么？\n3. 针对我们的情况，哪个更合适？具体理由是什么？..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 95,
+      "type": "code_block",
+      "category": "testing",
+      "length": 257,
+      "preview": "我需要为一个会员积分系统项目制定详细的工作分解结构（WBS）。\n\n项目概述：\n- 目标：设计并实现一个会员积分系统\n- 核心功能：积分获取规则配置、积分消费、积分过期管理、积分明细查询\n- 涉及团队：..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 128,
+      "type": "code_block",
+      "category": "testing",
+      "length": 210,
+      "preview": "基于以下WBS，请帮我进行工期估算。\n\n估算方法：\n1. 三点估算法（乐观、最可能、悲观）\n2. 参考历史数据（类似任务的实际工期）\n3. 考虑风险调整（高风险任务增加buffer）\n\n团队能力参数：..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 158,
+      "type": "code_block",
+      "category": "testing",
+      "length": 209,
+      "preview": "基于WBS和工期估算，请帮我优化资源分配。\n\n约束条件：\n- 后端3人：老王（资深）、小张（中级）、小李（初级）\n- 前端2人：小刘（中级）、小陈（初级，新加入）\n- 测试2人：小赵（资深）、小孙（中..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 192,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 214,
+      "preview": "今天是项目第8天，以下是今日进度：\n\n昨日完成任务：\n- 数据库设计（小张）✓\n\n进行中任务：\n- 积分获取规则API（老王）- 进度60%，预计明天完成\n- 积分查询页面（小陈）- 进度30%，遇到..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 238,
+      "type": "code_block",
+      "category": "review",
+      "length": 244,
+      "preview": "请基于以下项目数据，生成周报。\n\n项目：会员积分系统\n周期：第2周（共6周）\n\n进度数据：\n- 计划完成任务：12个\n- 实际完成任务：11个\n- 整体进度：38%（计划40%）\n\n质量数据：\n- 已..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 274,
+      "type": "code_block",
+      "category": "review",
+      "length": 189,
+      "preview": "请基于以下信息，重新评估各任务的风险等级。\n\n当前项目状态：\n[输入最新的进度、问题、变更信息]\n\n历史偏差数据：\n- 前3周实际工期 vs 预估工期的偏差：+15%\n- bug密度：每功能点0.8个..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 371,
+      "type": "code_block",
+      "category": "general",
+      "length": 155,
+      "preview": "请为以下项目生成完整的工作分解结构（WBS）：\n\n项目：[项目名称]\n目标：[项目目标]\n约束：[时间、资源、技术约束]\n\n要求：\n1. 使用MECE原则（相互独立，完全穷尽）\n2. 分解到可估算、可..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 388,
+      "type": "code_block",
+      "category": "general",
+      "length": 153,
+      "preview": "基于以下WBS，请进行工期估算。\n\n估算方法：\n1. 三点估算法（乐观O、最可能M、悲观P，期望工期=(O+4M+P)/6）\n2. 参考历史数据：[提供历史项目数据]\n3. 考虑团队能力：[团队成员经..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 410,
+      "type": "code_block",
+      "category": "review",
+      "length": 207,
+      "preview": "请基于以下信息，识别项目风险并评级。\n\n项目信息：\n- WBS：[任务列表]\n- 依赖关系：[依赖图]\n- 负责人信息：[经验、当前负载]\n- 历史数据：[类似项目的延期率、bug率]\n\n风险维度：\n..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 430,
+      "type": "code_block",
+      "category": "general",
+      "length": 150,
+      "preview": "请分析以下项目进度数据，识别偏差和风险。\n\n当前日期：[日期]\n计划进度：[计划完成百分比]\n实际进度：[实际完成百分比]\n\n任务详情：\n[每个任务的计划vs实际]\n\n请输出：\n1. 整体偏差分析\n2..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 453,
+      "type": "code_block",
+      "category": "general",
+      "length": 181,
+      "preview": "请基于以下约束，优化资源分配。\n\n任务列表：[WBS]\n工期估算：[各任务工期]\n资源池：[团队成员及能力]\n约束条件：\n- 某些任务需要特定技能\n- 某些任务有前置依赖\n- 资源负载上限\n\n优化目标..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 482,
+      "type": "code_block",
+      "category": "general",
+      "length": 149,
+      "preview": "请基于以下数据，生成项目周报。\n\n项目：[名称]\n周期：[时间段]\n\n数据：\n[进度数据、质量数据、风险数据、资源数据]\n\n报告要求：\n1. 面向管理层，简明扼要\n2. 包含健康度评分\n3. 突出风险..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 510,
+      "type": "code_block",
+      "category": "general",
+      "length": 169,
+      "preview": "请基于以下项目数据，总结项目经验教训。\n\n项目信息：\n- 计划vs实际对比\n- 风险记录\n- 问题记录\n- 变更记录\n\n请输出：\n1. 估算准确性分析（哪些任务估准了，哪些偏差大，原因）\n2. 风险模..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 540,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 178,
+      "preview": "请为\"SaaS产品团队协作功能\"项目生成完整规划。\n\n功能范围：\n- 团队管理（创建、成员邀请、角色权限）\n- 任务协作（任务分配、进度跟踪、评论）\n- 文档协作（在线编辑、版本历史、评论）\n- 通知..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 560,
+      "type": "code_block",
+      "category": "general",
+      "length": 88,
+      "preview": "项目：团队协作功能\n日期：[日期]\n\n今日完成：[任务列表]\n进行中：[任务列表+进度]\n阻塞问题：[问题列表]\n\n请分析：\n1. 进度健康度\n2. 风险预警\n3. 建议措施..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 576,
+      "type": "code_block",
+      "category": "general",
+      "length": 81,
+      "preview": "生成本周项目报告。\n\n数据：\n[进度、质量、风险、资源数据]\n\n要求：\n1. 健康度评分\n2. 可视化进度（文字图表）\n3. 重点关注项\n4. 需要的决策/支持..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 592,
+      "type": "code_block",
+      "category": "general",
+      "length": 83,
+      "preview": "请总结本项目经验教训。\n\n项目数据：\n[完整的项目数据]\n\n输出：\n1. 估算准确性分析\n2. 风险管理复盘\n3. 团队协作复盘\n4. 改进建议\n5. 可复用的资产..."
+    },
+    {
+      "chapter": 29,
+      "chapter_title": "第29章：让项目进度不再失控",
+      "file": "chapter-29-ai-project-management.md",
+      "line": 677,
+      "type": "code_block",
+      "category": "general",
+      "length": 141,
+      "preview": "请基于以下站会信息，生成分析和建议。\n\n项目：[项目名称]\n日期：[日期]\n\n昨日完成：\n- [任务列表]\n\n今日计划：\n- [任务列表]\n\n阻塞/问题：\n- [问题列表]\n\n请输出：\n1. 关键路径..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 93,
+      "type": "code_block",
+      "category": "testing",
+      "length": 331,
+      "preview": "基于以下PRD，请生成不同角色的需求理解版本。\n\n原始PRD：\n[PRD全文]\n\n请输出：\n\n1. **设计师视角版**：\n   - 关注页面结构、交互流程、视觉要求\n   - 列出所有需要设计稿的页..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 145,
+      "type": "code_block",
+      "category": "testing",
+      "length": 161,
+      "preview": "我已经将PRD的不同视角版本分别发给了设计、开发、测试。\n\n现在收到了他们的反馈：\n\n设计师反馈：\n[设计师的理解摘要]\n\n开发反馈：\n[开发的理解摘要]\n\n测试反馈：\n[测试的理解摘要]\n\n请帮我分..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 192,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 158,
+      "preview": "请基于以下已对齐的需求，生成统一认知确认书。\n\n对齐后的需求：\n[更新后的PRD]\n\n确认书要求：\n1. 列出核心需求点（用一句话概括）\n2. 列出各角色的职责边界\n3. 列出关键决策点和决策依据\n4..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 224,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 136,
+      "preview": "请基于以下设计稿描述，生成开发需要的设计交付物检查清单。\n\n设计稿：[描述或链接]\n\n检查清单要求：\n1. 基础交付物（是否齐全）\n2. 页面清单（是否完整）\n3. 交互说明（是否清晰）\n4. 设计规..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 243,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 135,
+      "preview": "请基于以下设计稿，生成给开发的详细实现说明。\n\n设计稿：[描述]\n\n要求：\n1. 页面结构描述（HTML结构建议）\n2. 样式说明（关键尺寸、颜色、字体）\n3. 交互逻辑（状态变化、动画细节）\n4. ..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 262,
+      "type": "code_block",
+      "category": "general",
+      "length": 137,
+      "preview": "开发基于设计稿写了技术方案，请检查是否与设计方案一致。\n\n设计方案：\n[设计稿关键信息]\n\n开发技术方案：\n[开发的技术方案]\n\n请检查：\n1. 页面结构是否与设计一致？\n2. 交互实现是否与设计意图..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 290,
+      "type": "code_block",
+      "category": "testing",
+      "length": 168,
+      "preview": "请基于以下PRD，生成完整的测试用例。\n\nPRD：[关键功能描述]\n\n测试用例要求：\n1. 功能测试用例（正常流程）\n2. 边界测试用例（异常数据、极端情况）\n3. 兼容性测试用例（不同设备、浏览器）..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 314,
+      "type": "code_block",
+      "category": "review",
+      "length": 142,
+      "preview": "请基于以下bug信息，生成标准化的bug报告。\n\n原始描述：[测试提供的bug信息]\n\n优化要求：\n1. 清晰的标题（问题+场景）\n2. 复现步骤（编号列表，每步一个操作）\n3. 预期结果 vs 实际..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 332,
+      "type": "code_block",
+      "category": "testing",
+      "length": 131,
+      "preview": "请生成功能验收检查清单。\n\n功能：[功能描述]\n\n检查清单要求：\n1. 开发自测项（开发完成前必须验证）\n2. 测试验证项（测试必须覆盖）\n3. 产品验收项（产品必须确认）\n4. 设计验收项（设计必须..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 393,
+      "type": "code_block",
+      "category": "testing",
+      "length": 145,
+      "preview": "基于以下PRD，生成多角色版本：\n\n原始PRD：[内容]\n\n请输出：\n1. 设计师版（关注视觉、交互）\n2. 开发版（关注技术实现）\n3. 测试版（关注验收标准）\n4. 运营版（关注业务流程）\n\n要求..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 415,
+      "type": "code_block",
+      "category": "testing",
+      "length": 129,
+      "preview": "请分析以下各角色的反馈，识别理解分歧：\n\n产品意图：[原始需求]\n\n设计师理解：[设计师反馈]\n开发理解：[开发反馈]\n测试理解：[测试反馈]\n\n请输出：\n1. 一致的部分\n2. 分歧的部分（具体在哪..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 438,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 108,
+      "preview": "请基于设计稿，生成开发交付物：\n\n设计稿：[描述或链接]\n\n交付物：\n1. 切图清单（尺寸、格式、命名）\n2. 标注说明（间距、颜色、字体）\n3. 交互说明（状态、动画、手势）\n4. 响应式规则\n5...."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 452,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 100,
+      "preview": "请基于技术方案，生成测试需要的信息：\n\n技术方案：[内容]\n\n交付物：\n1. 功能清单（可测试的功能点）\n2. 接口文档（如有）\n3. 关键逻辑说明（容易出错的地方）\n4. 自测报告（开发自测结果）..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 469,
+      "type": "code_block",
+      "category": "testing",
+      "length": 123,
+      "preview": "请生成完整的验收检查清单：\n\n功能：[功能描述]\n\n检查清单：\n1. 开发自测清单（开发必须完成）\n2. 功能测试清单（测试必须覆盖）\n3. 体验验收清单（设计必须确认）\n4. 业务验收清单（产品必须..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 487,
+      "type": "code_block",
+      "category": "general",
+      "length": 142,
+      "preview": "请基于以下PRD，生成需求澄清会的议程和材料。\n\nPRD：[内容]\n\n议程要求：\n1. 核心需求概述（5分钟）\n2. 各角色关注重点（各5分钟）\n3. 关键决策点讨论（10分钟）\n4. 风险和对齐（1..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 506,
+      "type": "code_block",
+      "category": "general",
+      "length": 145,
+      "preview": "请基于设计稿，生成设计评审检查清单。\n\n设计稿：[描述]\n\n检查维度：\n1. 需求覆盖度（是否覆盖所有PRD要求）\n2. 交互完整性（所有状态是否都有设计）\n3. 可实现性（是否有技术难点）\n4. 一..."
+    },
+    {
+      "chapter": 30,
+      "chapter_title": "第30章：让产品×开发×设计不再扯皮",
+      "file": "chapter-30-ai-team-collab.md",
+      "line": 523,
+      "type": "code_block",
+      "category": "testing",
+      "length": 127,
+      "preview": "请基于技术方案，生成评审要点。\n\n技术方案：[内容]\n\n评审维度：\n1. 需求理解（是否正确理解需求）\n2. 技术选型（是否合适）\n3. 可行性（是否能按期完成）\n4. 风险识别（是否有遗漏风险）\n5..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 99,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 186,
+      "preview": "请帮我盘点一个产品团队可能拥有的知识资产类型。\n\n团队情况：\n- 10人团队，负责电商后台产品\n- 成立2年，经历多个项目\n- 使用飞书、Confluence、GitLab等工具\n\n请列出：\n1. 各..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 140,
+      "type": "code_block",
+      "category": "general",
+      "length": 171,
+      "preview": "请帮我设计团队知识库的结构。\n\n知识库目标：\n- 帮助新人快速上手\n- 帮助老员工查找信息\n- 沉淀团队经验\n\n请设计知识分类体系：\n1. 一级分类（大的知识领域）\n2. 二级分类（具体主题）\n3. ..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 201,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 131,
+      "preview": "请基于以下知识库内容，回答用户问题。\n\n知识库：\n[已整理的知识文档]\n\n用户问题：[具体问题]\n\n回答要求：\n1. 基于知识库内容回答\n2. 如果知识库中没有，说明不知道\n3. 回答要简洁、准确\n4..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 254,
+      "type": "code_block",
+      "category": "general",
+      "length": 121,
+      "preview": "请帮我设计知识库的更新机制。\n\n要求：\n1. 谁负责更新（明确责任人）\n2. 什么时候更新（触发条件）\n3. 更新什么内容（范围）\n4. 怎么确保更新质量\n5. 怎么通知相关人员\n\n输出：\n1. 更新..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 322,
+      "type": "code_block",
+      "category": "general",
+      "length": 119,
+      "preview": "用户问了一个问题，知识库中没有相关答案。\n\n问题：[问题]\n\n我的回答：[回答]\n\n请帮我：\n1. 整理成标准的问题-答案格式\n2. 补充相关的上下文信息\n3. 确定应该放到知识库的哪个分类\n4. 生..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 383,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 144,
+      "preview": "请帮我整理以下内容为标准知识文档。\n\n原始内容：[会议记录/聊天记录/邮件等]\n\n整理要求：\n1. 提取核心信息（决策、结论、行动项）\n2. 补充上下文（背景、原因、相关人员）\n3. 结构化呈现（标题..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 402,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 129,
+      "preview": "请基于以下内容，设计知识分类体系。\n\n现有知识：[知识清单]\n\n要求：\n1. 设计分类层级（不超过3级）\n2. 确保MECE（相互独立，完全穷尽）\n3. 建立知识间的关联关系\n4. 设计标签体系\n\n输..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 424,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 124,
+      "preview": "你是一个团队知识助手，基于以下知识库回答问题。\n\n知识库：[知识文档]\n\n用户问题：[问题]\n\n回答要求：\n1. 基于知识库内容回答\n2. 回答要简洁、准确\n3. 必要时提供来源链接\n4. 如果知识库..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 444,
+      "type": "code_block",
+      "category": "general",
+      "length": 100,
+      "preview": "请基于以下信息，分析知识库的更新需求。\n\n新增知识：[新产生的知识]\n\n现有知识库：[知识库内容]\n\n请输出：\n1. 需要新增的内容\n2. 需要更新的内容\n3. 需要删除的内容\n4. 需要优化的结构..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 466,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 102,
+      "preview": "请帮我盘点团队的知识资产。\n\n团队信息：[团队情况]\n\n盘点维度：\n1. 显性知识（文档、代码等）\n2. 隐性知识（经验、关系等）\n3. 知识的位置和格式\n4. 知识的价值和时效性\n\n输出：知识资产清..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 495,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 75,
+      "preview": "请帮我整理以下内容为标准知识文档。\n\n原始内容：[内容]\n\n输出格式：\n- 标题\n- 摘要\n- 正文（结构化）\n- 相关链接\n- 标签\n- 更新记录..."
+    },
+    {
+      "chapter": 31,
+      "chapter_title": "第31章：让新人不再问东问西的知识库",
+      "file": "chapter-31-ai-knowledge.md",
+      "line": 604,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 207,
+      "preview": "## 知识整理Prompt\n\n请帮我整理以下内容为标准知识文档。\n\n原始内容：\n{{content}}\n\n输出格式：\n---\ntitle: [标题]\ncategory: [分类]\ntags: [标签]..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 75,
+      "type": "code_block",
+      "category": "general",
+      "length": 135,
+      "preview": "我需要为一个\"会员等级系统\"写PRD。\n\n背景：\n- B2C电商平台，日活50万\n- 现有会员体系只有积分，没有等级\n- 目标：通过等级体系提升用户粘性\n\n请帮我：\n1. 生成完整的需求框架\n2. 识..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 103,
+      "type": "code_block",
+      "category": "general",
+      "length": 109,
+      "preview": "请帮我详细设计\"成长值计算规则\"模块。\n\n要求：\n1. 列出所有可获得成长值的行为\n2. 每个行为的成长值计算公式\n3. 每日/每月的成长值上限\n4. 特殊情况处理（退款、取消订单等）\n5. 用户故事..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 121,
+      "type": "code_block",
+      "category": "general",
+      "length": 98,
+      "preview": "请检查这份PRD的完整性：\n\n[PRD全文]\n\n检查维度：\n1. 功能完整性\n2. 边界情况覆盖\n3. 验收标准清晰度\n4. 与其他模块的一致性\n5. 可实施性\n\n输出：检查发现的问题和改进建议..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 144,
+      "type": "code_block",
+      "category": "general",
+      "length": 130,
+      "preview": "请帮我做一份电商会员等级系统的竞品分析。\n\n竞品：淘宝、京东、拼多多、唯品会\n\n分析维度：\n1. 等级规则（几个等级、升级条件）\n2. 等级权益（各等级有什么特权）\n3. 等级展示（用户怎么看自己的等..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 164,
+      "type": "code_block",
+      "category": "general",
+      "length": 109,
+      "preview": "请预审以下技术方案：\n\n[技术方案全文]\n\n预审维度：\n1. 需求理解是否正确\n2. 技术选型是否合理\n3. 是否有遗漏的技术点\n4. 可能的风险点\n5. 需要重点讨论的问题\n\n输出：预审报告，标注需..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 193,
+      "type": "code_block",
+      "category": "general",
+      "length": 98,
+      "preview": "请生成项目进度报告。\n\n项目A数据：\n[进度、质量、风险数据]\n\n项目B数据：\n[进度、质量、风险数据]\n\n要求：\n1. 健康度评分\n2. 关键指标可视化\n3. 风险预警\n4. 需要的决策/支持..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 219,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 145,
+      "preview": "请为新人介绍订单系统的业务逻辑。\n\n介绍内容：\n1. 订单生命周期（状态流转）\n2. 核心业务流程（下单、支付、发货、收货、售后）\n3. 关键业务规则（优惠计算、库存扣减、退款逻辑）\n4. 常见问题和..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 242,
+      "type": "code_block",
+      "category": "general",
+      "length": 102,
+      "preview": "请生成部门周报。\n\n本周工作：\n[各项工作内容和数据]\n\n要求：\n1. 本周重点工作（3-5条）\n2. 关键数据指标\n3. 遇到的问题\n4. 下周计划\n5. 需要的支持\n\n格式：简洁明了，适合管理层阅..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 264,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 108,
+      "preview": "请基于以下项目数据，生成复盘文档。\n\n项目数据：\n[计划vs实际、问题记录、改进措施]\n\n复盘维度：\n1. 目标回顾\n2. 结果评估\n3. 过程分析\n4. 经验教训\n5. 改进措施\n\n输出：可沉淀为知..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 452,
+      "type": "code_block",
+      "category": "general",
+      "length": 88,
+      "preview": "请帮我[任务]。\n\n背景：\n[背景信息]\n\n输入：\n[输入内容]\n\n要求：\n1. [具体要求1]\n2. [具体要求2]\n3. [具体要求3]\n\n输出格式：\n[期望的输出格式]..."
+    },
+    {
+      "chapter": 32,
+      "chapter_title": "第32章：一天完成一周的产品需求工作",
+      "file": "chapter-32-ai-pm-workflow.md",
+      "line": 606,
+      "type": "code_block",
+      "category": "review",
+      "length": 110,
+      "preview": "# 我的AI辅助Prompt库\n\n## 使用说明\n1. 每个Prompt都有使用场景说明\n2. 根据实际情况调整输入内容\n3. 输出后必须人工审查\n4. 记录使用效果，持续优化\n\n## 需求分析\n\n#..."
+    },
+    {
+      "chapter": 33,
+      "chapter_title": "第33章：打造我的专属AI助理",
+      "file": "chapter-33-ai-personal-assistant.md",
+      "line": 669,
+      "type": "code_block",
+      "category": "general",
+      "length": 187,
+      "preview": "### OpenClaw的核心概念\n\n#### 1. Agent定义\n\nAgent是能力的最小单元，包含：\n- **Identity**：身份和性格\n- **Prompt**：系统提示词\n- **To..."
+    },
+    {
+      "chapter": 33,
+      "chapter_title": "第33章：打造我的专属AI助理",
+      "file": "chapter-33-ai-personal-assistant.md",
+      "line": 1129,
+      "type": "code_block",
+      "category": "review",
+      "length": 391,
+      "preview": "### 交付物3：个人Prompt库\n\n整理常用的Prompt模板：\n- 邮件分类Prompt\n- 代码审查Prompt\n- 日程规划Prompt\n- 会议纪要Prompt\n\n### 交付物4：使用文..."
+    },
+    {
+      "chapter": 34,
+      "chapter_title": "第34章：让多个AI Agent为我打工",
+      "file": "chapter-34-ai-multi-agent.md",
+      "line": 708,
+      "type": "code_block",
+      "category": "testing",
+      "length": 83,
+      "preview": "---\n\n### 周四：实战演练\n\n周四，小林决定用一个真实需求来测试他的AI团队。\n\n**需求**：为内部系统添加一个\"员工请假申请\"功能\n\n**启动项目**：..."
+    },
+    {
+      "chapter": 34,
+      "chapter_title": "第34章：让多个AI Agent为我打工",
+      "file": "chapter-34-ai-multi-agent.md",
+      "line": 873,
+      "type": "code_block",
+      "category": "general",
+      "length": 112,
+      "preview": "### GET /api/leaves/pending\n获取待审批列表\n\n### PUT /api/leaves/{id}/approve\n批准请假申请\n\n## 技术风险\n- 并发提交可能导致数据不一..."
+    },
+    {
+      "chapter": 34,
+      "chapter_title": "第34章：让多个AI Agent为我打工",
+      "file": "chapter-34-ai-multi-agent.md",
+      "line": 952,
+      "type": "code_block",
+      "category": "review",
+      "length": 410,
+      "preview": "project_manager：项目总结\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📊 项目总结报告\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━..."
+    },
+    {
+      "chapter": 35,
+      "chapter_title": "第35章：批量改造50个文件的魔法",
+      "file": "chapter-35-ai-batch-processing.md",
+      "line": 424,
+      "type": "code_block",
+      "category": "general",
+      "length": 88,
+      "preview": "\"太好了！\"小林看着分析结果，\"145个简单文件可以自动处理，167个中等复杂度文件用AI辅助，只有40个复杂文件需要人工处理。\"\n\n#### Step 2: 批量自动替换..."
+    },
+    {
+      "chapter": 35,
+      "chapter_title": "第35章：批量改造50个文件的魔法",
+      "file": "chapter-35-ai-batch-processing.md",
+      "line": 555,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 598,
+      "preview": "请输出完整的转换后的Vue组件代码。\n\"\"\"\n            \n            try:\n                response = await self.client.ch..."
+    },
+    {
+      "chapter": 35,
+      "chapter_title": "第35章：批量改造50个文件的魔法",
+      "file": "chapter-35-ai-batch-processing.md",
+      "line": 739,
+      "type": "code_block",
+      "category": "review",
+      "length": 167,
+      "preview": "\"太不可思议了！\"小林激动地看着报告。\n\n原本预估4个月的工作，用AI批量处理后，只需要不到2周！\n\n老板看到报告后也惊呆了：\"这...这是真的？两周就能完成？\"\n\n\"实际上，主要工作在两天内就完成了..."
+    },
+    {
+      "chapter": 35,
+      "chapter_title": "第35章：批量改造50个文件的魔法",
+      "file": "chapter-35-ai-batch-processing.md",
+      "line": 781,
+      "type": "code_block",
+      "category": "general",
+      "length": 233,
+      "preview": "### 批量处理的策略选择\n\n| 策略 | 适用场景 | 准确率 | 效率 |\n|------|---------|-------|------|\n| 规则替换 | 语法层面变更 | 99%+ | 极..."
+    },
+    {
+      "chapter": 35,
+      "chapter_title": "第35章：批量改造50个文件的魔法",
+      "file": "chapter-35-ai-batch-processing.md",
+      "line": 960,
+      "type": "code_block",
+      "category": "general",
+      "length": 223,
+      "preview": "### 交付物3：批量处理SOP\n\n- 批量处理标准操作流程\n- 常见问题排查指南\n- 回滚方案\n\n---\n\n## 行动清单\n\n- [ ] 学会使用代码分析工具扫描代码库\n- [ ] 设计至少一种批量..."
+    },
+    {
+      "chapter": 36,
+      "chapter_title": "第36章：让团队效率提升40%的Cowork模式",
+      "file": "chapter-36-ai-cowork-mode.md",
+      "line": 138,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 120,
+      "preview": "Prompt: 作为技术架构师，请分析以下需求文档，识别：\n1. 可能的技术风险点\n2. 模糊或不明确的需求描述\n3. 与其他系统的潜在冲突\n4. 需要进一步澄清的问题\n\n需求文档：[粘贴]\n\n上下文..."
+    },
+    {
+      "chapter": 36,
+      "chapter_title": "第36章：让团队效率提升40%的Cowork模式",
+      "file": "chapter-36-ai-cowork-mode.md",
+      "line": 199,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 1755,
+      "preview": "第一次运行时，AI给后端开发小李的PR提了这些意见：\n\n> **规范问题**：\n> - `permissionService.ts:45` - 函数名`check`过于笼统，建议改为`checkPer..."
+    },
+    {
+      "chapter": 36,
+      "chapter_title": "第36章：让团队效率提升40%的Cowork模式",
+      "file": "chapter-36-ai-cowork-mode.md",
+      "line": 463,
+      "type": "code_block",
+      "category": "explanation",
+      "length": 127,
+      "preview": "Prompt模板：\n基于以下项目上下文，回答问题。\n\n项目上下文：\n[粘贴AI_CONTEXT.md]\n\n问题：[具体问题]\n\n要求：\n1. 如果上下文中有答案，直接回答\n2. 如果上下文中没有，说明..."
+    },
+    {
+      "chapter": 36,
+      "chapter_title": "第36章：让团队效率提升40%的Cowork模式",
+      "file": "chapter-36-ai-cowork-mode.md",
+      "line": 482,
+      "type": "code_block",
+      "category": "review",
+      "length": 124,
+      "preview": "AI输出审查清单\n\n□ 逻辑是否正确\n□ 是否遗漏重要信息\n□ 是否超出AI能力范围（如业务判断）\n□ 是否存在安全/合规风险\n□ 是否需要人工补充\n\n审查结论：\n- [ ] 完全采纳\n- [ ] 部..."
+    },
+    {
+      "chapter": 36,
+      "chapter_title": "第36章：让团队效率提升40%的Cowork模式",
+      "file": "chapter-36-ai-cowork-mode.md",
+      "line": 532,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 188,
+      "preview": "请基于以下信息，生成一份AI_CONTEXT.md：\n\n项目类型：[Web应用/移动App/微服务/...]\n技术栈：[列出技术栈]\n项目目标：[一句话描述]\n已有文档：[列出已有文档]\n\n生成的AI..."
+    },
+    {
+      "chapter": 37,
+      "chapter_title": "第37章：建设团队级AI工程平台",
+      "file": "chapter-37-ai-harness-platform.md",
+      "line": 89,
+      "type": "code_block",
+      "category": "testing",
+      "length": 791,
+      "preview": "这样，复杂的AI任务可以分解成多个步骤，每个步骤可以用不同的模型，关键节点有人工确认。\n\n**2. 上下文管理**\n\nHarness有一个**上下文管理系统**，可以自动收集和项目相关的所有信息：\n\n..."
+    },
+    {
+      "chapter": 37,
+      "chapter_title": "第37章：建设团队级AI工程平台",
+      "file": "chapter-37-ai-harness-platform.md",
+      "line": 172,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 267,
+      "preview": "**第三步：技术实现**\n\n老吴选择了一个务实的技术方案：\n\n- **前端**：飞书多维表格 + 自建Web界面\n- **后端**：Node.js + Express\n- **AI引擎**：OpenA..."
+    },
+    {
+      "chapter": 37,
+      "chapter_title": "第37章：建设团队级AI工程平台",
+      "file": "chapter-37-ai-harness-platform.md",
+      "line": 488,
+      "type": "code_block",
+      "category": "code_generation",
+      "length": 693,
+      "preview": "建议初期选择的场景：\n\n| 场景 | 为什么优先做 |\n|:---|:---|\n| 代码评审 | 频率高、痛点明显、AI表现稳定 |\n| 需求分析 | 前置环节、错误代价高、AI能识别盲区 |\n| 知..."
+    },
+    {
+      "chapter": 37,
+      "chapter_title": "第37章：建设团队级AI工程平台",
+      "file": "chapter-37-ai-harness-platform.md",
+      "line": 586,
+      "type": "code_block",
+      "category": "documentation",
+      "length": 175,
+      "preview": "你是一位经验丰富的产品经理和技术架构师，请分析以下需求文档。\n\n## 需求文档\n{{requirement_doc}}\n\n## 项目背景\n{{project_context}}\n\n## 分析要求\n1...."
+    },
+    {
+      "chapter": 38,
+      "chapter_title": "第38章：从个人到组织的AI工程体系建设",
+      "file": "chapter-38-ai-best-practices.md",
+      "line": 99,
+      "type": "code_block",
+      "category": "general",
+      "length": 419,
+      "preview": "AI工程成熟度模型\n\nLevel 5: 智能化 (Intelligent)\n├── AI参与架构决策和策略制定\n├── 自适应的AI工作流\n├── 跨组织的AI能力共享\n└── AI驱动的持续优化\n\n..."
+    },
+    {
+      "chapter": 38,
+      "chapter_title": "第38章：从个人到组织的AI工程体系建设",
+      "file": "chapter-38-ai-best-practices.md",
+      "line": 166,
+      "type": "code_block",
+      "category": "testing",
+      "length": 289,
+      "preview": "# AI工具使用政策\n\n## 允许使用的场景\n✅ 代码补全和生成（IDE插件）\n✅ 代码审查辅助\n✅ 文档编写辅助\n✅ 测试用例生成\n✅ 技术问题解答\n\n## 禁止使用的场景\n❌ 处理敏感数据（用户隐..."
+    },
+    {
+      "chapter": 38,
+      "chapter_title": "第38章：从个人到组织的AI工程体系建设",
+      "file": "chapter-38-ai-best-practices.md",
+      "line": 199,
+      "type": "code_block",
+      "category": "general",
+      "length": 250,
+      "preview": "能力体系\n├── 培训体系\n│   ├── 入门级：AI工具基础使用\n│   ├── 进阶级：Prompt工程与最佳实践\n│   ├── 专家级：AI工程平台开发\n│   └── 持续学习：新技术、新..."
+    },
+    {
+      "chapter": 38,
+      "chapter_title": "第38章：从个人到组织的AI工程体系建设",
+      "file": "chapter-38-ai-best-practices.md",
+      "line": 274,
+      "type": "code_block",
+      "category": "review",
+      "length": 1993,
+      "preview": "#### 支柱4：度量体系（Measurement）\n\n**目标**：量化AI工程的效果，持续优化\n\n**核心指标**：\n\n**效率指标**：\n\n| 指标 | 定义 | 目标值 |\n|:---|:--..."
+    }
+  ]
+}

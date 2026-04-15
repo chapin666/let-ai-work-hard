@@ -1,0 +1,32 @@
+# Source: chapter-33-ai-personal-assistant.md
+# Lines: 995-1024
+# Language: yaml
+
+agent:
+  name: "PR总结助手"
+  
+  tools:
+    - github
+  
+  skills:
+    - name: summarize_prs
+      prompt: |
+        请总结今天的PR情况。
+        
+        首先，调用github.get_pr_list获取今天的PR列表。
+        然后，对每个PR调用github.get_pr_diff获取变更内容。
+        最后，生成一份PR总结报告。
+        
+        报告格式：
+        # 📊 今日PR总结
+        
+        ## 新增PR
+        | PR | 作者 | 标题 | 状态 |
+        |----|-----|------|-----|
+        | ... | ... | ... | ... |
+        
+        ## 关键变更
+        - [PR #X]: [变更摘要]
+        
+        ## 需要关注的PR
+        - [PR #Y]: [关注原因]

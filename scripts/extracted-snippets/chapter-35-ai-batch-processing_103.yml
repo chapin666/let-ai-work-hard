@@ -1,0 +1,48 @@
+# Source: chapter-35-ai-batch-processing.md
+# Lines: 103-148
+# Language: yaml
+
+# 批量处理策略
+migration_strategy:
+  # 类别1：纯语法替换（可以自动处理）
+  auto_migrate:
+    - pattern: "data()"
+      replacement: "setup() with reactive"
+      confidence: high
+      
+    - pattern: "beforeDestroy"
+      replacement: "beforeUnmount"
+      confidence: high
+      
+    - pattern: "destroyed"
+      replacement: "unmounted"
+      confidence: high
+      
+    - pattern: "Vue.set"
+      replacement: "direct assignment"
+      confidence: high
+  
+  # 类别2：需要智能分析（AI辅助）
+  ai_assisted:
+    - pattern: "Options API structure"
+      task: "Convert to Composition API"
+      notes: "需要理解组件逻辑，合理安排ref/reactive"
+      
+    - pattern: 'this.$refs'
+      task: "Convert to template refs"
+      notes: "需要区分不同使用场景"
+      
+    - pattern: "mixins"
+      task: "Convert to composables"
+      notes: "需要提取和重组逻辑"
+  
+  # 类别3：需要人工审查（高风险）
+  manual_review:
+    - pattern: "EventBus"
+      reason: "需要设计新的通信方案"
+      
+    - pattern: "filters"
+      reason: "需要决定使用computed还是method"
+      
+    - pattern: "vuex store"
+      reason: "可能需要升级到pinia"

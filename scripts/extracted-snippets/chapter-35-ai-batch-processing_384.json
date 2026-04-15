@@ -1,0 +1,43 @@
+# Source: chapter-35-ai-batch-processing.md
+# Lines: 384-424
+# Language: json
+
+{
+  "summary": {
+    "total_files": 352,
+    "total_patterns": {
+      "options_api": 340,
+      "data_function": 338,
+      "computed_props": 286,
+      "watch_props": 124,
+      "methods": 340,
+      "lifecycle_beforeDestroy": 156,
+      "lifecycle_destroyed": 148,
+      "filters": 23,
+      "filters_usage": 156,
+      "vue_set": 45,
+      "this_$refs": 234,
+      "mixins": 12
+    }
+  },
+  "batches": [
+    {
+      "name": "auto_batch",
+      "strategy": "automatic",
+      "files": ["..."],
+      "count": 145
+    },
+    {
+      "name": "ai_batch",
+      "strategy": "ai_assisted",
+      "files": ["..."],
+      "count": 167
+    },
+    {
+      "name": "manual_batch",
+      "strategy": "manual",
+      "files": ["..."],
+      "count": 40
+    }
+  ]
+}

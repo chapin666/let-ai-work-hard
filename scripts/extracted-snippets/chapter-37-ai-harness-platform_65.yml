@@ -1,0 +1,27 @@
+# Source: chapter-37-ai-harness-platform.md
+# Lines: 65-89
+# Language: yaml
+
+workflow: requirement-analysis
+steps:
+  - name: parse-requirement
+    model: gpt-4
+    prompt: |
+      请分析以下需求文档...
+    
+  - name: check-risks
+    model: claude-3-opus
+    depends_on: parse-requirement
+    prompt: |
+      基于以上分析，识别技术风险...
+    
+  - name: generate-estimate
+    model: gpt-4
+    depends_on: check-risks
+    prompt: |
+      基于以上信息，给出工作量估算...
+    
+  - name: human-review
+    type: human-in-the-loop
+    depends_on: generate-estimate
+    action: confirm_or_revise

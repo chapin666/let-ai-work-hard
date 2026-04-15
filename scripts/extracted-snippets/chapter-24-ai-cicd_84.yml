@@ -1,0 +1,347 @@
+# Source: chapter-24-ai-cicd.md
+# Lines: 84-428
+# Language: yaml
+
+stages:
+  - test
+  - build
+  - security
+  - deploy-dev
+  - deploy-staging
+  - deploy-prod
+  - notify
+
+variables:
+  DOCKER_REGISTRY: "harbor.company.com"
+  PROJECT_NAME: "myapp"
+  KUBE_NAMESPACE_DEV: "myapp-dev"
+  KUBE_NAMESPACE_STAGING: "myapp-staging"
+  KUBE_NAMESPACE_PROD: "myapp-prod"
+  
+  # GitLab CI内置变量
+  DOCKER_TLS_CERTDIR: "/certs"
+
+# ============================================================
+# 全局配置
+# ============================================================
+default:
+  image: docker:24-dind
+  services:
+    - docker:24-dind
+  before_script:
+    - apk add --no-cache curl jq bash
+    - docker info
+
+# ============================================================
+# Test阶段
+# ============================================================
+unit_tests:
+  stage: test
+  image: python:3.11-slim
+  services:
+    - postgres:15-alpine
+  variables:
+    POSTGRES_DB: test_db
+    POSTGRES_USER: test_user
+    POSTGRES_PASSWORD: test_pass
+    DATABASE_URL: "postgresql://test_user:test_pass@postgres:5432/test_db"
+  before_script:
+    - pip install -r requirements.txt -r requirements-test.txt
+  script:
+    - pytest tests/unit -v --cov=app --cov-report=xml --cov-report=term
+    - pytest tests/integration -v
+  coverage: '/TOTAL.+ ([0-9]{1,3}%)/'
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+    paths:
+      - coverage.xml
+    expire_in: 1 week
+  only:
+    - merge_requests
+    - main
+    - develop
+
+lint:
+  stage: test
+  image: python:3.11-slim
+  script:
+    - pip install flake8 black isort mypy
+    - flake8 app tests
+    - black --check app tests
+    - isort --check-only app tests
+    - mypy app
+  allow_failure: true
+
+frontend_test:
+  stage: test
+  image: node:18-alpine
+  script:
+    - cd frontend
+    - npm ci
+    - npm run lint
+    - npm run test:unit -- --coverage
+  artifacts:
+    paths:
+      - frontend/coverage/
+    expire_in: 1 week
+
+# ============================================================
+# Build阶段
+# ============================================================
+build_backend:
+  stage: build
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $DOCKER_REGISTRY
+    - |
+      docker build \
+        --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
+        --build-arg VCS_REF=$CI_COMMIT_SHA \
+        --build-arg VERSION=$CI_COMMIT_TAG \
+        -t $DOCKER_REGISTRY/$PROJECT_NAME/backend:$CI_COMMIT_SHA \
+        -t $DOCKER_REGISTRY/$PROJECT_NAME/backend:latest \
+        -f Dockerfile.backend .
+    - docker push $DOCKER_REGISTRY/$PROJECT_NAME/backend:$CI_COMMIT_SHA
+    - docker push $DOCKER_REGISTRY/$PROJECT_NAME/backend:latest
+  only:
+    - main
+    - develop
+
+build_frontend:
+  stage: build
+  image: node:18-alpine
+  script:
+    - cd frontend
+    - npm ci
+    - npm run build
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $DOCKER_REGISTRY
+    - |
+      docker build \
+        -t $DOCKER_REGISTRY/$PROJECT_NAME/frontend:$CI_COMMIT_SHA \
+        -t $DOCKER_REGISTRY/$PROJECT_NAME/frontend:latest \
+        -f Dockerfile.frontend .
+    - docker push $DOCKER_REGISTRY/$PROJECT_NAME/frontend:$CI_COMMIT_SHA
+    - docker push $DOCKER_REGISTRY/$PROJECT_NAME/frontend:latest
+  only:
+    - main
+    - develop
+
+# ============================================================
+# Security阶段
+# ============================================================
+security_scan:
+  stage: security
+  image: aquasec/trivy:latest
+  script:
+    - trivy image --severity HIGH,CRITICAL --exit-code 0 $DOCKER_REGISTRY/$PROJECT_NAME/backend:$CI_COMMIT_SHA
+    - trivy image --severity HIGH,CRITICAL --exit-code 1 --ignore-unfixed $DOCKER_REGISTRY/$PROJECT_NAME/backend:$CI_COMMIT_SHA
+  allow_failure: true
+  artifacts:
+    reports:
+      dependency_scanning: trivy-report.json
+
+sonarqube:
+  stage: security
+  image: sonarsource/sonar-scanner-cli:latest
+  script:
+    - sonar-scanner
+      -Dsonar.projectKey=$PROJECT_NAME
+      -Dsonar.sources=.
+      -Dsonar.host.url=$SONAR_URL
+      -Dsonar.login=$SONAR_TOKEN
+  allow_failure: true
+
+# ============================================================
+# Deploy Dev阶段（自动部署）
+# ============================================================
+deploy_dev:
+  stage: deploy-dev
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl config use-context dev
+    - envsubst < k8s/dev/deployment.yaml | kubectl apply -f -
+    - kubectl rollout status deployment/backend -n $KUBE_NAMESPACE_DEV --timeout=300s
+    - kubectl rollout status deployment/frontend -n $KUBE_NAMESPACE_DEV --timeout=300s
+    - |
+      curl -X POST $WECHAT_WEBHOOK \
+        -H 'Content-Type: application/json' \
+        -d '{
+          "msgtype": "markdown",
+          "markdown": {
+            "content": "🚀 **开发环境部署成功**\n\n项目：'$PROJECT_NAME'\n版本：'$CI_COMMIT_SHA'\n提交人：'$GITLAB_USER_NAME'\n提交信息：'$CI_COMMIT_MESSAGE'"
+          }
+        }'
+  environment:
+    name: development
+    url: https://dev.myapp.company.com
+  only:
+    - develop
+
+# ============================================================
+# Deploy Staging阶段（手动触发）
+# ============================================================
+deploy_staging:
+  stage: deploy-staging
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl config use-context staging
+    - envsubst < k8s/staging/deployment.yaml | kubectl apply -f -
+    - kubectl rollout status deployment/backend -n $KUBE_NAMESPACE_STAGING --timeout=300s
+    - kubectl rollout status deployment/frontend -n $KUBE_NAMESPACE_STAGING --timeout=300s
+    - |
+      curl -X POST $WECHAT_WEBHOOK \
+        -H 'Content-Type: application/json' \
+        -d '{
+          "msgtype": "markdown",
+          "markdown": {
+            "content": "🚀 **预发环境部署成功**\n\n项目：'$PROJECT_NAME'\n版本：'$CI_COMMIT_SHA'\n\n请进行验证，验证通过后点击 [部署生产]('$CI_PIPELINE_URL')"
+          }
+        }'
+  environment:
+    name: staging
+    url: https://staging.myapp.company.com
+  when: manual
+  only:
+    - main
+
+# ============================================================
+# Deploy Production阶段（金丝雀发布）
+# ============================================================
+deploy_prod_canary_10:
+  stage: deploy-prod
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl config use-context prod
+    - |
+      # 创建金丝雀版本（10%流量）
+      cat <<EOF | kubectl apply -f -
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: backend-canary
+        namespace: $KUBE_NAMESPACE_PROD
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: backend
+            version: canary
+        template:
+          metadata:
+            labels:
+              app: backend
+              version: canary
+          spec:
+            containers:
+            - name: backend
+              image: $DOCKER_REGISTRY/$PROJECT_NAME/backend:$CI_COMMIT_SHA
+              ports:
+              - containerPort: 8000
+      EOF
+    - |
+      # 更新VirtualService，10%流量到金丝雀
+      kubectl patch virtualservice backend -n $KUBE_NAMESPACE_PROD --type='merge' -p '{
+        "spec": {
+          "http": [{
+            "match": [{"headers": {"x-canary": {"exact": "true"}}}],
+            "route": [{"destination": {"host": "backend", "subset": "canary"}}]
+          },{
+            "route": [
+              {"destination": {"host": "backend", "subset": "stable"}, "weight": 90},
+              {"destination": {"host": "backend", "subset": "canary"}, "weight": 10}
+            ]
+          }]
+        }
+      }'
+    - sleep 30
+    - ./scripts/canary-analysis.sh  # 运行金丝雀分析脚本
+  environment:
+    name: production
+    url: https://myapp.company.com
+  when: manual
+
+# 等待人工验证后，流量提升到50%
+deploy_prod_canary_50:
+  stage: deploy-prod
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl config use-context prod
+    - |
+      kubectl patch virtualservice backend -n $KUBE_NAMESPACE_PROD --type='merge' -p '{
+        "spec": {
+          "http": [{
+            "route": [
+              {"destination": {"host": "backend", "subset": "stable"}, "weight": 50},
+              {"destination": {"host": "backend", "subset": "canary"}, "weight": 50}
+            ]
+          }]
+        }
+      }'
+    - sleep 60
+    - ./scripts/canary-analysis.sh
+  when: manual
+  dependencies:
+    - deploy_prod_canary_10
+
+# 最终全量发布
+deploy_prod_full:
+  stage: deploy-prod
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl config use-context prod
+    - |
+      # 更新稳定版本
+      kubectl set image deployment/backend backend=$DOCKER_REGISTRY/$PROJECT_NAME/backend:$CI_COMMIT_SHA -n $KUBE_NAMESPACE_PROD
+      kubectl rollout status deployment/backend -n $KUBE_NAMESPACE_PROD --timeout=600s
+    - |
+      # 删除金丝雀版本
+      kubectl delete deployment backend-canary -n $KUBE_NAMESPACE_PROD --ignore-not-found=true
+    - |
+      # 恢复100%流量到稳定版本
+      kubectl patch virtualservice backend -n $KUBE_NAMESPACE_PROD --type='merge' -p '{
+        "spec": {
+          "http": [{
+            "route": [{"destination": {"host": "backend", "subset": "stable"}, "weight": 100}]
+          }]
+        }
+      }'
+    - |
+      # 记录发布日志
+      echo "$(date): Deployed $CI_COMMIT_SHA to production" >> deploy.log
+    - |
+      curl -X POST $WECHAT_WEBHOOK \
+        -H 'Content-Type: application/json' \
+        -d '{
+          "msgtype": "markdown",
+          "markdown": {
+            "content": "✅ **生产环境发布成功**\n\n项目：'$PROJECT_NAME'\n版本：'$CI_COMMIT_SHA'\n发布时间：'$(date '+%Y-%m-%d %H:%M:%S')'\n发布人：'$GITLAB_USER_NAME'"
+          }
+        }'
+  when: manual
+  dependencies:
+    - deploy_prod_canary_50
+
+# ============================================================
+# 回滚任务
+# ============================================================
+rollback_prod:
+  stage: deploy-prod
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl config use-context prod
+    - kubectl rollout undo deployment/backend -n $KUBE_NAMESPACE_PROD
+    - kubectl rollout status deployment/backend -n $KUBE_NAMESPACE_PROD --timeout=300s
+    - |
+      curl -X POST $WECHAT_WEBHOOK \
+        -H 'Content-Type: application/json' \
+        -d '{
+          "msgtype": "markdown",
+          "markdown": {
+            "content": "⚠️ **生产环境已回滚**\n\n项目：'$PROJECT_NAME'\n回滚人：'$GITLAB_USER_NAME'\n回滚时间：'$(date '+%Y-%m-%d %H:%M:%S')'"
+          }
+        }'
+  when: manual
+  environment:
+    name: production

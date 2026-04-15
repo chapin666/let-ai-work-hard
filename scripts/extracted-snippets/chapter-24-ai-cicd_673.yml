@@ -1,0 +1,13 @@
+# Source: chapter-24-ai-cicd.md
+# Lines: 673-683
+# Language: yaml
+
+# 可以并行的任务不要串行
+build_frontend:
+  stage: build
+  # 前端构建
+
+build_backend:
+  stage: build
+  # 后端构建
+# 这两个任务会在同一个stage并行执行

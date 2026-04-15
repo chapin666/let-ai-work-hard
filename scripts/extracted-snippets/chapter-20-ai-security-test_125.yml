@@ -1,0 +1,14 @@
+# Source: chapter-20-ai-security-test.md
+# Lines: 125-136
+# Language: yaml
+
+  sast-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: returntocorp/semgrep-action@v1
+        with:
+          config: >-
+            p/security-audit
+            p/owasp-top-ten
+            p/cwe-top-25
