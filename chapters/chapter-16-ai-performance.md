@@ -43,6 +43,8 @@
 
 ![AI辅助性能优化流程](../images/chapter-16-performance-flow.svg)
 
+![性能优化前后对比](../images/ch16-compare.svg)
+
 
 
 ### 周二：AI性能顾问上线

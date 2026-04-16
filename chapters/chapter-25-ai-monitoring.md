@@ -31,6 +31,8 @@
 
 ![可观测性三大支柱](../images/chapter-25-observability.svg)
 
+![可观测性三大支柱](../images/ch25-pillars.svg)
+
 
 
 ### 周一：从被动到主动

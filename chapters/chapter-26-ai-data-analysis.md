@@ -48,6 +48,8 @@
 
 ![数据分析工作流程](../images/chapter-26-data-analysis.svg)
 
+![ETL示意图](../images/ch26-etl.svg)
+
 
 
 ### 周四上午：一个偶然的转机

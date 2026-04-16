@@ -43,6 +43,8 @@
 
 ![技术选型评估维度](../images/chapter-28-tech-decision.svg)
 
+![技术选型决策矩阵](../images/ch28-matrix.svg)
+
 
 
 ### 周三：转机出现

@@ -67,6 +67,8 @@ AI又生成了一段代码，加了一些简单的计数逻辑，但核心问题
 
 ![思维方式对比](../images/chapter-05-cot-comparison.svg)
 
+![CoT效果对比](../images/ch05-compare.svg)
+
 ![结构化输出工作流程](../images/chapter-05-structured-output.svg)
 
 

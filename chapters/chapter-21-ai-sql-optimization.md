@@ -35,6 +35,8 @@
 
 ![AI辅助SQL优化流程](../images/chapter-21-sql-optimization.svg)
 
+![执行计划对比](../images/ch21-plan.svg)
+
 
 
 ### 现状分析：为什么SQL这么慢？

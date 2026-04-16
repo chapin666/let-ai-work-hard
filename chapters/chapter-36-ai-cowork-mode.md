@@ -42,6 +42,8 @@
 
 ![Cowork模式对比](../images/chapter-36-cowork-comparison.svg)
 
+![人机协作流程](../images/ch36-human-ai.svg)
+
 
 
 ### 周二：意外的启发

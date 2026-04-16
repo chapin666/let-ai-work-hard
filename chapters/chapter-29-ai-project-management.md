@@ -39,6 +39,8 @@
 
 ![项目管理流程优化](../images/chapter-29-project-management.svg)
 
+![进度跟踪示意图](../images/ch29-tracking.svg)
+
 
 
 ### 周二：林姐的项目管理秘籍

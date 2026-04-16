@@ -32,6 +32,8 @@
 
 ![Cursor Agent模式架构](../images/chapter-06-agent-architecture.svg)
 
+![Cursor工作场景](../images/ch06-scene.svg)
+
 
 
 ### 1:00 PM 第一次用Agent模式

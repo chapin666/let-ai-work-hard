@@ -38,6 +38,8 @@
 
 ![Docker容器化流程](../images/chapter-23-docker-workflow.svg)
 
+![容器化架构图](../images/ch23-arch.svg)
+
 
 
 ### 周四：Dockerfile也能AI生成？

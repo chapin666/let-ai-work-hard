@@ -31,6 +31,8 @@
 
 ![自动化测试架构](../images/chapter-18-automation-arch.svg)
 
+![CI集成流程](../images/ch18-ci.svg)
+
 
 
 ### 回忆：测试是怎么变成噩梦的

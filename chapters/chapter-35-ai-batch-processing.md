@@ -36,6 +36,8 @@ Vue 2到Vue 3的迁移？这可是个大工程！
 
 ![批量代码处理流程](../images/chapter-35-batch-processing.svg)
 
+![代码转换流水线](../images/ch35-pipeline.svg)
+
 
 
 ### 周二：探索批量改造的可能

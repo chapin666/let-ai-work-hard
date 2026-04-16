@@ -33,6 +33,8 @@
 
 ![AI辅助需求分析流程](../images/chapter-27-requirements-flow.svg)
 
+![PRD结构图](../images/ch27-prd.svg)
+
 
 
 ### 周二：一个偶然的机会

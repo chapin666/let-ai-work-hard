@@ -29,6 +29,8 @@
 
 ![需求优先级矩阵](../images/chapter-32-priority-matrix.svg)
 
+![PM工作流](../images/ch32-workflow.svg)
+
 
 
 ### 周二：整合AI方法的灵感

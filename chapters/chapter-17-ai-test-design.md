@@ -34,6 +34,8 @@
 
 ![AI辅助测试设计流程](../images/chapter-17-test-design.svg)
 
+![测试金字塔](../images/ch17-pyramid.svg)
+
 
 
 ### 周二：测试覆盖率幻觉

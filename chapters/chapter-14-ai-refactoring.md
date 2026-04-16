@@ -35,6 +35,8 @@
 
 ![代码重构决策流程](../images/chapter-14-refactoring-flow.svg)
 
+![重构前后对比](../images/ch14-compare.svg)
+
 
 
 ### 周二：诊断病情

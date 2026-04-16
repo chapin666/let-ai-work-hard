@@ -35,6 +35,8 @@
 
 ![AI辅助后端开发流程](../images/chapter-13-backend-workflow.svg)
 
+![API设计示意图](../images/ch13-api.svg)
+
 
 
 ### 周二：用AI快速上手NestJS

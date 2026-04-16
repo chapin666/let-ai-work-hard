@@ -34,6 +34,8 @@
 
 ![代码审查维度](../images/chapter-15-review-dimensions.svg)
 
+![代码审查维度雷达图](../images/ch15-radar.svg)
+
 
 
 ### 周二：第一次听说AI代码审查

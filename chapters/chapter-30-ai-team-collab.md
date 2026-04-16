@@ -47,6 +47,8 @@
 
 ![团队协作架构](../images/chapter-30-team-collab.svg)
 
+![跨职能协作图](../images/ch30-cross.svg)
+
 
 
 ### 周二：一场意外的启发

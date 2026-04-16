@@ -47,6 +47,8 @@
 
 ![OpenClaw个人助手架构](../images/chapter-33-openclaw-arch.svg)
 
+![工具调用链](../images/ch33-toolchain.svg)
+
 ![个人助手工作流](../images/chapter-33-assistant-workflow.svg)
 
 

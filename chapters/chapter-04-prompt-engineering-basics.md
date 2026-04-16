@@ -60,6 +60,8 @@ function downloadFile(content, filename) {
 
 ![RPCT提示框架](../images/chapter-04-rpct-framework.svg)
 
+![Prompt元素拆解](../images/ch04-elements.svg)
+
 
 
 ### 周三下午：意外的启发

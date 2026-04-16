@@ -658,6 +658,8 @@ if __name__ == '__main__':
 
 ![CI/CD流水线架构](../images/chapter-24-cicd-architecture.svg)
 
+![部署流程图](../images/ch24-deploy.svg)
+
 
 #### 原则1：Fail Fast（快速失败）
 

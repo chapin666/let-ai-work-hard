@@ -55,6 +55,8 @@
 
 ![知识库建设流程](../images/chapter-31-knowledge-workflow.svg)
 
+![知识库架构](../images/ch31-arch.svg)
+
 
 
 ### 周二：偶遇知识管理高手

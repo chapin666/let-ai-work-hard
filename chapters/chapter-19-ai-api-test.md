@@ -41,6 +41,8 @@
 
 ![API测试流程](../images/chapter-19-api-test-flow.svg)
 
+![契约测试示意图](../images/ch19-contract.svg)
+
 
 
 ### 周五复盘会：谁在甩锅？

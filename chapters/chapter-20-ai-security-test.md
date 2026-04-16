@@ -27,6 +27,8 @@
 
 ![安全测试流程](../images/chapter-20-security-flow.svg)
 
+![漏洞扫描示意图](../images/ch20-vuln.svg)
+
 
 
 ### 周日上午：事后复盘

@@ -29,6 +29,10 @@ Cowork模式在团队里推广了一个月，老吴收到了 mixed 的反馈。
 
 ![Harness平台架构](../images/chapter-37-harness-arch.svg)
 
+![工程化流程](../images/ch37-flow.svg)
+
+![平台组件图](../images/ch37-components.svg)
+
 
 
 ### 周二：认识Harness

@@ -44,6 +44,8 @@
 
 ![AI辅助前端开发流程](../images/chapter-12-frontend-workflow.svg)
 
+![组件生成示意图](../images/ch12-component.svg)
+
 
 
 ### 周二：偶然的发现

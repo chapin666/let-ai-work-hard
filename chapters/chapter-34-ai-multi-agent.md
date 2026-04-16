@@ -25,6 +25,8 @@
 
 ![多Agent协作架构](../images/chapter-34-multi-agent.svg)
 
+![Agent通信流程](../images/ch34-comm.svg)
+
 
 
 ### 周二：设计AI团队架构
